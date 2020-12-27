@@ -154,15 +154,40 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    void startNewGame() {
+    public void startNewGame() {
         questions = new ArrayList<>();
 
-        Question question0 = new Question(R.drawable.img_quote_0.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question1 = new Question(R.drawable.img_quote_1.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question2 = new Question(R.drawable.img_quote_2.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question3 = new Question(R.drawable.img_quote_3.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question4 = new Question(R.drawable.img_quote_4.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question5 = new Question(R.drawable.img_quote_5.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
+        Question question0 = new Question(R.drawable.img_quote_0, "Pretty good advice,\n" +
+                "and perhaps a scientist\n" +
+                "did say it… Who\n" +
+                "actually did?", "Albert Einstein", "Issac Newton", "Rita Mae Brown", "Rosalind Franklin", 2);
+
+
+        Question question1 = new Question(R.drawable.img_quote_1, "Was honest Abe\n" +
+                "honestly quoted? Who\n" +
+                "authored this pithy bit\n" +
+                "of wisdom?", "Edward Stieglitz", "Maya Angelou", "Abraham Lincoln", "Ralph Waldo Emerson", 0);
+
+
+        Question question2 = new Question(R.drawable.img_quote_2, "Easy advice to read,\n" +
+                "difficult advice to\n" +
+                "follow — who actually \n said it?", "Martin Luther King Jr.", "Mother Teresa", "Fred Rogers", "Oprah Winfrey", 1);
+
+        Question question3 = new Question(R.drawable.img_quote_3, "Insanely inspiring,\n" +
+                "insanely incorrect\n" +
+                "(maybe). Who is the\n" +
+                "true source of this\n" +
+                "inspiration?", "Nelson Mandela", "Harriet Tubman", "Mahatma Gandhi", "Nicholas Klein", 3);
+
+        Question question4 = new Question(R.drawable.img_quote_4, "A peace worth striving\n" +
+                "for — who actually\n" +
+                "reminded us of this?", "Malala Yousafzai", "Martin Luther King Jr.", "Liu Xiaobo", "Dalai Lama", 1);
+
+        Question question5 = new Question(R.drawable.img_quote_5, "Unfortunately, true —\n" +
+                "but did Marilyn Monroe\n" +
+                "convey it or did\n" +
+                "someone else?", "Laurel Thatcher Ulrich", "Eleanor Roosevelt", "Marilyn Monroe", "Queen Victoria", 0);
+
 
         questions.add(question0);
         questions.add(question1);
@@ -173,6 +198,11 @@ public class MainActivity extends AppCompatActivity {
 
         totalCorrect = 0;
         totalQuestions = questions.size();
+
+        //while(questions.size() > 6) {
+            //int randomIndex =  generateRandomNumber(questions.size());
+            //questions.remove(randomIndex);
+        //}
 
         Question firstQuestion = chooseNewQuestion();
 
