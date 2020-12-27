@@ -117,15 +117,19 @@ public class MainActivity extends AppCompatActivity {
     }
     // TODO 3-F: displayQuestion(Question question) {...}
 
-    void onAnswerSubmission() {
+    public void onAnswerSubmission() {
         Question currentQuestion = getCurrentQuestion();
         if (currentQuestion.isCorrect()) {
             totalCorrect = totalCorrect + 1;
         }
-        questions.remove(currentQuestion);
 
-        // TODO 3-D.i: Uncomment the line below after implementing displayQuestionsRemaining(int)
-        // displayQuestionsRemaining(questions.size());
+        if(currentQuestion.playerAnswer == -1) {
+            return;
+        }
+
+        questions.remove(currentQuestion);
+        
+        displayQuestionsRemaining(questions.size());
 
         if (questions.size() == 0) {
             String gameOverMessage = getGameOverMessage(totalCorrect, totalQuestions);
