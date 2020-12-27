@@ -198,18 +198,16 @@ public class MainActivity extends AppCompatActivity {
         totalCorrect = 0;
         totalQuestions = questions.size();
 
-        //while(questions.size() > 6) {
-            //int randomIndex =  generateRandomNumber(questions.size());
-            //questions.remove(randomIndex);
-        //}
+        while(questions.size() > 6) {
+            int randomIndex =  generateRandomNumber(questions.size());
+            questions.remove(randomIndex);
+        }
 
         Question firstQuestion = chooseNewQuestion();
 
-        // TODO 3-D.ii: Uncomment the line below after implementing displayQuestionsRemaining(int)
-        // displayQuestionsRemaining(questions.size());
+        displayQuestionsRemaining(questions.size());
 
-        // TODO 3-H.ii: Uncomment after implementing displayQuestion(Question)
-        // displayQuestion(firstQuestion);
+        displayQuestion(firstQuestion);
     }
 
     Question chooseNewQuestion() {

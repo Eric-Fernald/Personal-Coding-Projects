@@ -36,7 +36,8 @@
         android:layout_marginStart="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:text="99"/>
+        tools:text="99"
+        android:layout_marginLeft="8dp" />
 
     <TextView
         android:id="@+id/tv_main_questions_remaining"
@@ -46,7 +47,8 @@
         android:text="questions\nremaining"
         app:layout_constraintTop_toTopOf="@id/tv_main_questions_remaining_count"
         app:layout_constraintBottom_toBottomOf="@id/tv_main_questions_remaining_count"
-        app:layout_constraintLeft_toRightOf="@id/tv_main_questions_remaining_count"/>
+        app:layout_constraintLeft_toRightOf="@id/tv_main_questions_remaining_count"
+        android:layout_marginLeft="8dp" />
 
     <Button
         style="@style/Widget.AppCompat.Button.Colored"
@@ -57,7 +59,8 @@
         android:text="submit"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_main_questions_remaining_count"/>
+        app:layout_constraintTop_toTopOf="@id/tv_main_questions_remaining_count"
+        android:layout_marginRight="8dp" />
 
     <LinearLayout
         android:id="@+id/ll_main_first_row_buttons"
