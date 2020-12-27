@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     int totalQuestions;
     ArrayList<Question> questions;
 
-    // TODO 3-A: Declare View member variables
     ImageView questionImageView;
     TextView questionTextView;
     TextView questionsRemainingTextView;
@@ -91,9 +90,32 @@ public class MainActivity extends AppCompatActivity {
         public void displayQuestionsRemaining(int questionsRemaining) {
         questionsRemainingTextView.setText(String.valueOf(questionsRemaining));
         }
-    // TODO 3-F: displayQuestion(Question question) {...}
 
-    // TODO 4-A: onAnswerSelected(int answerSelected) {...}
+    public void onAnswerSelected(int answerSelected) {
+        Question currentQuestion = getCurrentQuestion();
+        currentQuestion.playerAnswer = answerSelected;
+        answer0Button.setText(currentQuestion.answer0);
+        answer1Button.setText(currentQuestion.answer1);
+        answer2Button.setText(currentQuestion.answer2);
+        answer3Button.setText(currentQuestion.answer3);
+
+
+        switch(answerSelected) {
+            case 0:
+                answer0Button.setText("✔ " + currentQuestion.answer0);
+                break;
+            case 1:
+                answer1Button.setText("✔ " + currentQuestion.answer1);
+                break;
+            case 2:
+                answer2Button.setText("✔ " + currentQuestion.answer2);
+                break;
+            case 3:
+                answer3Button.setText("✔ " + currentQuestion.answer3);
+                break;
+        }
+    }
+    // TODO 3-F: displayQuestion(Question question) {...}
 
     void onAnswerSubmission() {
         Question currentQuestion = getCurrentQuestion();
