@@ -78,14 +78,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         startNewGame();
-        // TODO 5-A: set onClickListener for the submit answer Button
-
-        startNewGame();
     }
+        public void displayQuestion(Question question) {
+            questionImageView.setImageResource(question.imageId);
+            questionTextView.setText(question.questionText);
+            answer0Button.setText(question.answer0);
+            answer1Button.setText(question.answer1);
+            answer2Button.setText(question.answer2);
+            answer3Button.setText(question.answer3);
+        }
 
+        public void displayQuestionsRemaining(int questionsRemaining) {
+        questionsRemainingTextView.setText(String.valueOf(questionsRemaining));
+        }
     // TODO 3-F: displayQuestion(Question question) {...}
-
-    // TODO 3-C: displayQuestionsRemaining(int questionRemaining) {...}
 
     // TODO 4-A: onAnswerSelected(int answerSelected) {...}
 
