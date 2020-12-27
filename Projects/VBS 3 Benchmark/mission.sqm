@@ -1,0 +1,3253 @@
+version=22;
+class Mission
+{
+	addOns[]=
+	{
+		"vbs2_vehicles_land_tracked_m1abrams_usarmy_m1a2",
+		"vbs2_vehicles_land_tracked_uvz_t72_opfor_t72",
+		"vbs2_vehicles_land_tracked_bae_m2_us_m2a3",
+		"vbs2_vehicles_land_tracked_kmzap_bmp3_zz_bmp3",
+		"vbs2_vehicles_air_helicopters_mil_mi24_zz_mi24",
+		"vbs2_vehicles_air_helicopters_boeing_ah64_us_ah64d",
+		"vbs2_people_us_army_rifleman_ocp",
+		"vbs2_people_wp_wp_rifleman",
+		"customer_tboc_invisible_spectator",
+		"vbs2_editor",
+		"vbs_systems_modular_artillery_strike",
+		"vbs2_people_us_army_rifleman_ucp",
+		"vbs2_people_us_army_pilot_heli",
+		"cabuildings"
+	};
+	addOnsAuto[]=
+	{
+		"vbs2_vehicles_land_tracked_m1abrams_usarmy_m1a2",
+		"vbs2_vehicles_land_tracked_uvz_t72_opfor_t72",
+		"vbs2_vehicles_land_tracked_bae_m2_us_m2a3",
+		"vbs2_vehicles_land_tracked_kmzap_bmp3_zz_bmp3",
+		"vbs2_vehicles_air_helicopters_mil_mi24_zz_mi24",
+		"vbs2_vehicles_air_helicopters_boeing_ah64_us_ah64d",
+		"vbs2_people_us_army_rifleman_ocp",
+		"vbs2_people_wp_wp_rifleman",
+		"customer_tboc_invisible_spectator",
+		"vbs2_editor",
+		"vbs_systems_modular_artillery_strike",
+		"vbs2_people_us_army_rifleman_ucp",
+		"vbs2_people_us_army_pilot_heli",
+		"cabuildings"
+	};
+	randomSeed=12396040;
+	class Intel
+	{
+		startWeather=0;
+		forecastWeather=0;
+		year=2010;
+		month=9;
+		day=13;
+		hour=12;
+		minute=0;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	class Groups
+	{
+		items=51;
+		class Item0
+		{
+			side="WEST";
+			name="1-1-A-8";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3619.0537,129.12489,2125.1987};
+					positionASL[]={3619.0537,129.12489,2125.1987};
+					special="CAN_COLLIDE";
+					id=0;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_68";
+					description="M1A2 - AT load Commander";
+				};
+				class Item1
+				{
+					position[]={3619.0537,129.12489,2125.1987};
+					positionASL[]={3619.0537,129.12489,2125.1987};
+					special="CAN_COLLIDE";
+					id=1;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_69";
+					description="M1A2 - AT load Gunner";
+				};
+				class Item2
+				{
+					position[]={3619.0537,129.12489,2125.1987};
+					positionASL[]={3619.0537,129.12489,2125.1987};
+					special="CAN_COLLIDE";
+					id=10;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_70";
+					description="M1A2 - AT load Loader";
+				};
+				class Item3
+				{
+					position[]={3619.0537,129.12489,2125.1987};
+					positionASL[]={3619.0537,129.12489,2125.1987};
+					special="CAN_COLLIDE";
+					id=43;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_71";
+					description="M1A2 - AT load Driver";
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			name="1-1-C-5";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3690.2942,122.08824,1845.2389};
+					positionASL[]={3690.2942,122.08824,1845.2389};
+					special="CAN_COLLIDE";
+					id=2;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_177";
+					description="M2A3 Bradley Commander";
+				};
+				class Item1
+				{
+					position[]={3690.2942,122.08824,1845.2389};
+					positionASL[]={3690.2942,122.08824,1845.2389};
+					special="CAN_COLLIDE";
+					id=3;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_178";
+					description="M2A3 Bradley Gunner";
+				};
+				class Item2
+				{
+					position[]={3690.2942,122.08824,1845.2389};
+					positionASL[]={3690.2942,122.08824,1845.2389};
+					special="CAN_COLLIDE";
+					id=4;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_179";
+					description="M2A3 Bradley Driver";
+				};
+			};
+		};
+		class Item2
+		{
+			side="WEST";
+			name="1-1-A-4";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3601.4771,130.24161,2136.9304};
+					positionASL[]={3601.4771,130.24161,2136.9304};
+					special="CAN_COLLIDE";
+					id=5;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_24";
+					description="M1A2 - AT load Commander";
+				};
+				class Item1
+				{
+					position[]={3601.4771,130.24161,2136.9304};
+					positionASL[]={3601.4771,130.24161,2136.9304};
+					special="CAN_COLLIDE";
+					id=9;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_25";
+					description="M1A2 - AT load Gunner";
+				};
+				class Item2
+				{
+					position[]={3601.4771,130.24161,2136.9304};
+					positionASL[]={3601.4771,130.24161,2136.9304};
+					special="CAN_COLLIDE";
+					id=23;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_26";
+					description="M1A2 - AT load Loader";
+				};
+				class Item3
+				{
+					position[]={3601.4771,130.24161,2136.9304};
+					positionASL[]={3601.4771,130.24161,2136.9304};
+					special="CAN_COLLIDE";
+					id=24;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_27";
+					description="M1A2 - AT load Driver";
+				};
+			};
+		};
+		class Item3
+		{
+			side="WEST";
+			name="1-1-C-6";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3676.7751,122.15831,1819.6517};
+					positionASL[]={3676.7751,122.15831,1819.6517};
+					special="CAN_COLLIDE";
+					id=6;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_183";
+					description="M2A3 Bradley Commander";
+				};
+				class Item1
+				{
+					position[]={3676.7751,122.15831,1819.6517};
+					positionASL[]={3676.7751,122.15831,1819.6517};
+					special="CAN_COLLIDE";
+					id=7;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_184";
+					description="M2A3 Bradley Gunner";
+				};
+				class Item2
+				{
+					position[]={3676.7751,122.15831,1819.6517};
+					positionASL[]={3676.7751,122.15831,1819.6517};
+					special="CAN_COLLIDE";
+					id=8;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_185";
+					description="M2A3 Bradley Driver";
+				};
+			};
+		};
+		class Item4
+		{
+			side="WEST";
+			name="1-1-C-7";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3693.2073,122.37782,1760.6654};
+					positionASL[]={3693.2073,122.37782,1760.6654};
+					special="CAN_COLLIDE";
+					id=11;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_189";
+					description="M2A3 Bradley Commander";
+				};
+				class Item1
+				{
+					position[]={3693.2073,122.37782,1760.6654};
+					positionASL[]={3693.2073,122.37782,1760.6654};
+					special="CAN_COLLIDE";
+					id=12;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_190";
+					description="M2A3 Bradley Gunner";
+				};
+				class Item2
+				{
+					position[]={3693.2073,122.37782,1760.6654};
+					positionASL[]={3693.2073,122.37782,1760.6654};
+					special="CAN_COLLIDE";
+					id=13;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_191";
+					description="M2A3 Bradley Driver";
+				};
+			};
+		};
+		class Item5
+		{
+			side="WEST";
+			name="1-1-C-9";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3657.6177,125.63745,2084.3804};
+					positionASL[]={3657.6177,125.63745,2084.3804};
+					special="CAN_COLLIDE";
+					id=14;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_Leader_OCP_M_medium_iotv_none_M4RCO";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_213";
+				};
+				class Item1
+				{
+					position[]={3658.2856,125.63177,2088.4497};
+					positionASL[]={3658.2856,125.63177,2088.4497};
+					special="CAN_COLLIDE";
+					id=15;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_MGunner_OCP_M_medium_iotv_none_M240MGO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_214";
+				};
+				class Item2
+				{
+					position[]={3658.9434,125.64502,2080.4768};
+					positionASL[]={3658.9434,125.64502,2080.4768};
+					special="CAN_COLLIDE";
+					id=16;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_AssistantMGunnerM240_OCP_M_medium_iotv_none_M4CCO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_215";
+				};
+				class Item3
+				{
+					position[]={3658.9536,125.60702,2092.5188};
+					positionASL[]={3658.9536,125.60702,2092.5188};
+					special="CAN_COLLIDE";
+					id=17;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_MGunner_OCP_M_medium_iotv_none_M240MGO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_216";
+				};
+				class Item4
+				{
+					position[]={3660.2683,125.64662,2076.5718};
+					positionASL[]={3660.2683,125.64662,2076.5718};
+					special="CAN_COLLIDE";
+					id=18;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_AssistantMGunnerM240_OCP_M_medium_iotv_none_M4CCO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_217";
+				};
+				class Item5
+				{
+					position[]={3659.6216,125.59381,2096.5869};
+					positionASL[]={3659.6216,125.59381,2096.5869};
+					special="CAN_COLLIDE";
+					id=19;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATGunner_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_218";
+				};
+				class Item6
+				{
+					position[]={3661.5947,125.64794,2072.6682};
+					positionASL[]={3661.5947,125.64794,2072.6682};
+					special="CAN_COLLIDE";
+					id=20;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATAmmoBearer_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_219";
+				};
+				class Item7
+				{
+					position[]={3660.2898,125.56218,2100.6558};
+					positionASL[]={3660.2898,125.56218,2100.6558};
+					special="CAN_COLLIDE";
+					id=21;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATGunner_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_220";
+				};
+				class Item8
+				{
+					position[]={3662.9192,125.64741,2068.7634};
+					positionASL[]={3662.9192,125.64741,2068.7634};
+					special="CAN_COLLIDE";
+					id=22;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATAmmoBearer_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_221";
+				};
+			};
+		};
+		class Item6
+		{
+			side="WEST";
+			name="1-1-D-2";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3711.4656,122.33281,1898.0331};
+					positionASL[]={3711.4656,122.33281,1898.0331};
+					special="CAN_COLLIDE";
+					id=25;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_Leader_OCP_M_medium_iotv_none_M4RCO";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_249";
+				};
+				class Item1
+				{
+					position[]={3712.1335,122.32714,1902.1024};
+					positionASL[]={3712.1335,122.32714,1902.1024};
+					special="CAN_COLLIDE";
+					id=26;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_MGunner_OCP_M_medium_iotv_none_M240MGO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_250";
+				};
+				class Item2
+				{
+					position[]={3712.7913,122.3404,1894.1295};
+					positionASL[]={3712.7913,122.3404,1894.1295};
+					special="CAN_COLLIDE";
+					id=27;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_AssistantMGunnerM240_OCP_M_medium_iotv_none_M4CCO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_251";
+				};
+				class Item3
+				{
+					position[]={3712.8015,122.30239,1906.1715};
+					positionASL[]={3712.8015,122.30239,1906.1715};
+					special="CAN_COLLIDE";
+					id=28;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_MGunner_OCP_M_medium_iotv_none_M240MGO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_252";
+				};
+				class Item4
+				{
+					position[]={3714.1162,122.34198,1890.2245};
+					positionASL[]={3714.1162,122.34198,1890.2245};
+					special="CAN_COLLIDE";
+					id=29;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_AssistantMGunnerM240_OCP_M_medium_iotv_none_M4CCO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_253";
+				};
+				class Item5
+				{
+					position[]={3713.4695,122.28918,1910.2396};
+					positionASL[]={3713.4695,122.28918,1910.2396};
+					special="CAN_COLLIDE";
+					id=30;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATGunner_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_254";
+				};
+				class Item6
+				{
+					position[]={3715.4426,122.3433,1886.3209};
+					positionASL[]={3715.4426,122.3433,1886.3209};
+					special="CAN_COLLIDE";
+					id=31;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATAmmoBearer_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_255";
+				};
+				class Item7
+				{
+					position[]={3714.1377,122.25756,1914.3085};
+					positionASL[]={3714.1377,122.25756,1914.3085};
+					special="CAN_COLLIDE";
+					id=32;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATGunner_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_256";
+				};
+				class Item8
+				{
+					position[]={3716.7671,122.34278,1882.4161};
+					positionASL[]={3716.7671,122.34278,1882.4161};
+					special="CAN_COLLIDE";
+					id=33;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATAmmoBearer_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_257";
+				};
+			};
+		};
+		class Item7
+		{
+			side="WEST";
+			name="1-1-D-3";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3713.1396,130.25418,1808.0997};
+					positionASL[]={3713.1396,130.25418,1808.0997};
+					special="CAN_COLLIDE";
+					id=34;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_Leader_OCP_M_medium_iotv_none_M4RCO";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_267";
+				};
+				class Item1
+				{
+					position[]={3713.8076,130.2485,1812.1691};
+					positionASL[]={3713.8076,130.2485,1812.1691};
+					special="CAN_COLLIDE";
+					id=35;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_MGunner_OCP_M_medium_iotv_none_M240MGO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_268";
+				};
+				class Item2
+				{
+					position[]={3714.4653,130.26173,1804.1962};
+					positionASL[]={3714.4653,130.26173,1804.1962};
+					special="CAN_COLLIDE";
+					id=36;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_AssistantMGunnerM240_OCP_M_medium_iotv_none_M4CCO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_269";
+				};
+				class Item3
+				{
+					position[]={3714.4756,130.22375,1816.2382};
+					positionASL[]={3714.4756,130.22375,1816.2382};
+					special="CAN_COLLIDE";
+					id=37;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_MGunner_OCP_M_medium_iotv_none_M240MGO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_270";
+				};
+				class Item4
+				{
+					position[]={3715.7903,130.26334,1800.2911};
+					positionASL[]={3715.7903,130.26334,1800.2911};
+					special="CAN_COLLIDE";
+					id=38;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_AssistantMGunnerM240_OCP_M_medium_iotv_none_M4CCO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_271";
+				};
+				class Item5
+				{
+					position[]={3715.1436,130.21054,1820.3063};
+					positionASL[]={3715.1436,130.21054,1820.3063};
+					special="CAN_COLLIDE";
+					id=39;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATGunner_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_272";
+				};
+				class Item6
+				{
+					position[]={3717.1167,130.26466,1796.3876};
+					positionASL[]={3717.1167,130.26466,1796.3876};
+					special="CAN_COLLIDE";
+					id=40;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATAmmoBearer_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_273";
+				};
+				class Item7
+				{
+					position[]={3715.8118,130.17889,1824.3751};
+					positionASL[]={3715.8118,130.17889,1824.3751};
+					special="CAN_COLLIDE";
+					id=41;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATGunner_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_274";
+				};
+				class Item8
+				{
+					position[]={3718.4412,130.26414,1792.4828};
+					positionASL[]={3718.4412,130.26414,1792.4828};
+					special="CAN_COLLIDE";
+					id=42;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATAmmoBearer_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_275";
+				};
+			};
+		};
+		class Item8
+		{
+			side="WEST";
+			name="1-1-D-4";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={3597.6035,130.8694,2168.002};
+					positionASL[]={3597.6035,130.8694,2168.002};
+					special="CAN_COLLIDE";
+					id=44;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_Leader_OCP_M_medium_iotv_none_M4RCO";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_285";
+				};
+				class Item1
+				{
+					position[]={3598.2715,130.86372,2172.0713};
+					positionASL[]={3598.2715,130.86372,2172.0713};
+					special="CAN_COLLIDE";
+					id=45;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_MGunner_OCP_M_medium_iotv_none_M240MGO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_286";
+				};
+				class Item2
+				{
+					position[]={3598.9292,130.87698,2164.0984};
+					positionASL[]={3598.9292,130.87698,2164.0984};
+					special="CAN_COLLIDE";
+					id=46;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_AssistantMGunnerM240_OCP_M_medium_iotv_none_M4CCO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_287";
+				};
+				class Item3
+				{
+					position[]={3598.9395,130.83897,2176.1404};
+					positionASL[]={3598.9395,130.83897,2176.1404};
+					special="CAN_COLLIDE";
+					id=47;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_MGunner_OCP_M_medium_iotv_none_M240MGO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_288";
+				};
+				class Item4
+				{
+					position[]={3600.2542,130.87857,2160.1934};
+					positionASL[]={3600.2542,130.87857,2160.1934};
+					special="CAN_COLLIDE";
+					id=48;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_AssistantMGunnerM240_OCP_M_medium_iotv_none_M4CCO";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_289";
+				};
+				class Item5
+				{
+					position[]={3599.6074,130.82576,2180.2085};
+					positionASL[]={3599.6074,130.82576,2180.2085};
+					special="CAN_COLLIDE";
+					id=49;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATGunner_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_290";
+				};
+				class Item6
+				{
+					position[]={3601.5806,130.87988,2156.2898};
+					positionASL[]={3601.5806,130.87988,2156.2898};
+					special="CAN_COLLIDE";
+					id=50;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATAmmoBearer_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_291";
+				};
+				class Item7
+				{
+					position[]={3600.2756,130.79414,2184.2773};
+					positionASL[]={3600.2756,130.79414,2184.2773};
+					special="CAN_COLLIDE";
+					id=51;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATGunner_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_292";
+				};
+				class Item8
+				{
+					position[]={3602.905,130.87936,2152.385};
+					positionASL[]={3602.905,130.87936,2152.385};
+					special="CAN_COLLIDE";
+					id=52;
+					side="WEST";
+					vehicle="VBS2_US_ARMY_ATAmmoBearer_OCP_M_medium_iotv_none_M4CCOJavelin";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_293";
+				};
+			};
+		};
+		class Item9
+		{
+			side="WEST";
+			name="1-1-A-5";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3585.7473,130.95148,2142.842};
+					positionASL[]={3585.7473,130.95148,2142.842};
+					special="CAN_COLLIDE";
+					id=53;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_32";
+					description="M1A2 - AT load Commander";
+				};
+				class Item1
+				{
+					position[]={3585.7473,130.95148,2142.842};
+					positionASL[]={3585.7473,130.95148,2142.842};
+					special="CAN_COLLIDE";
+					id=54;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_35";
+					description="M1A2 - AT load Driver";
+				};
+				class Item2
+				{
+					position[]={3585.7473,130.95148,2142.842};
+					positionASL[]={3585.7473,130.95148,2142.842};
+					special="CAN_COLLIDE";
+					id=55;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_33";
+					description="M1A2 - AT load Gunner";
+				};
+				class Item3
+				{
+					position[]={3585.7473,130.95148,2142.842};
+					positionASL[]={3585.7473,130.95148,2142.842};
+					special="CAN_COLLIDE";
+					id=56;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_34";
+					description="M1A2 - AT load Loader";
+				};
+			};
+		};
+		class Item10
+		{
+			side="EAST";
+			name="1-1-C-1";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={3235.2922,124.52215,2082.3237};
+					positionASL[]={3235.2922,124.52215,2082.3237};
+					special="CAN_COLLIDE";
+					id=57;
+					side="EAST";
+					vehicle="vbs2_wp_leader_ak47";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_349";
+				};
+				class Item1
+				{
+					position[]={3232.677,124.52101,2084.4194};
+					positionASL[]={3232.677,124.52101,2084.4194};
+					special="CAN_COLLIDE";
+					id=58;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_ak74";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_350";
+				};
+				class Item2
+				{
+					position[]={3228.0427,124.47036,2087.6519};
+					positionASL[]={3228.0427,124.47036,2087.6519};
+					special="CAN_COLLIDE";
+					id=59;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_ak74";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_351";
+				};
+				class Item3
+				{
+					position[]={3232.3096,124.46714,2076.7751};
+					positionASL[]={3232.3096,124.46714,2076.7751};
+					special="CAN_COLLIDE";
+					id=60;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_at13";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_352";
+				};
+				class Item4
+				{
+					position[]={3229.1567,124.44336,2072.0769};
+					positionASL[]={3229.1567,124.44336,2072.0769};
+					special="CAN_COLLIDE";
+					id=61;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_rpg";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_353";
+				};
+				class Item5
+				{
+					position[]={3225.9646,124.42137,2068.1792};
+					positionASL[]={3225.9646,124.42137,2068.1792};
+					special="CAN_COLLIDE";
+					id=62;
+					side="EAST";
+					vehicle="vbs2_wp_machinegunner_pk";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_354";
+				};
+				class Item6
+				{
+					position[]={3222.948,124.40979,2090.2961};
+					positionASL[]={3222.948,124.40979,2090.2961};
+					special="CAN_COLLIDE";
+					id=63;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_rpg";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_355";
+				};
+			};
+		};
+		class Item11
+		{
+			side="WEST";
+			name="1-1-A-9";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3626.9561,126.87406,2069.1946};
+					positionASL[]={3626.9561,126.87406,2069.1946};
+					special="CAN_COLLIDE";
+					id=64;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_76";
+					description="M1A2 - AT load Commander";
+				};
+				class Item1
+				{
+					position[]={3626.9561,126.87406,2069.1946};
+					positionASL[]={3626.9561,126.87406,2069.1946};
+					special="CAN_COLLIDE";
+					id=67;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_77";
+					description="M1A2 - AT load Gunner";
+				};
+				class Item2
+				{
+					position[]={3626.9561,126.87406,2069.1946};
+					positionASL[]={3626.9561,126.87406,2069.1946};
+					special="CAN_COLLIDE";
+					id=69;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_78";
+					description="M1A2 - AT load Loader";
+				};
+				class Item3
+				{
+					position[]={3626.9561,126.87406,2069.1946};
+					positionASL[]={3626.9561,126.87406,2069.1946};
+					special="CAN_COLLIDE";
+					id=70;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_79";
+					description="M1A2 - AT load Driver";
+				};
+			};
+		};
+		class Item12
+		{
+			side="EAST";
+			name="1-1-E-7";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3414.52,121.43889,1724.0518};
+					positionASL[]={3414.52,121.43889,1724.0518};
+					special="CAN_COLLIDE";
+					id=65;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_405";
+					description="T-72 Commander";
+				};
+				class Item1
+				{
+					position[]={3414.52,121.43889,1724.0518};
+					positionASL[]={3414.52,121.43889,1724.0518};
+					special="CAN_COLLIDE";
+					id=66;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_406";
+					description="T-72 Driver";
+				};
+				class Item2
+				{
+					position[]={3414.52,121.43889,1724.0518};
+					positionASL[]={3414.52,121.43889,1724.0518};
+					special="CAN_COLLIDE";
+					id=68;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_407";
+					description="T-72 Gunner";
+				};
+			};
+		};
+		class Item13
+		{
+			side="WEST";
+			name="1-1-A-2";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3598.2693,129.4491,2097.4063};
+					positionASL[]={3598.2693,129.4491,2097.4063};
+					special="CAN_COLLIDE";
+					id=71;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_8";
+					description="M1A2 - AT load Commander";
+				};
+				class Item1
+				{
+					position[]={3598.2693,129.4491,2097.4063};
+					positionASL[]={3598.2693,129.4491,2097.4063};
+					special="CAN_COLLIDE";
+					id=79;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_9";
+					description="M1A2 - AT load Gunner";
+				};
+				class Item2
+				{
+					position[]={3598.2693,129.4491,2097.4063};
+					positionASL[]={3598.2693,129.4491,2097.4063};
+					special="CAN_COLLIDE";
+					id=80;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_10";
+					description="M1A2 - AT load Loader";
+				};
+				class Item3
+				{
+					position[]={3598.2693,129.4491,2097.4063};
+					positionASL[]={3598.2693,129.4491,2097.4063};
+					special="CAN_COLLIDE";
+					id=81;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_11";
+					description="M1A2 - AT load Driver";
+				};
+			};
+		};
+		class Item14
+		{
+			side="WEST";
+			name="1-1-B-1";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3617.0107,124.11953,1970.8162};
+					positionASL[]={3617.0107,124.11953,1970.8162};
+					special="CAN_COLLIDE";
+					id=72;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_84";
+					description="M1A2 - AT load Commander";
+				};
+				class Item1
+				{
+					position[]={3617.0107,124.11953,1970.8162};
+					positionASL[]={3617.0107,124.11953,1970.8162};
+					special="CAN_COLLIDE";
+					id=76;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_85";
+					description="M1A2 - AT load Gunner";
+				};
+				class Item2
+				{
+					position[]={3617.0107,124.11953,1970.8162};
+					positionASL[]={3617.0107,124.11953,1970.8162};
+					special="CAN_COLLIDE";
+					id=77;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_86";
+					description="M1A2 - AT load Loader";
+				};
+				class Item3
+				{
+					position[]={3617.0107,124.11953,1970.8162};
+					positionASL[]={3617.0107,124.11953,1970.8162};
+					special="CAN_COLLIDE";
+					id=78;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_87";
+					description="M1A2 - AT load Driver";
+				};
+			};
+		};
+		class Item15
+		{
+			side="EAST";
+			name="1-1-E-8";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3410.4097,121.44267,1739.5992};
+					positionASL[]={3410.4097,121.44267,1739.5992};
+					special="CAN_COLLIDE";
+					id=73;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_411";
+					description="T-72 Commander";
+				};
+				class Item1
+				{
+					position[]={3410.4097,121.44267,1739.5992};
+					positionASL[]={3410.4097,121.44267,1739.5992};
+					special="CAN_COLLIDE";
+					id=74;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_412";
+					description="T-72 Driver";
+				};
+				class Item2
+				{
+					position[]={3410.4097,121.44267,1739.5992};
+					positionASL[]={3410.4097,121.44267,1739.5992};
+					special="CAN_COLLIDE";
+					id=75;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_413";
+					description="T-72 Gunner";
+				};
+			};
+		};
+		class Item16
+		{
+			side="WEST";
+			name="1-1-A-6";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3606.2659,128.0244,2054.6667};
+					positionASL[]={3606.2659,128.0244,2054.6667};
+					special="CAN_COLLIDE";
+					id=82;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_40";
+					description="M1A2 - AT load Commander";
+				};
+				class Item1
+				{
+					position[]={3606.2659,128.0244,2054.6667};
+					positionASL[]={3606.2659,128.0244,2054.6667};
+					special="CAN_COLLIDE";
+					id=93;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_41";
+					description="M1A2 - AT load Gunner";
+				};
+				class Item2
+				{
+					position[]={3606.2659,128.0244,2054.6667};
+					positionASL[]={3606.2659,128.0244,2054.6667};
+					special="CAN_COLLIDE";
+					id=114;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_42";
+					description="M1A2 - AT load Loader";
+				};
+				class Item3
+				{
+					position[]={3606.2659,128.0244,2054.6667};
+					positionASL[]={3606.2659,128.0244,2054.6667};
+					special="CAN_COLLIDE";
+					id=121;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_43";
+					description="M1A2 - AT load Driver";
+				};
+			};
+		};
+		class Item17
+		{
+			side="WEST";
+			name="1-1-B-2";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3637.4468,122.42087,1935.8975};
+					positionASL[]={3637.4468,122.42087,1935.8975};
+					special="CAN_COLLIDE";
+					id=83;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_92";
+					description="M1A2 - AT load Commander";
+				};
+				class Item1
+				{
+					position[]={3637.4468,122.42087,1935.8975};
+					positionASL[]={3637.4468,122.42087,1935.8975};
+					special="CAN_COLLIDE";
+					id=84;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_93";
+					description="M1A2 - AT load Gunner";
+				};
+				class Item2
+				{
+					position[]={3637.4468,122.42087,1935.8975};
+					positionASL[]={3637.4468,122.42087,1935.8975};
+					special="CAN_COLLIDE";
+					id=91;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_94";
+					description="M1A2 - AT load Loader";
+				};
+				class Item3
+				{
+					position[]={3637.4468,122.42087,1935.8975};
+					positionASL[]={3637.4468,122.42087,1935.8975};
+					special="CAN_COLLIDE";
+					id=92;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_95";
+					description="M1A2 - AT load Driver";
+				};
+			};
+		};
+		class Item18
+		{
+			side="EAST";
+			name="1-1-F-2";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3344.7632,124.91278,1931.0524};
+					positionASL[]={3344.7632,124.91278,1931.0524};
+					special="CAN_COLLIDE";
+					id=85;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_420";
+					description="T-72 Commander";
+				};
+				class Item1
+				{
+					position[]={3344.7632,124.91278,1931.0524};
+					positionASL[]={3344.7632,124.91278,1931.0524};
+					special="CAN_COLLIDE";
+					id=86;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_421";
+					description="T-72 Driver";
+				};
+				class Item2
+				{
+					position[]={3344.7632,124.91278,1931.0524};
+					positionASL[]={3344.7632,124.91278,1931.0524};
+					special="CAN_COLLIDE";
+					id=87;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_422";
+					description="T-72 Gunner";
+				};
+			};
+		};
+		class Item19
+		{
+			side="EAST";
+			name="1-1-F-3";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3340.6528,124.98562,1946.5999};
+					positionASL[]={3340.6528,124.98562,1946.5999};
+					special="CAN_COLLIDE";
+					id=88;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_423";
+					description="T-72 Commander";
+				};
+				class Item1
+				{
+					position[]={3340.6528,124.98562,1946.5999};
+					positionASL[]={3340.6528,124.98562,1946.5999};
+					special="CAN_COLLIDE";
+					id=89;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_424";
+					description="T-72 Driver";
+				};
+				class Item2
+				{
+					position[]={3340.6528,124.98562,1946.5999};
+					positionASL[]={3340.6528,124.98562,1946.5999};
+					special="CAN_COLLIDE";
+					id=90;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_425";
+					description="T-72 Gunner";
+				};
+			};
+		};
+		class Item20
+		{
+			side="WEST";
+			name="1-1-B-3";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3659.9326,122.04595,1870.799};
+					positionASL[]={3659.9326,122.04595,1870.799};
+					special="CAN_COLLIDE";
+					id=94;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_100";
+					description="M1A2 - AT load Commander";
+				};
+				class Item1
+				{
+					position[]={3659.9326,122.04595,1870.799};
+					positionASL[]={3659.9326,122.04595,1870.799};
+					special="CAN_COLLIDE";
+					id=101;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_101";
+					description="M1A2 - AT load Gunner";
+				};
+				class Item2
+				{
+					position[]={3659.9326,122.04595,1870.799};
+					positionASL[]={3659.9326,122.04595,1870.799};
+					special="CAN_COLLIDE";
+					id=102;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_102";
+					description="M1A2 - AT load Loader";
+				};
+				class Item3
+				{
+					position[]={3659.9326,122.04595,1870.799};
+					positionASL[]={3659.9326,122.04595,1870.799};
+					special="CAN_COLLIDE";
+					id=103;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_103";
+					description="M1A2 - AT load Driver";
+				};
+			};
+		};
+		class Item21
+		{
+			side="EAST";
+			name="1-1-F-4";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3306.2866,124.8779,2011.6874};
+					positionASL[]={3306.2866,124.8779,2011.6874};
+					special="CAN_COLLIDE";
+					id=95;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_432";
+					description="T-72 Commander";
+				};
+				class Item1
+				{
+					position[]={3306.2866,124.8779,2011.6874};
+					positionASL[]={3306.2866,124.8779,2011.6874};
+					special="CAN_COLLIDE";
+					id=96;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_433";
+					description="T-72 Driver";
+				};
+				class Item2
+				{
+					position[]={3306.2866,124.8779,2011.6874};
+					positionASL[]={3306.2866,124.8779,2011.6874};
+					special="CAN_COLLIDE";
+					id=97;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_434";
+					description="T-72 Gunner";
+				};
+			};
+		};
+		class Item22
+		{
+			side="EAST";
+			name="1-1-F-5";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3302.1765,124.82298,2027.2349};
+					positionASL[]={3302.1765,124.82298,2027.2349};
+					special="CAN_COLLIDE";
+					id=98;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_435";
+					description="T-72 Commander";
+				};
+				class Item1
+				{
+					position[]={3302.1765,124.82298,2027.2349};
+					positionASL[]={3302.1765,124.82298,2027.2349};
+					special="CAN_COLLIDE";
+					id=99;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_436";
+					description="T-72 Driver";
+				};
+				class Item2
+				{
+					position[]={3302.1765,124.82298,2027.2349};
+					positionASL[]={3302.1765,124.82298,2027.2349};
+					special="CAN_COLLIDE";
+					id=100;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_437";
+					description="T-72 Gunner";
+				};
+			};
+		};
+		class Item23
+		{
+			side="WEST";
+			name="1-1-B-4";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3672.1462,122.21287,1805.4093};
+					positionASL[]={3672.1462,122.21287,1805.4093};
+					special="CAN_COLLIDE";
+					id=104;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_108";
+					description="M1A2 - AT load Commander";
+				};
+				class Item1
+				{
+					position[]={3672.1462,122.21287,1805.4093};
+					positionASL[]={3672.1462,122.21287,1805.4093};
+					special="CAN_COLLIDE";
+					id=105;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_109";
+					description="M1A2 - AT load Gunner";
+				};
+				class Item2
+				{
+					position[]={3672.1462,122.21287,1805.4093};
+					positionASL[]={3672.1462,122.21287,1805.4093};
+					special="CAN_COLLIDE";
+					id=112;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_110";
+					description="M1A2 - AT load Loader";
+				};
+				class Item3
+				{
+					position[]={3672.1462,122.21287,1805.4093};
+					positionASL[]={3672.1462,122.21287,1805.4093};
+					special="CAN_COLLIDE";
+					id=113;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_111";
+					description="M1A2 - AT load Driver";
+				};
+			};
+		};
+		class Item24
+		{
+			side="EAST";
+			name="1-1-F-8";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3356.9565,122.8234,1799.9524};
+					positionASL[]={3356.9565,122.8234,1799.9524};
+					special="CAN_COLLIDE";
+					id=106;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_456";
+					description="T-72 Commander";
+				};
+				class Item1
+				{
+					position[]={3356.9565,122.8234,1799.9524};
+					positionASL[]={3356.9565,122.8234,1799.9524};
+					special="CAN_COLLIDE";
+					id=107;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_457";
+					description="T-72 Driver";
+				};
+				class Item2
+				{
+					position[]={3356.9565,122.8234,1799.9524};
+					positionASL[]={3356.9565,122.8234,1799.9524};
+					special="CAN_COLLIDE";
+					id=108;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_458";
+					description="T-72 Gunner";
+				};
+			};
+		};
+		class Item25
+		{
+			side="EAST";
+			name="1-1-F-9";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3352.8462,122.94287,1815.4998};
+					positionASL[]={3352.8462,122.94287,1815.4998};
+					special="CAN_COLLIDE";
+					id=109;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_459";
+					description="T-72 Commander";
+				};
+				class Item1
+				{
+					position[]={3352.8462,122.94287,1815.4998};
+					positionASL[]={3352.8462,122.94287,1815.4998};
+					special="CAN_COLLIDE";
+					id=110;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_460";
+					description="T-72 Driver";
+				};
+				class Item2
+				{
+					position[]={3352.8462,122.94287,1815.4998};
+					positionASL[]={3352.8462,122.94287,1815.4998};
+					special="CAN_COLLIDE";
+					id=111;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_461";
+					description="T-72 Gunner";
+				};
+			};
+		};
+		class Item26
+		{
+			side="EAST";
+			name="1-1-G-1";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3330.5671,123.81207,1858.7261};
+					positionASL[]={3330.5671,123.81207,1858.7261};
+					special="CAN_COLLIDE";
+					id=115;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_468";
+					description="T-72 Commander";
+				};
+				class Item1
+				{
+					position[]={3330.5671,123.81207,1858.7261};
+					positionASL[]={3330.5671,123.81207,1858.7261};
+					special="CAN_COLLIDE";
+					id=116;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_469";
+					description="T-72 Driver";
+				};
+				class Item2
+				{
+					position[]={3330.5671,123.81207,1858.7261};
+					positionASL[]={3330.5671,123.81207,1858.7261};
+					special="CAN_COLLIDE";
+					id=117;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_470";
+					description="T-72 Gunner";
+				};
+			};
+		};
+		class Item27
+		{
+			side="EAST";
+			name="1-1-G-2";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3328.6138,123.9484,1889.6825};
+					positionASL[]={3328.6138,123.9484,1889.6825};
+					special="CAN_COLLIDE";
+					id=118;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_471";
+					description="T-72 Commander";
+				};
+				class Item1
+				{
+					position[]={3328.6138,123.9484,1889.6825};
+					positionASL[]={3328.6138,123.9484,1889.6825};
+					special="CAN_COLLIDE";
+					id=119;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_472";
+					description="T-72 Driver";
+				};
+				class Item2
+				{
+					position[]={3328.6138,123.9484,1889.6825};
+					positionASL[]={3328.6138,123.9484,1889.6825};
+					special="CAN_COLLIDE";
+					id=120;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_473";
+					description="T-72 Gunner";
+				};
+			};
+		};
+		class Item28
+		{
+			side="EAST";
+			name="1-1-H-4";
+			class Vehicles
+			{
+				items=5;
+				class Item0
+				{
+					position[]={3329.1995,125.20768,1985.8976};
+					positionASL[]={3329.1995,125.20768,1985.8976};
+					special="CAN_COLLIDE";
+					id=122;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_474";
+					description="BMP-3 Commander";
+				};
+				class Item1
+				{
+					position[]={3329.1995,125.20768,1985.8976};
+					positionASL[]={3329.1995,125.20768,1985.8976};
+					special="CAN_COLLIDE";
+					id=123;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_475";
+					description="BMP-3 Driver";
+				};
+				class Item2
+				{
+					position[]={3329.1995,125.20768,1985.8976};
+					positionASL[]={3329.1995,125.20768,1985.8976};
+					special="CAN_COLLIDE";
+					id=124;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_476";
+					description="BMP-3 Gunner";
+				};
+				class Item3
+				{
+					position[]={3329.1995,125.20768,1985.8976};
+					positionASL[]={3329.1995,125.20768,1985.8976};
+					special="CAN_COLLIDE";
+					id=125;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_477";
+					description="BMP-3 Gunner";
+				};
+				class Item4
+				{
+					position[]={3329.1995,125.20768,1985.8976};
+					positionASL[]={3329.1995,125.20768,1985.8976};
+					special="CAN_COLLIDE";
+					id=126;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_478";
+					description="BMP-3 Gunner";
+				};
+			};
+		};
+		class Item29
+		{
+			side="EAST";
+			name="1-1-H-5";
+			class Vehicles
+			{
+				items=5;
+				class Item0
+				{
+					position[]={3357.2339,123.84525,1875.7007};
+					positionASL[]={3357.2339,123.84525,1875.7007};
+					special="CAN_COLLIDE";
+					id=127;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_484";
+					description="BMP-3 Commander";
+				};
+				class Item1
+				{
+					position[]={3357.2339,123.84525,1875.7007};
+					positionASL[]={3357.2339,123.84525,1875.7007};
+					special="CAN_COLLIDE";
+					id=128;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_485";
+					description="BMP-3 Gunner";
+				};
+				class Item2
+				{
+					position[]={3357.2339,123.84525,1875.7007};
+					positionASL[]={3357.2339,123.84525,1875.7007};
+					special="CAN_COLLIDE";
+					id=129;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_486";
+					description="BMP-3 Gunner";
+				};
+				class Item3
+				{
+					position[]={3357.2339,123.84525,1875.7007};
+					positionASL[]={3357.2339,123.84525,1875.7007};
+					special="CAN_COLLIDE";
+					id=130;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_487";
+					description="BMP-3 Gunner";
+				};
+				class Item4
+				{
+					position[]={3357.2339,123.84525,1875.7007};
+					positionASL[]={3357.2339,123.84525,1875.7007};
+					special="CAN_COLLIDE";
+					id=131;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_488";
+					description="BMP-3 Driver";
+				};
+			};
+		};
+		class Item30
+		{
+			side="WEST";
+			name="1-1-B-7";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3558.6504,131.46407,2158.4023};
+					positionASL[]={3558.6504,131.46407,2158.4023};
+					special="CAN_COLLIDE";
+					id=132;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_132";
+					description="M2A3 Bradley Commander";
+				};
+				class Item1
+				{
+					position[]={3558.6504,131.46407,2158.4023};
+					positionASL[]={3558.6504,131.46407,2158.4023};
+					special="CAN_COLLIDE";
+					id=138;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_133";
+					description="M2A3 Bradley Driver";
+				};
+				class Item2
+				{
+					position[]={3558.6504,131.46407,2158.4023};
+					positionASL[]={3558.6504,131.46407,2158.4023};
+					special="CAN_COLLIDE";
+					id=139;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_134";
+					description="M2A3 Bradley Gunner";
+				};
+			};
+		};
+		class Item31
+		{
+			side="EAST";
+			name="1-1-H-6";
+			class Vehicles
+			{
+				items=5;
+				class Item0
+				{
+					position[]={3367.1875,123.44659,1845.4817};
+					positionASL[]={3367.1875,123.44659,1845.4817};
+					special="CAN_COLLIDE";
+					id=133;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_494";
+					description="BMP-3 Commander";
+				};
+				class Item1
+				{
+					position[]={3367.1875,123.44659,1845.4817};
+					positionASL[]={3367.1875,123.44659,1845.4817};
+					special="CAN_COLLIDE";
+					id=134;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_495";
+					description="BMP-3 Gunner";
+				};
+				class Item2
+				{
+					position[]={3367.1875,123.44659,1845.4817};
+					positionASL[]={3367.1875,123.44659,1845.4817};
+					special="CAN_COLLIDE";
+					id=135;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_496";
+					description="BMP-3 Gunner";
+				};
+				class Item3
+				{
+					position[]={3367.1875,123.44659,1845.4817};
+					positionASL[]={3367.1875,123.44659,1845.4817};
+					special="CAN_COLLIDE";
+					id=136;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_497";
+					description="BMP-3 Gunner";
+				};
+				class Item4
+				{
+					position[]={3367.1875,123.44659,1845.4817};
+					positionASL[]={3367.1875,123.44659,1845.4817};
+					special="CAN_COLLIDE";
+					id=137;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_498";
+					description="BMP-3 Driver";
+				};
+			};
+		};
+		class Item32
+		{
+			side="EAST";
+			name="1-1-H-7";
+			class Vehicles
+			{
+				items=5;
+				class Item0
+				{
+					position[]={3410.3643,121.77481,1764.3286};
+					positionASL[]={3410.3643,121.77481,1764.3286};
+					special="CAN_COLLIDE";
+					id=140;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_504";
+					description="BMP-3 Commander";
+				};
+				class Item1
+				{
+					position[]={3410.3643,121.77481,1764.3286};
+					positionASL[]={3410.3643,121.77481,1764.3286};
+					special="CAN_COLLIDE";
+					id=141;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_505";
+					description="BMP-3 Gunner";
+				};
+				class Item2
+				{
+					position[]={3410.3643,121.77481,1764.3286};
+					positionASL[]={3410.3643,121.77481,1764.3286};
+					special="CAN_COLLIDE";
+					id=142;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_506";
+					description="BMP-3 Gunner";
+				};
+				class Item3
+				{
+					position[]={3410.3643,121.77481,1764.3286};
+					positionASL[]={3410.3643,121.77481,1764.3286};
+					special="CAN_COLLIDE";
+					id=143;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_507";
+					description="BMP-3 Gunner";
+				};
+				class Item4
+				{
+					position[]={3410.3643,121.77481,1764.3286};
+					positionASL[]={3410.3643,121.77481,1764.3286};
+					special="CAN_COLLIDE";
+					id=144;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_508";
+					description="BMP-3 Driver";
+				};
+			};
+		};
+		class Item33
+		{
+			side="WEST";
+			name="1-1-A-3";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3624.6614,128.1216,2104.2168};
+					positionASL[]={3624.6614,128.1216,2104.2168};
+					special="CAN_COLLIDE";
+					id=145;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					player="PLAY CDG";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_16";
+					description="M1A2 - AT load Commander";
+				};
+				class Item1
+				{
+					position[]={3624.6614,128.1216,2104.2168};
+					positionASL[]={3624.6614,128.1216,2104.2168};
+					special="CAN_COLLIDE";
+					id=152;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_17";
+					description="M1A2 - AT load Gunner";
+				};
+				class Item2
+				{
+					position[]={3624.6614,128.1216,2104.2168};
+					positionASL[]={3624.6614,128.1216,2104.2168};
+					special="CAN_COLLIDE";
+					id=154;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_18";
+					description="M1A2 - AT load Loader";
+				};
+				class Item3
+				{
+					position[]={3624.6614,128.1216,2104.2168};
+					positionASL[]={3624.6614,128.1216,2104.2168};
+					special="CAN_COLLIDE";
+					id=156;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_19";
+					description="M1A2 - AT load Driver";
+				};
+			};
+		};
+		class Item34
+		{
+			side="EAST";
+			name="1-1-H-8";
+			class Vehicles
+			{
+				items=5;
+				class Item0
+				{
+					position[]={3424.5254,121.51279,1742.4198};
+					positionASL[]={3424.5254,121.51279,1742.4198};
+					special="CAN_COLLIDE";
+					id=146;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_514";
+					description="BMP-3 Commander";
+				};
+				class Item1
+				{
+					position[]={3424.5254,121.51279,1742.4198};
+					positionASL[]={3424.5254,121.51279,1742.4198};
+					special="CAN_COLLIDE";
+					id=147;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_515";
+					description="BMP-3 Gunner";
+				};
+				class Item2
+				{
+					position[]={3424.5254,121.51279,1742.4198};
+					positionASL[]={3424.5254,121.51279,1742.4198};
+					special="CAN_COLLIDE";
+					id=148;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_516";
+					description="BMP-3 Gunner";
+				};
+				class Item3
+				{
+					position[]={3424.5254,121.51279,1742.4198};
+					positionASL[]={3424.5254,121.51279,1742.4198};
+					special="CAN_COLLIDE";
+					id=149;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_517";
+					description="BMP-3 Gunner";
+				};
+				class Item4
+				{
+					position[]={3424.5254,121.51279,1742.4198};
+					positionASL[]={3424.5254,121.51279,1742.4198};
+					special="CAN_COLLIDE";
+					id=150;
+					side="EAST";
+					vehicle="vbs2_wp_AFVcrew";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_518";
+					description="BMP-3 Driver";
+				};
+			};
+		};
+		class Item35
+		{
+			side="WEST";
+			name="1-1-A-7";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3630.1423,126.26207,2047.9487};
+					positionASL[]={3630.1423,126.26207,2047.9487};
+					special="CAN_COLLIDE";
+					id=151;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_48";
+					description="M1A2 - AT load Commander";
+				};
+				class Item1
+				{
+					position[]={3630.1423,126.26207,2047.9487};
+					positionASL[]={3630.1423,126.26207,2047.9487};
+					special="CAN_COLLIDE";
+					id=153;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_49";
+					description="M1A2 - AT load Gunner";
+				};
+				class Item2
+				{
+					position[]={3630.1423,126.26207,2047.9487};
+					positionASL[]={3630.1423,126.26207,2047.9487};
+					special="CAN_COLLIDE";
+					id=155;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_50";
+					description="M1A2 - AT load Loader";
+				};
+				class Item3
+				{
+					position[]={3630.1423,126.26207,2047.9487};
+					positionASL[]={3630.1423,126.26207,2047.9487};
+					special="CAN_COLLIDE";
+					id=157;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_51";
+					description="M1A2 - AT load Driver";
+				};
+			};
+		};
+		class Item36
+		{
+			side="WEST";
+			name="1-1-B-9";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3624.8516,129.56506,2146.7251};
+					positionASL[]={3624.8516,129.56506,2146.7251};
+					special="CAN_COLLIDE";
+					id=158;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_147";
+					description="M2A3 Bradley Commander";
+				};
+				class Item1
+				{
+					position[]={3624.8516,129.56506,2146.7251};
+					positionASL[]={3624.8516,129.56506,2146.7251};
+					special="CAN_COLLIDE";
+					id=159;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_148";
+					description="M2A3 Bradley Gunner";
+				};
+				class Item2
+				{
+					position[]={3624.8516,129.56506,2146.7251};
+					positionASL[]={3624.8516,129.56506,2146.7251};
+					special="CAN_COLLIDE";
+					id=174;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_149";
+					description="M2A3 Bradley Driver";
+				};
+			};
+		};
+		class Item37
+		{
+			side="EAST";
+			name="1-1-C-2";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={3245.479,123.96885,2013.6007};
+					positionASL[]={3245.479,123.96885,2013.6007};
+					special="CAN_COLLIDE";
+					id=160;
+					side="EAST";
+					vehicle="vbs2_wp_leader_ak47";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_541";
+				};
+				class Item1
+				{
+					position[]={3242.8638,123.96772,2015.6964};
+					positionASL[]={3242.8638,123.96772,2015.6964};
+					special="CAN_COLLIDE";
+					id=161;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_ak74";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_542";
+				};
+				class Item2
+				{
+					position[]={3238.2295,123.91706,2018.9288};
+					positionASL[]={3238.2295,123.91706,2018.9288};
+					special="CAN_COLLIDE";
+					id=162;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_ak74";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_543";
+				};
+				class Item3
+				{
+					position[]={3242.4963,123.91384,2008.0521};
+					positionASL[]={3242.4963,123.91384,2008.0521};
+					special="CAN_COLLIDE";
+					id=163;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_at13";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_544";
+				};
+				class Item4
+				{
+					position[]={3239.3435,123.89006,2003.3539};
+					positionASL[]={3239.3435,123.89006,2003.3539};
+					special="CAN_COLLIDE";
+					id=164;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_rpg";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_545";
+				};
+				class Item5
+				{
+					position[]={3236.1514,123.86808,1999.4562};
+					positionASL[]={3236.1514,123.86808,1999.4562};
+					special="CAN_COLLIDE";
+					id=165;
+					side="EAST";
+					vehicle="vbs2_wp_machinegunner_pk";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_546";
+				};
+				class Item6
+				{
+					position[]={3233.1348,123.85649,2021.5731};
+					positionASL[]={3233.1348,123.85649,2021.5731};
+					special="CAN_COLLIDE";
+					id=166;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_rpg";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_547";
+				};
+			};
+		};
+		class Item38
+		{
+			side="EAST";
+			name="1-1-B-4";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={3365.1667,121.54615,1731.7729};
+					positionASL[]={3365.1667,121.54615,1731.7729};
+					special="CAN_COLLIDE";
+					id=167;
+					side="EAST";
+					vehicle="vbs2_wp_leader_ak47";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_562";
+				};
+				class Item1
+				{
+					position[]={3362.5515,121.545,1733.8687};
+					positionASL[]={3362.5515,121.545,1733.8687};
+					special="CAN_COLLIDE";
+					id=168;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_ak74";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_563";
+				};
+				class Item2
+				{
+					position[]={3357.9172,121.49436,1737.1011};
+					positionASL[]={3357.9172,121.49436,1737.1011};
+					special="CAN_COLLIDE";
+					id=169;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_ak74";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_564";
+				};
+				class Item3
+				{
+					position[]={3362.1841,121.49115,1726.2244};
+					positionASL[]={3362.1841,121.49115,1726.2244};
+					special="CAN_COLLIDE";
+					id=170;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_at13";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_565";
+				};
+				class Item4
+				{
+					position[]={3359.0313,121.46736,1721.5261};
+					positionASL[]={3359.0313,121.46736,1721.5261};
+					special="CAN_COLLIDE";
+					id=171;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_rpg";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_566";
+				};
+				class Item5
+				{
+					position[]={3355.8391,121.44536,1717.6284};
+					positionASL[]={3355.8391,121.44536,1717.6284};
+					special="CAN_COLLIDE";
+					id=172;
+					side="EAST";
+					vehicle="vbs2_wp_machinegunner_pk";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_567";
+				};
+				class Item6
+				{
+					position[]={3352.8225,121.4338,1739.7454};
+					positionASL[]={3352.8225,121.4338,1739.7454};
+					special="CAN_COLLIDE";
+					id=173;
+					side="EAST";
+					vehicle="vbs2_wp_soldier_rpg";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_568";
+				};
+			};
+		};
+		class Item39
+		{
+			side="WEST";
+			name="1-1-C-1";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3649.6443,125.42984,2051.3567};
+					positionASL[]={3649.6443,125.42984,2051.3567};
+					special="CAN_COLLIDE";
+					id=175;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_153";
+					description="M2A3 Bradley Commander";
+				};
+				class Item1
+				{
+					position[]={3649.6443,125.42984,2051.3567};
+					positionASL[]={3649.6443,125.42984,2051.3567};
+					special="CAN_COLLIDE";
+					id=178;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_154";
+					description="M2A3 Bradley Gunner";
+				};
+				class Item2
+				{
+					position[]={3649.6443,125.42984,2051.3567};
+					positionASL[]={3649.6443,125.42984,2051.3567};
+					special="CAN_COLLIDE";
+					id=179;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_155";
+					description="M2A3 Bradley Driver";
+				};
+			};
+		};
+		class Item40
+		{
+			side="EAST";
+			name="1-1-B-5";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={2055.6941,120.21119,1641.9351};
+					positionASL[]={2055.6941,120.21119,1641.9351};
+					special="CAN_COLLIDE";
+					id=176;
+					side="EAST";
+					vehicle="vbs2_wp_pilot_heli";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_576";
+					description="Mi-24V - YAK-B, S5, AT-9 Pilot";
+				};
+				class Item1
+				{
+					position[]={2055.6941,120.21119,1641.9351};
+					positionASL[]={2055.6941,120.21119,1641.9351};
+					special="CAN_COLLIDE";
+					id=177;
+					side="EAST";
+					vehicle="vbs2_wp_pilot_heli";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_577";
+					description="Mi-24V - YAK-B, S5, AT-9 Copilot";
+				};
+			};
+		};
+		class Item41
+		{
+			side="WEST";
+			name="1-1-C-2";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3654.5239,122.75114,1953.0536};
+					positionASL[]={3654.5239,122.75114,1953.0536};
+					special="CAN_COLLIDE";
+					id=180;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_159";
+					description="M2A3 Bradley Commander";
+				};
+				class Item1
+				{
+					position[]={3654.5239,122.75114,1953.0536};
+					positionASL[]={3654.5239,122.75114,1953.0536};
+					special="CAN_COLLIDE";
+					id=181;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_160";
+					description="M2A3 Bradley Gunner";
+				};
+				class Item2
+				{
+					position[]={3654.5239,122.75114,1953.0536};
+					positionASL[]={3654.5239,122.75114,1953.0536};
+					special="CAN_COLLIDE";
+					id=184;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_161";
+					description="M2A3 Bradley Driver";
+				};
+			};
+		};
+		class Item42
+		{
+			side="EAST";
+			name="1-1-B-7";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={2026.2094,120.73114,1626.1265};
+					positionASL[]={2026.2094,120.73114,1626.1265};
+					special="CAN_COLLIDE";
+					id=182;
+					side="EAST";
+					vehicle="vbs2_wp_pilot_heli";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_584";
+					description="Mi-24V - YAK-B, S5, AT-9 Pilot";
+				};
+				class Item1
+				{
+					position[]={2026.2094,120.73114,1626.1265};
+					positionASL[]={2026.2094,120.73114,1626.1265};
+					special="CAN_COLLIDE";
+					id=183;
+					side="EAST";
+					vehicle="vbs2_wp_pilot_heli";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_585";
+					description="Mi-24V - YAK-B, S5, AT-9 Copilot";
+				};
+			};
+		};
+		class Item43
+		{
+			side="WEST";
+			name="1-1-C-3";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3675.7019,122.08928,1911.0226};
+					positionASL[]={3675.7019,122.08928,1911.0226};
+					special="CAN_COLLIDE";
+					id=185;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_165";
+					description="M2A3 Bradley Commander";
+				};
+				class Item1
+				{
+					position[]={3675.7019,122.08928,1911.0226};
+					positionASL[]={3675.7019,122.08928,1911.0226};
+					special="CAN_COLLIDE";
+					id=188;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_166";
+					description="M2A3 Bradley Gunner";
+				};
+				class Item2
+				{
+					position[]={3675.7019,122.08928,1911.0226};
+					positionASL[]={3675.7019,122.08928,1911.0226};
+					special="CAN_COLLIDE";
+					id=189;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_167";
+					description="M2A3 Bradley Driver";
+				};
+			};
+		};
+		class Item44
+		{
+			side="WEST";
+			name="1-1-D-6";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={4350.1997,119.88749,2540.3184};
+					positionASL[]={4350.1997,119.88749,2540.3184};
+					special="CAN_COLLIDE";
+					id=186;
+					side="WEST";
+					vehicle="vbs_us_army_helipilot_ucp_m_medium_airwarrior_none_m9_a2cu";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_592";
+					description="AH-64D Apache - M230, Hydra, AGM114K Pilot";
+				};
+				class Item1
+				{
+					position[]={4350.1997,119.88749,2540.3184};
+					positionASL[]={4350.1997,119.88749,2540.3184};
+					special="CAN_COLLIDE";
+					id=187;
+					side="WEST";
+					vehicle="vbs_us_army_helipilot_ucp_m_medium_airwarrior_none_m9_a2cu";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_593";
+					description="AH-64D Apache - M230, Hydra, AGM114K Copilot";
+				};
+			};
+		};
+		class Item45
+		{
+			side="WEST";
+			name="1-1-D-7";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={4384.4492,120.18065,2543.5654};
+					positionASL[]={4384.4492,120.18065,2543.5654};
+					special="CAN_COLLIDE";
+					id=190;
+					side="WEST";
+					vehicle="vbs_us_army_helipilot_ucp_m_medium_airwarrior_none_m9_a2cu";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_596";
+					description="AH-64D Apache - M230, Hydra, AGM114K Pilot";
+				};
+				class Item1
+				{
+					position[]={4384.4492,120.18065,2543.5654};
+					positionASL[]={4384.4492,120.18065,2543.5654};
+					special="CAN_COLLIDE";
+					id=191;
+					side="WEST";
+					vehicle="vbs_us_army_helipilot_ucp_m_medium_airwarrior_none_m9_a2cu";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_597";
+					description="AH-64D Apache - M230, Hydra, AGM114K Copilot";
+				};
+			};
+		};
+		class Item46
+		{
+			side="WEST";
+			name="1-1-A-1";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={3592.8601,130.27219,2124.772};
+					positionASL[]={3592.8601,130.27219,2124.772};
+					special="CAN_COLLIDE";
+					id=192;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					player="PLAY CDG";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_0";
+					description="M1A2 - AT load Commander";
+				};
+				class Item1
+				{
+					position[]={3592.8601,130.27219,2124.772};
+					positionASL[]={3592.8601,130.27219,2124.772};
+					special="CAN_COLLIDE";
+					id=200;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					player="PLAY CDG";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_2";
+					description="M1A2 - AT load Gunner";
+				};
+				class Item2
+				{
+					position[]={3592.8601,130.27219,2124.772};
+					positionASL[]={3592.8601,130.27219,2124.772};
+					special="CAN_COLLIDE";
+					id=201;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					player="PLAY CDG";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_3";
+					description="M1A2 - AT load Loader";
+				};
+				class Item3
+				{
+					position[]={3592.8601,130.27219,2124.772};
+					positionASL[]={3592.8601,130.27219,2124.772};
+					special="CAN_COLLIDE";
+					id=202;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					player="PLAY CDG";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_1";
+					description="M1A2 - AT load Driver";
+				};
+			};
+		};
+		class Item47
+		{
+			side="WEST";
+			name="1-1-C-4";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3682.6555,122.17825,1883.7772};
+					positionASL[]={3682.6555,122.17825,1883.7772};
+					special="CAN_COLLIDE";
+					id=193;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_171";
+					description="M2A3 Bradley Commander";
+				};
+				class Item1
+				{
+					position[]={3682.6555,122.17825,1883.7772};
+					positionASL[]={3682.6555,122.17825,1883.7772};
+					special="CAN_COLLIDE";
+					id=196;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_172";
+					description="M2A3 Bradley Gunner";
+				};
+				class Item2
+				{
+					position[]={3682.6555,122.17825,1883.7772};
+					positionASL[]={3682.6555,122.17825,1883.7772};
+					special="CAN_COLLIDE";
+					id=199;
+					side="WEST";
+					vehicle="vbs2_us_army_afvcrew_ucp_m_medium_iotv_none_m4cco";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_173";
+					description="M2A3 Bradley Driver";
+				};
+			};
+		};
+		class Item48
+		{
+			side="WEST";
+			name="1-1-D-8";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={4356.7852,120.22168,2579.239};
+					positionASL[]={4356.7852,120.22168,2579.239};
+					special="CAN_COLLIDE";
+					id=194;
+					side="WEST";
+					vehicle="vbs_us_army_helipilot_ucp_m_medium_airwarrior_none_m9_a2cu";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_600";
+					description="AH-64D Apache - M230, Hydra, AGM114K Pilot";
+				};
+				class Item1
+				{
+					position[]={4356.7852,120.22168,2579.239};
+					positionASL[]={4356.7852,120.22168,2579.239};
+					special="CAN_COLLIDE";
+					id=195;
+					side="WEST";
+					vehicle="vbs_us_army_helipilot_ucp_m_medium_airwarrior_none_m9_a2cu";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_601";
+					description="AH-64D Apache - M230, Hydra, AGM114K Copilot";
+				};
+			};
+		};
+		class Item49
+		{
+			side="WEST";
+			name="1-1-D-9";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={4386.1187,120.6277,2573.2102};
+					positionASL[]={4386.1187,120.6277,2573.2102};
+					special="CAN_COLLIDE";
+					id=197;
+					side="WEST";
+					vehicle="vbs_us_army_helipilot_ucp_m_medium_airwarrior_none_m9_a2cu";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_604";
+					description="AH-64D Apache - M230, Hydra, AGM114K Pilot";
+				};
+				class Item1
+				{
+					position[]={4386.1187,120.6277,2573.2102};
+					positionASL[]={4386.1187,120.6277,2573.2102};
+					special="CAN_COLLIDE";
+					id=198;
+					side="WEST";
+					vehicle="vbs_us_army_helipilot_ucp_m_medium_airwarrior_none_m9_a2cu";
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_605";
+					description="AH-64D Apache - M230, Hydra, AGM114K Copilot";
+				};
+			};
+		};
+		class Item50
+		{
+			side="CIV";
+			name="1-1-A-1";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3399.0833,126.37329,1972.0795};
+					positionASL[]={3399.0833,126.37329,1972.0795};
+					special="CAN_COLLIDE";
+					id=203;
+					side="CIV";
+					vehicle="tboc_invisible_spectator_camera";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rankName="PRIVATE";
+					skill=0.60000002;
+					text="unit_606";
+				};
+			};
+		};
+	};
+	Biotope="<?xml version=""1.0"" encoding=""utf-8"" ?>" \n "<Plant root="""">" \n "    <Components />" \n "</Plant>" \n "";
+	BiotopeFile="";
+	class DeletedMapObjects
+	{
+		items=0;
+	};
+	TerrainModifs[]={0,0,0,0,0};
+	RiverModifs[]={0,0,0,0,0};
+	SnowModifs[]={0,0,0,0,0};
+	SeastatesRandomSeed=3714708;
+};
+class Intro
+{
+	randomSeed=10296299;
+	class Intel
+	{
+		startWeather=0;
+		forecastWeather=0;
+		year=2010;
+		month=9;
+		day=13;
+		hour=12;
+		minute=0;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	Biotope="<?xml version=""1.0"" encoding=""utf-8"" ?>" \n "<Plant root="""">" \n "    <Components />" \n "</Plant>" \n "";
+	BiotopeFile="";
+	class DeletedMapObjects
+	{
+		items=0;
+	};
+	TerrainModifs[]={0,0,0,0,0};
+	RiverModifs[]={0,0,0,0,0};
+	SnowModifs[]={0,0,0,0,0};
+	SeastatesRandomSeed=3714708;
+};
+class OutroWin
+{
+	randomSeed=7948861;
+	class Intel
+	{
+		startWeather=0;
+		forecastWeather=0;
+		year=2010;
+		month=9;
+		day=13;
+		hour=12;
+		minute=0;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	Biotope="<?xml version=""1.0"" encoding=""utf-8"" ?>" \n "<Plant root="""">" \n "    <Components />" \n "</Plant>" \n "";
+	BiotopeFile="";
+	class DeletedMapObjects
+	{
+		items=0;
+	};
+	TerrainModifs[]={0,0,0,0,0};
+	RiverModifs[]={0,0,0,0,0};
+	SnowModifs[]={0,0,0,0,0};
+	SeastatesRandomSeed=3714708;
+};
+class OutroLoose
+{
+	randomSeed=2667259;
+	class Intel
+	{
+		startWeather=0;
+		forecastWeather=0;
+		year=2010;
+		month=9;
+		day=13;
+		hour=12;
+		minute=0;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	Biotope="<?xml version=""1.0"" encoding=""utf-8"" ?>" \n "<Plant root="""">" \n "    <Components />" \n "</Plant>" \n "";
+	BiotopeFile="";
+	class DeletedMapObjects
+	{
+		items=0;
+	};
+	TerrainModifs[]={0,0,0,0,0};
+	RiverModifs[]={0,0,0,0,0};
+	SnowModifs[]={0,0,0,0,0};
+	SeastatesRandomSeed=3714708;
+};
