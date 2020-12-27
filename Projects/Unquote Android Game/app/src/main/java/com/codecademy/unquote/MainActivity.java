@@ -73,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
         questions = new ArrayList<>();
 
         // TODO 2-H: Provide actual drawables for each of these questions!
-        Question question0 = new Question(0, "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question1 = new Question(0, "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question2 = new Question(0, "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question3 = new Question(0, "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question4 = new Question(0, "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
-        Question question5 = new Question(0, "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
+        Question question0 = new Question(R.drawable.img_quote_0.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
+        Question question1 = new Question(R.drawable.img_quote_1.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
+        Question question2 = new Question(R.drawable.img_quote_2.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
+        Question question3 = new Question(R.drawable.img_quote_3.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
+        Question question4 = new Question(R.drawable.img_quote_4.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
+        Question question5 = new Question(R.drawable.img_quote_5.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
 
         questions.add(question0);
         questions.add(question1);
