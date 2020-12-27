@@ -128,19 +128,29 @@ public class MainActivity extends AppCompatActivity {
         }
 
         questions.remove(currentQuestion);
-        
+
         displayQuestionsRemaining(questions.size());
 
         if (questions.size() == 0) {
             String gameOverMessage = getGameOverMessage(totalCorrect, totalQuestions);
 
-            // TODO 5-D: Show a popup instead
-            System.out.println(gameOverMessage);
+
+            AlertDialog.Builder gameOverDialogBuilder = new AlertDialog.Builder(MainActivity.this);
+            gameOverDialogBuilder.setCancelable(false);
+            gameOverDialogBuilder.setTitle("Game over!");
+            gameOverDialogBuilder.setMessage(gameOverMessage);
+            gameOverDialogBuilder.setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    startNewGame();
+                }
+            });
+            gameOverDialogBuilder.create().show();
         } else {
             chooseNewQuestion();
 
-            // TODO 3-H.i: uncomment after implementing displayQuestion(Question)
-            // displayQuestion(getCurrentQuestion());
+
+            displayQuestion(getCurrentQuestion());
         }
     }
 
