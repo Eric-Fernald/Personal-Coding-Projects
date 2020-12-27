@@ -46,8 +46,38 @@ public class MainActivity extends AppCompatActivity {
         answer2Button = findViewById(R.id.btn_main_answer_2);
         answer3Button = findViewById(R.id.btn_main_answer_3);
         submitButton = findViewById(R.id.btn_main_submit_answer);
-        // TODO 4-E: set onClickListener for each answer Button
 
+        answer0Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onAnswerSelected(0);
+            }
+        });
+        answer1Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onAnswerSelected(1);
+            }
+        });
+        answer2Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onAnswerSelected(2);
+            }
+        });
+        answer3Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onAnswerSelected(3);
+            }
+        });
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onAnswerSubmission();
+            }
+        });
+        startNewGame();
         // TODO 5-A: set onClickListener for the submit answer Button
 
         startNewGame();
