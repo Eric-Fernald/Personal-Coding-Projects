@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // TODO 2-G: Show app icon in ActionBar
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.drawable.ic_unquote_icon);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
@@ -72,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
     void startNewGame() {
         questions = new ArrayList<>();
 
-        // TODO 2-H: Provide actual drawables for each of these questions!
         Question question0 = new Question(R.drawable.img_quote_0.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
         Question question1 = new Question(R.drawable.img_quote_1.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
         Question question2 = new Question(R.drawable.img_quote_2.png), "This is a test question!", "Test Answer 0", "Test Answer 1", "Test Answer 2", "Test Answer 3", 2);
