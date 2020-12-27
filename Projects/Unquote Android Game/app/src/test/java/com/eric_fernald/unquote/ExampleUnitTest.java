@@ -1,4 +1,4 @@
-package com.codecademy.unquote;
+package com.eric_fernald.unquote;
 
 import org.junit.Test;
 

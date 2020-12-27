@@ -1,4 +1,4 @@
-package com.codecademy.unquote;
+package com.eric_fernald.unquote;
 
 public class Question {
 
@@ -22,13 +22,13 @@ public class Question {
         questionText = questionString;
         answer0 = answerZero;
         answer1 = answerOne;
-        answer2 = answerTwp;
+        answer2 = answerTwo;
         answer3 = answerThree;
         correctAnswer = correctAnswerIndex;
         playerAnswer = -1;
     }
 
     public boolean isCorrect() {
-        return userAnswer == correctAnswer;
+        return playerAnswer == correctAnswer;
     }
 }
