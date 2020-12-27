@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<GameData>
+	<LocalizedText>
+		<!--CIVILIZATION-->
+		<Row Tag="LOC_CIVILIZATION_PTH_HATTENGAARD_NAME" Language="en_US">
+			<Text>Hattengaard</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PTH_HATTENGAARD_DESCRIPTION" Language="en_US">
+			<Text>Hattengaard</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PTH_HATTENGAARD_ADJECTIVE" Language="en_US">
+			<Text>Hattengaardian</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PTH_HATTENGAARD_DESCRIPTION_PTH_CIVILIZATION" Language="en_US">
+			<Text>Hattengaard</Text>
+		</Row>
+		<!--Pedia-->
+		<Row Tag="LOC_CIVINFO_PTH_HATTENGAARD_LOCATION" Language="en_US">
+			<Text>Europe</Text>
+		</Row>
+		<Row Tag="LOC_CIVINFO_PTH_HATTENGAARD_POPULATION" Language="en_US">
+			<Text>We're too drunk to take a census.</Text>
+		</Row>
+		<Row Tag="LOC_CIVINFO_PTH_HATTENGAARD_SIZE" Language="en_US">
+			<Text>Well that depends. How many vodka bottles are in a kilometer?</Text>
+		</Row>
+		<Row Tag="LOC_CIVINFO_PTH_HATTENGAARD_CAPITAL" Language="en_US">
+			<Text>Hattengaard</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_PTH_HATTENGAARD_CHAPTER_HISTORY_PARA_1" Language="en_US">
+			<Text>Top Hats Exposed: Part 1</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_PTH_HATTENGAARD_CHAPTER_HISTORY_PARA_2" Language="en_US">
+			<Text>Top Hats Exposed: Part 2</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_PTH_HATTENGAARD_CHAPTER_HISTORY_PARA_3" Language="en_US">
+			<Text>Top Hats Exposed: Part 3</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_PTH_HATTENGAARD_CHAPTER_HISTORY_PARA_4" Language="en_US">
+			<Text>Top Hats Exposed: Part 4</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_PTH_HATTENGAARD_CHAPTER_HISTORY_PARA_5" Language="en_US">
+			<Text>Top Hats Exposed: Part 5</Text>
+		</Row>
+		
+		
+		<!--Cities-->
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_1" Language="en_US">
+			<Text>Hattengaard</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_2" Language="en_US">
+			<Text>Melrakkanes</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_3" Language="en_US">
+			<Text>Kollshamarr</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_4" Language="en_US">
+			<Text>Deildara </Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_5" Language="en_US">
+			<Text>Brynjudalr</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_6" Language="en_US">
+			<Text>Skorraholt</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_7" Language="en_US">
+			<Text>Lysa</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_8" Language="en_US">
+			<Text>Hakonarhella</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_9" Language="en_US">
+			<Text>Ladytopjod</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_10" Language="en_US">
+			<Text>Brattahlio</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_11" Language="en_US">
+			<Text>Bramsloekr</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_12" Language="en_US">
+			<Text>Hvalsey</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_13" Language="en_US">
+			<Text>Lofot</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_14" Language="en_US">
+			<Text>Kvia</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_15" Language="en_US">
+			<Text>Hatropolis</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_16" Language="en_US">
+			<Text>Oddsass</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_17" Language="en_US">
+			<Text></Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_18" Language="en_US">
+			<Text>Lonlond</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_19" Language="en_US">
+			<Text>Berserkseyrr</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_20" Language="en_US">
+			<Text>Landeyjar</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_21" Language="en_US">
+			<Text>Skagi</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_22" Language="en_US">
+			<Text>Grjota</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_23" Language="en_US">
+			<Text>Fjoll</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_24" Language="en_US">
+			<Text>Kolbeinsstaoir</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_25" Language="en_US">
+			<Text>Skalmarnes</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_26" Language="en_US">
+			<Text>Alfsoss</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_27" Language="en_US">
+			<Text>Hofsfell</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_28" Language="en_US">
+			<Text>Gaular</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_29" Language="en_US">
+			<Text>Akranes</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PTH_HATTENGAARD_30" Language="en_US">
+			<Text>Gil</Text>
+		</Row>
+		
+		
+		
+		<!--Citizens-->
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MALE_1" Language="en_US">
+			<Text>Potato Pole</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MALE_2" Language="en_US">
+			<Text>Past THaC</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MALE_3" Language="en_US">
+			<Text>Drunken7Dragoon</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MALE_4" Language="en_US">
+			<Text>Sith Lord THaC</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MALE_5" Language="en_US">
+			<Text>SpaceCouncil</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MALE_6" Language="en_US">
+			<Text>James R. Basterd</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MALE_7" Language="en_US">
+			<Text>Hammer</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MALE_8" Language="en_US">
+			<Text>Chris4197</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MALE_9" Language="en_US">
+			<Text>JonathanExley</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_MALE_1" Language="en_US">
+			<Text>PotatoHollow</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_MALE_2" Language="en_US">
+			<Text>PartTim3Hobo</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_MALE_3" Language="en_US">
+			<Text>Dugachug</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_MALE_4" Language="en_US">
+			<Text>OppressorFessor</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_MALE_5" Language="en_US">
+			<Text>Finntrovert</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_MALE_6" Language="en_US">
+			<Text>WalkerTrips</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_MALE_7" Language="en_US">
+			<Text>oiscream</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_MALE_8" Language="en_US">
+			<Text>LiquidEvilGaming</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_MALE_9" Language="en_US">
+			<Text>Ledger Balance</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_MALE_10" Language="en_US">
+			<Text>Nonthiest Yeast</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_FEMALE_1" Language="en_US">
+			<Text>LadyTopHat</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_FEMALE_2" Language="en_US">
+			<Text>shanarith</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_FEMALE_3" Language="en_US">
+			<Text>RoseLawliet</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_FEMALE_4" Language="en_US">
+			<Text>Meranima</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_FEMALE_5" Language="en_US">
+			<Text>TheCinemaNurse</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_FEMALE_6" Language="en_US">
+			<Text>Missye042</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_FEMALE_7" Language="en_US">
+			<Text>CuteGamerGrill</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_FEMALE_8" Language="en_US">
+			<Text>Chantel</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_FEMALE_9" Language="en_US">
+			<Text>Jynxed</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_FEMALE_10" Language="en_US">
+			<Text>Lara</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_FEMALE_1" Language="en_US">
+			<Text>Ashantha</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_FEMALE_2" Language="en_US">
+			<Text>Ladysharp</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_FEMALE_3" Language="en_US">
+			<Text>logicsharpener</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_FEMALE_4" Language="en_US">
+			<Text>BarBot</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_FEMALE_5" Language="en_US">
+			<Text>jonathan's sister</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_FEMALE_6" Language="en_US">
+			<Text>D3moira</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_FEMALE_7" Language="en_US">
+			<Text>helenx_Lutja</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_FEMALE_8" Language="en_US">
+			<Text>The Spanish Inn Physician</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_FEMALE_9" Language="en_US">
+			<Text>Vandipitty</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_PTH_HATTENGAARD_MODERN_FEMALE_10" Language="en_US">
+			<Text>Console Fairy</Text>
+		</Row>
+		
+		
+		
+		<!--LEADER-->
+		<Row Tag="LOC_LEADER_PTH_THAC_NAME" Language="en_US">
+			<Text>Top Hats And Champagne</Text>
+		</Row>
+
+		
+		<!--DOM-->
+		<Row Tag="LOC_LOADING_INFO_LEADER_PTH_THAC" Language="en_US">
+			<Text>Well looks like you've survived another alcoholic poisoning. Hello, my name is Top Hats and Champagne. Welcome to Hattengaard where we're ruled by drunks and vikings alike.</Text>
+		</Row>
+		
+		
+		<!--Civilopedia-->
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_PTH_THAC_TITLE" Language="en_US">
+			<Text>Top Hats and Champagne</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_PTH_THAC_SUBTITLE" Language="en_US">
+			<Text>The Plunderer of Alcohol</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_PTH_THAC_QUOTE" Language="en_US">
+			<Text>Don't let a trip to the emergency room stop your love for alcohol. - September 4th, 2017</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_PTH_THAC_CHAPTER_HISTORY_PARA_1" Language="en_US">
+			<Text>
+				Top Hats and Champagne was born in the remote Siberian wilderness. He was raised by a family of wolves. He learned to live off the land until he was 15.
+				He was eventually recruited to serve in the Hitler Youth at a young age when Germany invaded Russia in World War 2.
+				After the war he went into hiding and managed to join Al Qaeda.
+				He was then exiled to the dropbear infested land known as Australia. He started a YouTube channel and Twitch channel in hopes of raising money to one day return to Germany to make Hitler proud.
+				He plans on forcing his Twitch subscribers into a concentration camp to work on potato fields for 16 hours a day. He plans on holding PartTim3Hobo in a cage and forcing me to make weekly highlights for him until he died.
+				Meanwhile all of PartTim3Hobo's hopes and dreams will be burned in a fire. On his Twitch streams he regularly mocks his viewers.
+				He also wields his mods like a powerful oppressive shitlord and times out anyone who falls out of line. He has even revealed on stream multiple times just how much of a degenerate he really is.
+				His wife is also in on the act. Lady Top Hat is secretly preparing a rocket that she is building using Top Hats' Patreon money.
+				It will detonate in London in an attempt to kill all the people who supported Brexit.
+				We cannot allow this to happen. PartTim3Hobo even attempted to send an undercover agent to raid his treasury but he was caught in the act.
+				We must unite as one between both Team Chaos and Team Ordah. We must also get more developers on our side. We must fight back!
+				Or in the words of General The Destroyer "Now it's war. Now it's fucking, fucking war!
+				Shortly after seeing Top Hats get the better hand of several of my generals PartTim3Hobo ran to the CIA to see if they could build him a weapon that could defeat Top Hats and Champagne once and for all.
+				The CIA agreed to start building a secret project titled Project Dugachug.
+			</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_PTH_THAC_CHAPTER_HISTORY_PARA_2" Language="en_US">
+			<Text>
+				The campaign suffered a setback. During the 24 hour stream Top Hats made a secret phone call to Twitch and had PartTim3Hobo timed out for spewing propaganda.
+				Fortunately he was able to work around this by changing his IP address and resuming my propoganda work.
+				This timeout also managed to incite many members into laughter. We could only hope that this raises their morale.
+				So this is all well and good but PartTim3Hobo discovered a new secret.
+				One that may change the outcome of this fight.
+				PartTim3Hobo implanted a camera into Lara's eye.
+				The footage he recovered from her had revealed something about Top Hats and Champagne that he never knew before.
+				Top Hats has managed to invent a cloning machine.
+				He has used this cloning machine to create more copies of himself.
+				He is tried to hide a few of these copies of himself by giving them different nationalities.
+				But PartTim3Hobo managed to hack into his webcam to see exactly what these clones look like.
+				However the cloning technology hasn't been perfected.
+				And let's just say that some of the clones came out...retarded.
+				Seeing as how Top Hats and Champagne had invented his own cloning technology PartTim3Hobo figured he needed to develop his own cloning method.
+				However he decided not to clone himself.
+				So who did he clone?
+				He cloned the nightwalker, who glides through oceans of blood, someone who is beyond human, a monster who's power radiates through the darkness,
+				and cast's a shadow on darkness itself.
+				His name is Hammer. But the best part is, he made his clone German.
+				But before everyone went and started singing the Hell March theme there was one problem.
+				Remember how it said Top Hats' cloning technique wasn't perfected yet?
+				Well neither was ours so our German Hammer clone didn't quite work out.
+				He's roughly what Hammer is but with one major exception.
+				In his desire to expose Top Hats for the man he truly is PartTim3Hobo needed to strike fear into his entire chain of command.
+				He needed someone who can trigger Top Hats with just the sound of his voice.
+				He needed the man who has at one point unleashed a special kind of hell upon Top Hats.
+				This means that he had to turn to someone who has known Top Hats and Champagne for a fairly long time.
+				His name was BulletBarry.
+			</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_PTH_THAC_CHAPTER_HISTORY_PARA_3" Language="en_US">
+			<Text>
+				In Hobo's quest to expose Top Hats and Champagne for the man he truly is, PartTim3Hobo recieved some devastating news.
+				Remember the rocket I told you about back in the first chapter?
+				Well sadly Lady Top Hat has managed to finish the rocket, launch it, and wipe out nearly all of London.
+				Fearing the consequences of their actions Top Hats and Champagne and Lady Top Hat flee into space.
+				They had been preparing for this day for a long time.
+				A call is sent out for all available space fighters in the area to respond.
+				Much to Hobo's delight, there was an overwhelming response.
+				However news of Top Hats fleeing into space was not only recieved by the Top Hatters.
+				There's an old saying that the enemy of my enemy is my friend.
+				Well as it turns out there was a much greater threat than we had anticipated.
+				This forced the Top Hatters to fight together for the greater good of themselves.
+				His name was GeneralTheDestroyer.
+				In the unfolding chaos of the battle he was stealthily taken prisoner by Top Hats and Champagne.
+				He brought me back to Earth and relegated me to his basement.
+				He didn't know what he had planned for him.
+				He knew he had to find a way to escape.
+				You know, there's an old saying out there.
+				The enemy of my enemy is my friend.
+				But very often people leave out the last part of that sentence.
+				The enemy of my enemy is my friend, until he becomes my enemy again.
+			</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_PTH_THAC_CHAPTER_HISTORY_PARA_4" Language="en_US">
+			<Text>
+				And now PartTim3Hobo is in the basement of Top Hats and Champagne's house.
+				He rummaged through his old stuff and found a really old laptop which I'm using to make this video.
+				He wants you all to know that no matter how dire of a situation he may be in, he is always committed to exposing the truth about Top Hats and Champagne.
+				Anyways, once he managed to get his old computer up and running the first thing he did was check his email.
+				He was pleasantly surprised to see that he recieved an email from the CIA with great news.
+				Project Dugachug was a success.
+				However rumors of Top Hats and Champagne's total defeat are greatly exaggerated.
+				There are rumors swirling that Top Hats and Champagne has been practicing relentlessly and may face off against Project Dugachug in the near future.
+				As many of you saw in the last episode of Top Hats Exposed, Hobo was taken prisoner after the space battle against General The Destroyer.
+				PartTim3Hobo was thrown into Top Hats and Champagne's basement and locked down there.
+				But Hobo was not alone.
+				For many years a failed science experiment was trapped down there.
+				Top Hats and Champagne had tried to fuse his DNA with potatoes in an attempt to grow more clones of himself.
+				However things went horribly wrong when the potato began conducting the electricity being sent through the cloning machine.
+				His name was Potato Pole.
+				He told Hobo of the suffering Top Hats and Champagne put him through.
+				Many of you are aware that Top Hats and Champagne drinks large amounts of alcohol on stream.
+				But what you may not be aware of is the fact that Potato Pole is the one brewing all of this alcohol himself.
+				He's forced to betray his one true family, the potatoes, and turn them into potato vodka for Top Hats and Champagne's enjoyment.
+				Top Hats and Champagne often lies about this on stream by saying he buys all of his vodka.
+				He even emotionally abuses Potato Pole to the point where he is incapable of expressing any emotion anymore.
+				The potatoes that Top Hats and Champagne forces his subscribers to mine in the concentration camps are all descendents of Potato Pole.
+				Hobo knew then what he had to do.
+				Hobo had to start a GoFundMe account for Potato Pole and beg for donations to set him free.
+				"For just $10 a month you can help rescue a concentraion camp victim.
+				Your money will go towards paying for Navy SEALS to rescue Potato Pole.
+				You'll recieve weekly updates on how many potatoes were harvested by Potato Pole that week.
+				And if you ever stop paying your subscription Hobo will personally make sure you end up in the same concentration camp as Potato Pole."
+				Hobo knew he had to set Potato Pole free so he could avenge his family.
+				Potato Pole and PartTim3Hobo used the GPS tracking software in Top Hats and Champagne's spaceship to locate where he was going to land.
+				He landed on a small island called Erangel.
+				After learning of this Potato Pole and Hobo had to figure out a way to escape the basement.
+				We basically just walked through the front door because Top Hats and Champagne was too drunk to remember to lock it.
+				From there they hopped on a military cargo plane and took off for Erangel.
+			</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_PTH_THAC_CHAPTER_HISTORY_PARA_5" Language="en_US">
+			<Text>-</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_PTH_THAC_CHAPTER_HISTORY_PARA_6" Language="en_US">
+			<Text>-</Text>
+		</Row>
+		
+		
+		<!--Diplomacy-->
+		<!--FIRST MEET-->
+		<!--First AI line-->
+		<Row Tag="LOC_DIPLO_FIRST_MEET_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Cheers sir or madam, I can't really tell. I'm really drunk. Would you like a glass of champagne?</Text>
+		</Row>
+		<!--AI invitation to visit nearby City-->
+		<Row Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Do you want to come and visit my city? It has cocaine parties all the time.</Text>
+		</Row>
+		<!--AI accepts Human invitation-->
+		<Row Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Let me come and inspect your city, I bet it's not as efficient as mine.</Text>
+		</Row>
+		<!--AI invitation to exchange Capital Information-->
+		<Row Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Let's compare Cities, I know that yours will be trash, but you can look at mine for help!</Text>
+		</Row>
+		<!--GREETINGS-->
+		<Row Tag="LOC_DIPLO_GREETING_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>You alright mate?</Text>
+		</Row>
+		<!--DELEGATION-->
+		<!--AI Accepts-->
+		<Row Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Thanks for the delegation. We'll be sure to get them as drunk as possible before sending them home.</Text>
+		</Row>
+		<!--AI Rejects-->
+		<Row Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Ha, I don't want your delegation they're probably weebs anyway.</Text>
+		</Row>
+		<!--AI Requests -->
+		<Row Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>I have sent you a delegation with champagne and cocaine!</Text>
+		</Row>
+		<!--OPEN BORDERS-->
+		<!--AI accepts from human-->
+		<Row Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Boy you really are as gullible as Merkel. Don't you know open borders never works.</Text>
+		</Row>
+		<!--AI rejects from human-->
+		<Row Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>What are you, some kind of American that likes walls instead? </Text>
+		</Row>
+		<!--AI requests from human-->
+		<Row Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Open your borders... For reasons... Many of which involve cocaine...</Text>
+		</Row>
+		<!--DECLARE FRIENDSHIP-->
+		<!--AI accepts from human-->
+		<Row Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Yeah alright, we can be friends... For now...</Text>
+		</Row>
+		<!--AI Rejects from human -->
+		<Row Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Ha I don't want to be friends with you... Fucking console peasant...</Text>
+		</Row>
+		<!--AI Requests friendship from human-->
+		<Row Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Hey, do you want to be friends? We can team up and wreck those other weebs!</Text>
+		</Row>
+		<!--Human accepts AI requests, AI responds-->
+		<Row Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>My Man!</Text>
+		</Row>
+		<!--Human rejects AI requests, AI responds-->
+		<Row Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>That's fine, it means I can just feed you to Potato Pole instead...</Text>
+		</Row>
+		<!--ALLIANCE-->
+		<!--AI Requests an alliance from human-->
+		<Row Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Join forces with me, and together we will drink all the vodka and snort all the cocaine!</Text>
+		</Row>
+		<!--KUDOS & WARNINGS-->
+		<!--AI Kudos-->
+		<Row Tag="LOC_DIPLO_KUDO_EXIT_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Odin smiles upon you.</Text>
+		</Row>
+		<!--AI Warnings-->
+		<Row Tag="LOC_DIPLO_WARNING_EXIT_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Stop Chrissplaining to me REEEEEEEEEEE!</Text>
+		</Row>
+		<!--AI warns player for border troops-->
+		<Row Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>I see those troops on my borders... And I will farm them for XP if your not careful!</Text>
+		</Row>
+		<!--TRADE-->
+		<!--AI Accepts Deal-->
+		<Row Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>This will go nicely with my alcohol collection.</Text>
+		</Row>
+		<!--AI Rejects Deal-->
+		<Row Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>I reject your deal because I don't just want your men. I want your women and children too.</Text>
+		</Row>
+		<!--DENOUNCE-->
+		<!--From Human-->
+		<Row Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>HAHA! Do you know what? Good... Go ahead and shoot at me in 5 turns... I dare you!</Text>
+		</Row>
+		<!--From AI-->
+		<Row Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Watching you play this game is like watching a Japanese car crash in slow motion. You are inefficient, bad and just a massive weeb. Go learn how to play Civilization from a real Civilization game like CIV 4 you complete twat. (Denounces You)</Text>
+		</Row>
+		<!--DECLARE WAR-->
+		<!--Human Declares War-->
+		<Row Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>OH HELL YEAH! Now we are talking... I have vodka powered nukes by the way...</Text>
+		</Row>
+		<!--AI Declares War-->
+		<Row Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>You have broken rules 1 and 2 too many times! Time to get a swift banhammer to your skull you absolute pest!</Text>
+		</Row>
+		<!--MAKE PEACE-->
+		<!--AI accepts from human-->
+		<Row Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Meh, I was bored anyway... Back to the cocaine snorting and fun times with other men.</Text>
+		</Row>
+		<!--AI refuses human-->
+		<Row Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Did you really just try to offer peace with me? You must be as weak as Console Fairy.</Text>
+		</Row>
+		<!--AI requests from human-->
+		<Row Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Right, I need to go feed Potato Pole in the basement so let's make peace then carry this on later...</Text>
+		</Row>
+		<!--DEFEAT-->
+		<!--AI is Defeated-->
+		<Row Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>I did not click that! Time to save scum! I bet you're playing on settler difficulty! Screw it, I'm going to Valhalla!</Text>
+		</Row>
+		<!--Human is Defeated (will see this in hotseat)-->
+		<Row Tag="LOC_DIPLO_DEFEAT_FROM_HUMAN_LEADER_PTH_THAC_ANY" Language="en_US">
+			<Text>Now just imagine Hollow reaching back with a grenade yelling "Allahu Akbar" and blowing up your capital city. That's what this victory feels like.</Text>
+		</Row>
+
+
+
+
+		
+		
+		
+		
+		
+		
+
+		<!--Traits-->
+		<Row Tag="LOC_TRAIT_LEADER_PTH_THAC_ECO_NAME" Language="en_US">
+			<Text>Top Hat Hoarder</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_PTH_THAC_ECO_DESCRIPTION" Language="en_US">
+			<Text>+1 Extra Economic Slot in any government.</Text>
+		</Row>
+
+
+		<Row Tag="LOC_TRAIT_CIVILIZATION_PTH_GRIND_NAME" Language="en_US">
+			<Text>Viking Blood Line</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_PTH_GRIND_DESCRIPTION" Language="en_US">
+			<Text>+75% Experience for all units. When killing a unit, you recieve [Icon_Gold] Gold equal to it's Combat Strength.</Text>
+		</Row>
+
+
+
+		<Row Tag="LOC_BUILDING_PTH_CUSTOM_NAME" Language="en_US">
+			<Text>The Viking Top Hat Bar</Text>
+		</Row>
+		<Row Tag="LOC_BUILDING_PTH_CUSTOM_DESCRIPTION" Language="en_US">
+			<Text>+5 [Icon_Strength] Combat Strength Vs Barbarians for each Viking Top Hat Bar built.</Text>
+		</Row>
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</LocalizedText>
+</GameData>

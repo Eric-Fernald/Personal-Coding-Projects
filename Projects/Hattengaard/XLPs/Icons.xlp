@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AssetObjects::XLP>
+	<m_Version>
+		<major>4</major>
+		<minor>0</minor>
+		<build>253</build>
+		<revision>293</revision>
+	</m_Version>
+	<m_ClassName text="UITexture"/>
+	<m_PackageName text="Icons"/>
+	<m_Entries>
+		<Element>
+			<m_EntryID text="ICON_THAC_256"/>
+			<m_ObjectName text="ICON_THAC_256"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ICON_THAC_80"/>
+			<m_ObjectName text="ICON_THAC_80"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ICON_THAC_64"/>
+			<m_ObjectName text="ICON_THAC_64"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ICON_THAC_55"/>
+			<m_ObjectName text="ICON_THAC_55"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ICON_THAC_50"/>
+			<m_ObjectName text="ICON_THAC_50"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ICON_THAC_45"/>
+			<m_ObjectName text="ICON_THAC_45"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ICON_THAC_32"/>
+			<m_ObjectName text="ICON_THAC_32"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ICON_HATTENGAARD_256"/>
+			<m_ObjectName text="ICON_HATTENGAARD_256"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ICON_HATTENGAARD_80"/>
+			<m_ObjectName text="ICON_HATTENGAARD_80"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ICON_HATTENGAARD_64"/>
+			<m_ObjectName text="ICON_HATTENGAARD_64"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ICON_HATTENGAARD_55"/>
+			<m_ObjectName text="ICON_HATTENGAARD_55"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ICON_HATTENGAARD_50"/>
+			<m_ObjectName text="ICON_HATTENGAARD_50"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ICON_HATTENGAARD_45"/>
+			<m_ObjectName text="ICON_HATTENGAARD_45"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ICON_HATTENGAARD_32"/>
+			<m_ObjectName text="ICON_HATTENGAARD_32"/>
+		</Element>
+	</m_Entries>
+	<m_AllowedPlatforms>
+		<Element>WINDOWS</Element>
+		<Element>LINUX</Element>
+		<Element>MACOS</Element>
+		<Element>IOS</Element>
+	</m_AllowedPlatforms>
+</AssetObjects::XLP>

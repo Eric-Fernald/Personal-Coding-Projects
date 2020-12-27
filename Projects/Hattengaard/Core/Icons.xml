@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<IconTextureAtlases>
+		<!--Leader Icons-->
+		
+		<Row Name="ICON_ATLAS_THAC" IconSize="32"  IconsPerRow="1" IconsPerColumn="1" Filename="ICON_THAC_32.dds"/>
+		<Row Name="ICON_ATLAS_THAC" IconSize="45"  IconsPerRow="1" IconsPerColumn="1" Filename="ICON_THAC_45.dds"/>
+		<Row Name="ICON_ATLAS_THAC" IconSize="50"  IconsPerRow="1" IconsPerColumn="1" Filename="ICON_THAC_50.dds"/>
+		<Row Name="ICON_ATLAS_THAC" IconSize="55"  IconsPerRow="1" IconsPerColumn="1" Filename="ICON_THAC_55.dds"/>
+		<Row Name="ICON_ATLAS_THAC" IconSize="64"  IconsPerRow="1" IconsPerColumn="1" Filename="ICON_THAC_64.dds"/>
+		<Row Name="ICON_ATLAS_THAC" IconSize="80"  IconsPerRow="1" IconsPerColumn="1" Filename="ICON_THAC_80.dds"/>
+		<Row Name="ICON_ATLAS_THAC" IconSize="256" IconsPerRow="1" IconsPerColumn="1" Filename="ICON_THAC_256.dds"/>
+
+		<!--CIV Icons-->
+
+		<Row Name="ICON_ATLAS_HATTENGAARD" IconSize="32"  IconsPerRow="1" IconsPerColumn="1" Filename="ICON_HATTENGAARD_32.dds"/>
+		<Row Name="ICON_ATLAS_HATTENGAARD" IconSize="45"  IconsPerRow="1" IconsPerColumn="1" Filename="ICON_HATTENGAARD_45.dds"/>
+		<Row Name="ICON_ATLAS_HATTENGAARD" IconSize="50"  IconsPerRow="1" IconsPerColumn="1" Filename="ICON_HATTENGAARD_50.dds"/>
+		<Row Name="ICON_ATLAS_HATTENGAARD" IconSize="55"  IconsPerRow="1" IconsPerColumn="1" Filename="ICON_HATTENGAARD_55.dds"/>
+		<Row Name="ICON_ATLAS_HATTENGAARD" IconSize="64"  IconsPerRow="1" IconsPerColumn="1" Filename="ICON_HATTENGAARD_64.dds"/>
+		<Row Name="ICON_ATLAS_HATTENGAARD" IconSize="80"  IconsPerRow="1" IconsPerColumn="1" Filename="ICON_HATTENGAARD_80.dds"/>
+		<Row Name="ICON_ATLAS_HATTENGAARD" IconSize="256" IconsPerRow="1" IconsPerColumn="1" Filename="ICON_HATTENGAARD_256.dds"/>
+
+
+	</IconTextureAtlases>
+
+	<IconDefinitions>
+		<!--Leader Icons-->
+		<Row Name="ICON_LEADER_PTH_THAC" Atlas="ICON_ATLAS_THAC" Index="0"/>
+
+		<!--Civilization Icons-->
+		<Row Name="ICON_CIVILIZATION_PTH_HATTENGAARD" Atlas="ICON_ATLAS_HATTENGAARD" Index="0"/>
+
+
+		<!--Building Icons-->
+		<Row Name="ICON_BUILDING_PTH_CUSTOM" Atlas="ICON_ATLAS_CIVICS" Index="29"/>
+
+	</IconDefinitions>
+</GameData>

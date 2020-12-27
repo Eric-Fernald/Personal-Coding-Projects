@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="7111051c-0b7c-4baf-b0e6-f71446e7060a" version="1">
+  <Properties>
+    <Name>Hattengaard Civilization - Top Hats and Champagne</Name>
+    <Description>This mod adds the leader Top Hats and Champagne while also adding Hattengaard as a nation.
+You can check him out here: https://www.twitch.tv/thachampagne
+
+Also a special shoutout to WalkerTrips for his help with the art for this mod.
+You can find him here: https://www.twitch.tv/walkertrips
+
+Features:
+- Fully custom civilians with the names of moderators and patrons of Top Hats and Champagne's livestreams.
+- Fully custom AI dialogue with mannerisms and quotes from Top Hats and Champagne.
+- A partial background story of Top Hats and Champagne comprised of the lore found in the Top Hats Exposed video series.
+- Full renaming scheme for all cities to custom Norwegian/Viking city names.
+- Art assets mostly provided by WalkerTrips.
+
+- Unique Building: The Viking Top Hat Bar
++5 Combat Strength Vs Barbarians for each Viking Top Hat Bar built.
+
+- Unique Civ Grind Trait: Viking Blood Line
++75% Experience for all units. When killing a unit, you recieve [Icon_Gold] Gold equal to it's Combat Strength.
+
+- Unique Leader Economy Bonus: Top Hat Hoarder
++1 Extra Economic Slot in any government.</Description>
+    <Teaser>This mod adds the leader Top Hats and Champagne and the nation of Hattengaard.</Teaser>
+    <Authors>PartTim3Hobo</Authors>
+    <SpecialThanks>WalkerTrips</SpecialThanks>
+  </Properties>
+  <FrontEndActions>
+    <UpdateDatabase id="NewAction">
+      <File>Core/Buildings.xml</File>
+      <File>Core/Config.sql</File>
+    </UpdateDatabase>
+    <UpdateIcons id="NewAction">
+      <File>Core/Icons.xml</File>
+    </UpdateIcons>
+    <UpdateText id="NewAction">
+      <File>Core/GameText.xml</File>
+    </UpdateText>
+    <UpdateArt id="NewAction">
+      <File>Hattengaard Civilization - Top Hats and Champagne.dep</File>
+    </UpdateArt>
+  </FrontEndActions>
+  <InGameActions>
+    <UpdateDatabase id="NewAction">
+      <File>Core/Buildings.xml</File>
+      <File>Core/GameDefines.sql</File>
+    </UpdateDatabase>
+    <UpdateIcons id="NewAction">
+      <File>Core/Icons.xml</File>
+    </UpdateIcons>
+    <UpdateText id="NewAction">
+      <File>Core/GameText.xml</File>
+    </UpdateText>
+    <UpdateArt id="NewAction">
+      <File>Hattengaard Civilization - Top Hats and Champagne.dep</File>
+    </UpdateArt>
+  </InGameActions>
+  <Files>
+    <File>ArtDefs/FallbackLeaders.artdef</File>
+    <File>ArtDefs/Leaders.artdef</File>
+    <File>Core/Buildings.xml</File>
+    <File>Core/Config.sql</File>
+    <File>Core/GameDefines.sql</File>
+    <File>Core/GameText.xml</File>
+    <File>Core/Icons.xml</File>
+    <File>Hattengaard Civilization - Top Hats and Champagne.dep</File>
+    <File>Mod.Art.xml</File>
+    <File>Platforms/MacOS/BLPs/Icons.blp</File>
+    <File>Platforms/MacOS/BLPs/LeaderBackgrounds.blp</File>
+    <File>Platforms/MacOS/BLPs/LeaderFallbacks.blp</File>
+    <File>Platforms/MacOS/BLPs/LEADER_PTH_THAC.blp</File>
+    <File>Platforms/MacOS/BLPs/UILeaders.blp</File>
+    <File>Platforms/Windows/BLPs/Icons.blp</File>
+    <File>Platforms/Windows/BLPs/LeaderBackgrounds.blp</File>
+    <File>Platforms/Windows/BLPs/LeaderFallbacks.blp</File>
+    <File>Platforms/Windows/BLPs/LEADER_PTH_THAC.blp</File>
+    <File>Platforms/Windows/BLPs/UILeaders.blp</File>
+    <File>Textures/ART_LEADER_THAC.dds</File>
+    <File>Textures/ART_LEADER_THAC.tex</File>
+    <File>Textures/FALLBACK_NEUTRAL_THAC.dds</File>
+    <File>Textures/FALLBACK_NEUTRAL_THAC.tex</File>
+    <File>Textures/ICON_HATTENGAARD_256.dds</File>
+    <File>Textures/ICON_HATTENGAARD_256.tex</File>
+    <File>Textures/ICON_HATTENGAARD_32.dds</File>
+    <File>Textures/ICON_HATTENGAARD_32.tex</File>
+    <File>Textures/ICON_HATTENGAARD_45.dds</File>
+    <File>Textures/ICON_HATTENGAARD_45.tex</File>
+    <File>Textures/ICON_HATTENGAARD_50.dds</File>
+    <File>Textures/ICON_HATTENGAARD_50.tex</File>
+    <File>Textures/ICON_HATTENGAARD_55.dds</File>
+    <File>Textures/ICON_HATTENGAARD_55.tex</File>
+    <File>Textures/ICON_HATTENGAARD_64.dds</File>
+    <File>Textures/ICON_HATTENGAARD_64.tex</File>
+    <File>Textures/ICON_HATTENGAARD_80.dds</File>
+    <File>Textures/ICON_HATTENGAARD_80.tex</File>
+    <File>Textures/ICON_THAC_256.dds</File>
+    <File>Textures/ICON_THAC_256.tex</File>
+    <File>Textures/ICON_THAC_32.dds</File>
+    <File>Textures/ICON_THAC_32.tex</File>
+    <File>Textures/ICON_THAC_45.dds</File>
+    <File>Textures/ICON_THAC_45.tex</File>
+    <File>Textures/ICON_THAC_50.dds</File>
+    <File>Textures/ICON_THAC_50.tex</File>
+    <File>Textures/ICON_THAC_55.dds</File>
+    <File>Textures/ICON_THAC_55.tex</File>
+    <File>Textures/ICON_THAC_64.dds</File>
+    <File>Textures/ICON_THAC_64.tex</File>
+    <File>Textures/ICON_THAC_80.dds</File>
+    <File>Textures/ICON_THAC_80.tex</File>
+    <File>Textures/LEADER_THAC_BACKGROUND.dds</File>
+    <File>Textures/LEADER_THAC_BACKGROUND.tex</File>
+    <File>Textures/LEADER_THAC_NEUTRAL.dds</File>
+    <File>Textures/LEADER_THAC_NEUTRAL.tex</File>
+    <File>XLPs/Icons.xlp</File>
+    <File>XLPs/LeaderBackgrounds.xlp</File>
+    <File>XLPs/LeaderFallbacks.xlp</File>
+    <File>XLPs/Leader_THAC.xlp</File>
+    <File>XLPs/UILeaders.xlp</File>
+  </Files>
+</Mod>

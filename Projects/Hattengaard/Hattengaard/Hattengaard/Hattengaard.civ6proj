@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>Hattengaard Civilization - Top Hats and Champagne</Name>
+    <Guid>7111051c-0b7c-4baf-b0e6-f71446e7060a</Guid>
+    <ProjectGuid>cdf8bf08-704a-4d72-bd3e-3a7f46d15f6a</ProjectGuid>
+    <ModVersion>1</ModVersion>
+    <Teaser>This mod adds the leader Top Hats and Champagne and the nation of Hattengaard.</Teaser>
+    <Description>This mod adds the leader Top Hats and Champagne while also adding Hattengaard as a nation.
+You can check him out here: https://www.twitch.tv/thachampagne
+
+Also a special shoutout to WalkerTrips for his help with the art for this mod.
+You can find him here: https://www.twitch.tv/walkertrips
+
+Features:
+- Fully custom civilians with the names of moderators and patrons of Top Hats and Champagne's livestreams.
+- Fully custom AI dialogue with mannerisms and quotes from Top Hats and Champagne.
+- A partial background story of Top Hats and Champagne comprised of the lore found in the Top Hats Exposed video series.
+- Full renaming scheme for all cities to custom Norwegian/Viking city names.
+- Art assets mostly provided by WalkerTrips.
+
+- Unique Building: The Viking Top Hat Bar
++5 Combat Strength Vs Barbarians for each Viking Top Hat Bar built.
+
+- Unique Civ Grind Trait: Viking Blood Line
++75% Experience for all units. When killing a unit, you recieve [Icon_Gold] Gold equal to it's Combat Strength.
+
+- Unique Leader Economy Bonus: Top Hat Hoarder
++1 Extra Economic Slot in any government.</Description>
+    <Authors>PartTim3Hobo</Authors>
+    <SpecialThanks>WalkerTrips</SpecialThanks>
+    <AffectsSavedGames>true</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <AssemblyName>THAC_Civ</AssemblyName>
+    <RootNamespace>THAC_Civ</RootNamespace>
+    <FrontEndActionData><![CDATA[<FrontEndActions><UpdateDatabase id="NewAction"><File>Core/Buildings.xml</File><File>Core/Config.sql</File></UpdateDatabase><UpdateIcons id="NewAction"><File>Core/Icons.xml</File></UpdateIcons><UpdateText id="NewAction"><File>Core/GameText.xml</File></UpdateText><UpdateArt id="NewAction"><File>(Mod Art Dependency File)</File></UpdateArt></FrontEndActions>]]></FrontEndActionData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="NewAction"><File>Core/Buildings.xml</File><File>Core/GameDefines.sql</File></UpdateDatabase><UpdateIcons id="NewAction"><File>Core/Icons.xml</File></UpdateIcons><UpdateText id="NewAction"><File>Core/GameText.xml</File></UpdateText><UpdateArt id="NewAction"><File>(Mod Art Dependency File)</File></UpdateArt></InGameActions>]]></InGameActionData>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="ArtDefs" />
+    <Folder Include="Core" />
+    <Folder Include="XLPs" />
+    <Folder Include="Textures" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArtDefs\FallbackLeaders.artdef">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ArtDefs\Leaders.artdef">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Buildings.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Config.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\GameDefines.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\GameText.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Icons.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Mod.Art.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ART_LEADER_THAC.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ART_LEADER_THAC.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FALLBACK_NEUTRAL_THAC.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FALLBACK_NEUTRAL_THAC.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_256.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_256.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_32.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_32.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_45.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_45.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_50.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_50.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_55.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_55.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_64.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_64.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_80.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_HATTENGAARD_80.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_256.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_256.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_32.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_32.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_45.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_45.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_50.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_50.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_55.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_55.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_64.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_64.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_80.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\ICON_THAC_80.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\LEADER_THAC_BACKGROUND.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\LEADER_THAC_BACKGROUND.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\LEADER_THAC_NEUTRAL.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\LEADER_THAC_NEUTRAL.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XLPs\Icons.xlp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XLPs\LeaderBackgrounds.xlp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XLPs\LeaderFallbacks.xlp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XLPs\Leader_THAC.xlp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XLPs\UILeaders.xlp">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
