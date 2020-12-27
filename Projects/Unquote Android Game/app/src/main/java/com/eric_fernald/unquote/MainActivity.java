@@ -115,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-    // TODO 3-F: displayQuestion(Question question) {...}
 
     public void onAnswerSubmission() {
         Question currentQuestion = getCurrentQuestion();
