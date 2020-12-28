@@ -14,8 +14,6 @@ To run this KSP kRPC Python program you need:
 When installed, install the .craft file (Falkon-5A.craft).
 Go to the directory with this program, start Python command line and run:
 execfile('kRPC_falkon5_01.py')
-
-Good luck!
 """
 
 import krpc
