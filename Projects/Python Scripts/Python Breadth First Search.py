@@ -1,4 +1,4 @@
-#This program runs a breadth first search on a set of possible paths.
+#This program runs a breadth first search on a set of possible paths through a graph.
 the_most_dangerous_graph = {
     'lava': set(['sharks', 'piranhas']),
     'sharks': set(['lava', 'bees', 'lasers']),
