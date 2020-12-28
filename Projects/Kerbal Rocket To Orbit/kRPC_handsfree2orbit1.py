@@ -14,8 +14,6 @@ To run this KSP kRPC Python program you need:
 When installed, install the .craft file (Handsfree 1.craft).
 Go to the directory with this program, start Python command line and run:
 execfile('kRPC_Orbital1_scrout.py')
-
-Good luck!
 """
 
 import krpc
