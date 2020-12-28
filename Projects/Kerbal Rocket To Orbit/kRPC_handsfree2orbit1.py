@@ -147,7 +147,7 @@ ap.reference_frame = vessel.orbital_reference_frame
 ap.engage()
 
 # Point the vessel in the prograde direction
-# Not necessarily the most efficient way to get into orbit, but hey.
+# Not necessarily the most efficient way to get into orbit, but it works.
 ap.target_direction = (0,1,0)
 
 
@@ -168,7 +168,7 @@ while vessel.orbit.periapsis_altitude < target_periapsis:
 
 vessel.control.throttle = 0
 
-# And... we're in orbit.. hopefully.
+# And now the rocket is in orbit.
 text.content = 'Welcome to orbit!'
 print('Welcome to orbit!')
 
