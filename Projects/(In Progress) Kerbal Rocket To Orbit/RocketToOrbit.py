@@ -13,7 +13,7 @@ To run this KSP kRPC Python program you need:
 
 When installed, install the .craft file (RocketToOrbit.craft).
 Go to the directory with this program, start Python command line and run:
-execfile('RocketToOrbit.py')
+execfile('RocketToOrbit.py').
 """
 
 import krpc
