@@ -1,26 +1,26 @@
 """
-kRPC Handsfree2Orbit 1.0
+kRPC RocketToOrbit 1.0
 
 Description:
-Python program to bring the Handsfree 1 rocket in orbit in Kerbal Space Program.
+Python program to bring the RocketToOrbit rocket in orbit in Kerbal Space Program.
 
 To run this KSP kRPC Python program you need:
-- Kerbal Space Program (tested in 1.1.3)
-- kRPC 0.3.5 (https://mods.curse.com/ksp-mods/kerbal/220219-krpc-control-the-game-using-c-c-java-lua-python)
+- Kerbal Space Program (tested in 1.5.1)
+- kRPC 0.4.8 (https://mods.curse.com/ksp-mods/kerbal/220219-krpc-control-the-game-using-c-c-java-lua-python)
   Use the install guide on https://krpc.github.io/krpc/getting-started.html
 - I've also installed the Python client library (https://pypi.python.org/pypi/krpc)
-- Python 2.7 (https://www.python.org/download/releases/2.7/)
+- Python 3.9 (https://www.python.org/download/releases/2.7/)
 
-When installed, install the .craft file (Handsfree 1.craft).
+When installed, install the .craft file (RocketToOrbit.craft).
 Go to the directory with this program, start Python command line and run:
-execfile('kRPC_Orbital1_scrout.py')
+execfile('RocketToOrbit.py')
 """
 
 import krpc
 import time
 
 
-conn = krpc.connect(name='Orbital flight script')
+conn = krpc.connect(name='Orbital Flight Script')
 canvas = conn.ui.stock_canvas
 
 # Get the size of the game window in pixels
