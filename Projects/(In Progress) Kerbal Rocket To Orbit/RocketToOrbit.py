@@ -9,7 +9,7 @@ To run this KSP kRPC Python program you need:
 - kRPC 0.4.8 (https://mods.curse.com/ksp-mods/kerbal/220219-krpc-control-the-game-using-c-c-java-lua-python)
   Use the install guide on https://krpc.github.io/krpc/getting-started.html
 - I've also installed the Python client library (https://pypi.python.org/pypi/krpc)
-- Python 3.9.1 (https://www.python.org/download/releases/3.9.1/)
+- Python 3.9.1 (https://www.python.org/downloads/release/python-391/)
 
 When installed, install the .craft file (RocketToOrbit.craft).
 Go to the directory with this program, start Python command line and run:
