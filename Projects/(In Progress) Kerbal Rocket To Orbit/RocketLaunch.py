@@ -1,6 +1,9 @@
+#This program launches a rocket in Kerbal Space Program.
+
 import krpc
 import time 
 
+#Establishes connection to the krpc server.
 connection = krpc.connect()
 
 vessel = connection.space_center.active_vessel
