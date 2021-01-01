@@ -1,4 +1,5 @@
 #This program launches a rocket in Kerbal Space Program.
+#Created by Eric Fernald.
 
 import krpc
 import time 
