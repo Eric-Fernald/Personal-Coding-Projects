@@ -5,7 +5,7 @@ import krpc
 import time 
 
 #Establishes connection to the krpc server.
-connection = krpc.connect()
+conn = krpc.connect()
 
 vessel = connection.space_center.active_vessel
 
@@ -18,4 +18,3 @@ countdown = ["Ten", "Nine", "Eight", "Seven", "Six", "Five", "Four", "Three", "T
 for i in range(len(countdown)):
     print(countdown[i])
     time.sleep(1)
-    
