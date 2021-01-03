@@ -21,3 +21,7 @@ for i in range(len(countdown)):
 
 vessel.control.throttle = 1
 vessel.control.activate_next_stage()
+
+accentPhase = True
+cruisePhase = False
+insertionPhase = False
