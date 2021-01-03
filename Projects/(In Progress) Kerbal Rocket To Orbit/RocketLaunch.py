@@ -18,3 +18,6 @@ countdown = ["Ten", "Nine", "Eight", "Seven", "Six", "Five", "Four", "Three", "T
 for i in range(len(countdown)):
     print(countdown[i])
     time.sleep(1)
+
+vessel.control.throttle = 1
+vessel.control.activate_next_stage()
