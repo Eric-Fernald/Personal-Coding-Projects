@@ -79,8 +79,11 @@ while ascentPhase or cruisePhase or insertionPhase:
         else:
             vessel.control.yaw = 0.5
 
-        if vessel.orbit.periapsis < 690000:
-            vessel.control.throttle = 1
-        else:
+        #SECO
+        if vessel.orbit.periapsis > 690000:
             vessel.control.throttle = 0
             insertionPhase = False
+        
+        #Staging
+        if vessel.thrust == 0.0:
+            vessel.control.activate_next_stage()
