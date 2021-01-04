@@ -27,6 +27,8 @@ cruisePhase = False
 insertionPhase = False
 
 while ascentPhase or cruisePhase or insertionPhase:
+    altitude = vessel.flight().mean_altitude
+
     if ascentPhase:
     
     elif cruisePhase:
