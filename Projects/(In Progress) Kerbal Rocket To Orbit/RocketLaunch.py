@@ -67,4 +67,11 @@ while ascentPhase or cruisePhase or insertionPhase:
             vessel.control.throttle = 1
 
     elif insertionPhase:
+        targetPitch = 0
+        pitchDiff = vessel.flight().pitch - targetPitch
         
+        #Heading Control
+        if heading < 180:
+            vessel.control.yaw = (pitchDiff / 90)
+        else:
+            vessel.control.yaw = 0.5
