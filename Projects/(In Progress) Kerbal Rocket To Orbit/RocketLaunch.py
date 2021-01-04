@@ -38,7 +38,8 @@ while ascentPhase or cruisePhase or insertionPhase:
             vessel.control.yaw = (pitchDiff / 90)
         else:
             vessel.control.yaw = 0.5
-            
+
+        #Adds another stage activation to the vessel if more than one stage is required to get to orbit.
         if vessel.thrust == 0.0:
             vessel.control.activate_next_stage()
         
