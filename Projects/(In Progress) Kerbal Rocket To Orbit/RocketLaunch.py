@@ -46,6 +46,7 @@ while ascentPhase or cruisePhase or insertionPhase:
 
             vessel.control.sas = True  
             time.sleep(0.1)
+            vessel.control.sas_mode = conn.space_center.SASMode.prograde
     
     elif cruisePhase:
         print("Cruise Phase")
