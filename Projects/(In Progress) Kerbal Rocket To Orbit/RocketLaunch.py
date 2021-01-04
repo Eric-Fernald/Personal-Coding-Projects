@@ -37,5 +37,6 @@ while ascentPhase or cruisePhase or insertionPhase:
         vessel.control.yaw = (pitchDiff / 90)
     
     elif cruisePhase:
-    
+        print("Cruise Phase")
     elif insertionPhase:
+        print("Insertion Phase")
