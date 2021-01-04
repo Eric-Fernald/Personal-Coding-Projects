@@ -33,13 +33,19 @@ while ascentPhase or cruisePhase or insertionPhase:
     if ascentPhase:
         targetPitch = 90 * ((50000 - altitude) / 50000))
         pitchDiff = vessel.flight().pitch - targetPitch
-        
+
         if heading < 180:
             vessel.control.yaw = (pitchDiff / 90)
         else:
             vessel.control.yaw = 0.5
+        
+        if vessel.orbit.apoapsis > 700000:
+            vessel.control.throttle = 0
+            time.sleep(0.5)
+            vessel.control.activate_next_stage()
     
     elif cruisePhase:
         print("Cruise Phase")
+
     elif insertionPhase:
         print("Insertion Phase")
