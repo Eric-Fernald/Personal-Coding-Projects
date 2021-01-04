@@ -31,6 +31,7 @@ while ascentPhase or cruisePhase or insertionPhase:
     heading = vessel.flight().heading
 
     if ascentPhase:
+        targetPitch = (50000 - altitude) / 50000
     
     elif cruisePhase:
     
