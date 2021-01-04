@@ -25,3 +25,10 @@ vessel.control.activate_next_stage()
 ascentPhase = True
 cruisePhase = False
 insertionPhase = False
+
+while ascentPhase or cruisePhase or insertionPhase:
+    if ascentPhase:
+    
+    elif cruisePhase:
+    
+    elif insertionPhase:
