@@ -60,7 +60,7 @@ while ascentPhase or cruisePhase or insertionPhase:
             ascentPhase = False
             cruisePhase = True
     
-    #Cruise phase
+    #Cruise Phase
     elif cruisePhase:
         if altitude > 90000:
             cruisePhase = False
@@ -68,7 +68,7 @@ while ascentPhase or cruisePhase or insertionPhase:
             vessel.control.sas = False
             vessel.control.throttle = 1
 
-    #Insertion phase
+    #Insertion Phase
     elif insertionPhase:
         targetPitch = 0
         pitchDiff = vessel.flight().pitch - targetPitch
