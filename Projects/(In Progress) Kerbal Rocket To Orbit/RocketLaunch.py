@@ -60,7 +60,11 @@ while ascentPhase or cruisePhase or insertionPhase:
             cruisePhase = True
     
     elif cruisePhase:
-        print("Cruise Phase")
+        if altitude > 90000:
+            cruisePhase = False
+            insertionPhase = True
+            vessel.control.sas = False
+            vessel.control.throttle = 1
 
     elif insertionPhase:
-        print("Insertion Phase")
+        
