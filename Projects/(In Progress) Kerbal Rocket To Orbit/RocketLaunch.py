@@ -43,6 +43,9 @@ while ascentPhase or cruisePhase or insertionPhase:
             vessel.control.throttle = 0
             time.sleep(0.5)
             vessel.control.activate_next_stage()
+
+            vessel.control.sas = True  
+            time.sleep(0.1)
     
     elif cruisePhase:
         print("Cruise Phase")
