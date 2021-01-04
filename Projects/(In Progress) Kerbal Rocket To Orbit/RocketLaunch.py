@@ -28,6 +28,7 @@ ascentPhase = True
 cruisePhase = False
 insertionPhase = False
 
+#Main launch control.
 while ascentPhase or cruisePhase or insertionPhase:
     altitude = vessel.flight().mean_altitude
     heading = vessel.flight().heading
@@ -59,6 +60,7 @@ while ascentPhase or cruisePhase or insertionPhase:
             ascentPhase = False
             cruisePhase = True
     
+    #Cruise phase
     elif cruisePhase:
         if altitude > 90000:
             cruisePhase = False
@@ -66,12 +68,19 @@ while ascentPhase or cruisePhase or insertionPhase:
             vessel.control.sas = False
             vessel.control.throttle = 1
 
+    #Insertion phase
     elif insertionPhase:
         targetPitch = 0
         pitchDiff = vessel.flight().pitch - targetPitch
-        
+
         #Heading Control
         if heading < 180:
             vessel.control.yaw = (pitchDiff / 90)
         else:
             vessel.control.yaw = 0.5
+
+        if vessel.orbit.periapsis < 690000:
+            vessel.control.throttle = 1
+        else:
+            vessel.control.throttle = 0
+            insertionPhase = False
