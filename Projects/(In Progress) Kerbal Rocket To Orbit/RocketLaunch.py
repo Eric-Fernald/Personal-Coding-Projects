@@ -43,7 +43,7 @@ while ascentPhase or cruisePhase or insertionPhase:
     heading = vessel.flight().heading
 
     if ascentPhase:
-        targetPitch = 90 * ((50000 - altitude) / 50000))
+        targetPitch = 90 * ((50000 - altitude) / 50000)
         pitchDiff = vessel.flight().pitch - targetPitch
 
         #Heading Control
