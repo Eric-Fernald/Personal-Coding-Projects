@@ -39,14 +39,24 @@ vessel = conn.space_center.active_vessel
 countdown = ["Five", "Four", "Three", "Two", "One", "LIFT OFF!"]
 
 #Start the Countdown Sequence.
-for i in range(len(countdown)):
-    print("Countdown: " + countdown[i])
-    time.sleep(1)
+text.content = 'FIVE'
+print('FIVE'); time.sleep(1)
+text.content = 'FOUR'
+print('FOUR'); time.sleep(1)
+text.content = 'THREE'
+print('THREE'); time.sleep(1)
+text.content = 'TWO'
+print('TWO'); time.sleep(1)
+text.content = 'ONE'
+print('ONE'); time.sleep(1)
+text.content = 'LIFT OFF'
+print('LIFT OFF!')
 
+#Launch the Vessel.
 vessel.control.throttle = 1
 vessel.control.activate_next_stage()
 
-#Flight State
+#Sets the Flight State.
 ascentPhase = True
 cruisePhase = False
 insertionPhase = False
