@@ -35,9 +35,6 @@ text.size = 18
 #Establishes the rocket as the main vessel.
 vessel = conn.space_center.active_vessel
 
-#Countdown Sequence.
-countdown = ["Five", "Four", "Three", "Two", "One", "LIFT OFF!"]
-
 #Start the Countdown Sequence.
 text.content = 'FIVE'
 print('FIVE'); time.sleep(1)
