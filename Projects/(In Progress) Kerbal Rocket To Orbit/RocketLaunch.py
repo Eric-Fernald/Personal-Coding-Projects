@@ -22,7 +22,7 @@ conn = krpc.connect()
 vessel = conn.space_center.active_vessel
 
 #Countdown Sequence.
-countdown = ["Ten", "Nine", "Eight", "Seven", "Six", "Five", "Four", "Three", "Two", "One", "LIFT OFF!"]
+countdown = ["Three", "Two", "One", "LIFT OFF!"]
 
 #Start the Countdown Sequence.
 for i in range(len(countdown)):
