@@ -1,6 +1,16 @@
 #This program launches a rocket in Kerbal Space Program.
 #Created by Eric Fernald.
 
+"""
+To run this KSP kRPC Python program you need:
+- Kerbal Space Program (tested in 1.5.1)
+- kRPC 0.4.8 (https://mods.curse.com/ksp-mods/kerbal/220219-krpc-control-the-game-using-c-c-java-lua-python)
+  Use the install guide on https://krpc.github.io/krpc/getting-started.html
+- I've also installed the Python client library (https://pypi.python.org/pypi/krpc)
+- Python 3.9.1 (https://www.python.org/downloads/release/python-391/)
+
+"""
+
 import krpc
 import time 
 
