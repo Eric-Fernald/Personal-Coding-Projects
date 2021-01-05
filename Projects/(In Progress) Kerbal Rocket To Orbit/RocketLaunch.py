@@ -17,7 +17,7 @@ import krpc
 import time 
 
 #Establishes connection to the krpc server.
-conn = krpc.connect()
+connection = krpc.connect()
 
 vessel = connection.space_center.active_vessel
 
