@@ -18,8 +18,19 @@ import time
 conn = krpc.connect()
 canvas = conn.ui.stock_canvas
 
-# Get the size of the game window in pixels.
+#Get the size of the game window in pixels.
 screen_size = canvas.rect_transform.size
+
+#Position the panel on the left of the screen.
+rect = panel.rect_transform
+rect.size = (400,100)
+rect.position = (210-(screen_size[0]/2),-200)
+
+#Settings for text size in the panel on screen.
+text = panel.add_text("Countdown")
+text.rect_transform.position = (0,-20)
+text.color = (1,1,1)
+text.size = 18
 
 #Establishes the rocket as the main vessel.
 vessel = conn.space_center.active_vessel
