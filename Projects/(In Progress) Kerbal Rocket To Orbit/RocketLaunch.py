@@ -71,7 +71,7 @@ while ascentPhase or cruisePhase or insertionPhase:
     
     #Cruise Phase
     elif cruisePhase:
-        if altitude > 90000:
+        if altitude > 80000:
             cruisePhase = False
             insertionPhase = True
             vessel.control.sas = False
