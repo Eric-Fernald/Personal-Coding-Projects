@@ -1,4 +1,4 @@
-#This program launches a rocket in Kerbal Space Program.
+#This program launches a rocket into orbit in Kerbal Space Program.
 #Created by Eric Fernald.
 
 """
