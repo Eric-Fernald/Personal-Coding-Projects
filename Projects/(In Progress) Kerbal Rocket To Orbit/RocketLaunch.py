@@ -9,9 +9,6 @@ To run this KSP kRPC Python program you need:
   Use the install guide on https://krpc.github.io/krpc/getting-started.html
 - I've also installed the Python client library (https://pypi.python.org/pypi/krpc)
 - Python 3.9.1 (https://www.python.org/downloads/release/python-391/)
-
-Go to the directory with this program, start Python command line and run:
-execfile('RocketLaunch.py').
 """
 
 import krpc
