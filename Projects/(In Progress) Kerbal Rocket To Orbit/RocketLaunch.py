@@ -31,7 +31,7 @@ for i in range(len(countdown)):
 vessel.control.throttle = 1
 vessel.control.activate_next_stage()
 
-#Flight State
+#Flight State.
 ascentPhase = True
 cruisePhase = False
 insertionPhase = False
@@ -45,7 +45,7 @@ while ascentPhase or cruisePhase or insertionPhase:
         targetPitch = 90 * ((50000 - altitude) / 50000)
         pitchDiff = vessel.flight().pitch - targetPitch
 
-        #Heading Control
+        #Heading Control.
         if heading < 180:
             vessel.control.yaw = (pitchDiff / 90)
         else:
@@ -68,7 +68,7 @@ while ascentPhase or cruisePhase or insertionPhase:
             ascentPhase = False
             cruisePhase = True
     
-    #Cruise Phase
+    #Cruise Phase.
     elif cruisePhase:
         if altitude > 80000:
             cruisePhase = False
@@ -76,12 +76,12 @@ while ascentPhase or cruisePhase or insertionPhase:
             vessel.control.sas = False
             vessel.control.throttle = 1
 
-    #Insertion Phase
+    #Insertion Phase.
     elif insertionPhase:
         targetPitch = 0
         pitchDiff = vessel.flight().pitch - targetPitch
 
-        #Heading Control
+        #Heading Control.
         if heading < 180:
             vessel.control.yaw = (pitchDiff / 90)
             if vessel.flight().pitch < 1 and vessel.flight().pitch > -1:
@@ -91,11 +91,11 @@ while ascentPhase or cruisePhase or insertionPhase:
         else:
             vessel.control.yaw = 0.5
 
-        #SECO (Second Engine Cut Off)
+        #SECO (Second Engine Cut Off).
         if vessel.orbit.periapsis > 690000:
             vessel.control.throttle = 0
             insertionPhase = False
         
-        #Staging
+        #Staging.
         if vessel.thrust == 0.0:
             vessel.control.activate_next_stage()
