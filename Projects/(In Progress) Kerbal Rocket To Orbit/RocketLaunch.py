@@ -16,7 +16,12 @@ import time
 
 #Establishes connection to the krpc server.
 conn = krpc.connect()
+canvas = conn.ui.stock_canvas
 
+# Get the size of the game window in pixels.
+screen_size = canvas.rect_transform.size
+
+#Establishes the rocket as the main vessel.
 vessel = conn.space_center.active_vessel
 
 #Countdown Sequence.
