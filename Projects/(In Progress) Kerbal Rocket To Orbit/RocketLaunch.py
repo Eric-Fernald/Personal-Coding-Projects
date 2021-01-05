@@ -57,7 +57,7 @@ while ascentPhase or cruisePhase or insertionPhase:
             vessel.control.activate_next_stage()
         
         #MECO (Main Engine Cut Off)
-        if vessel.orbit.apoapsis > 700000:
+        if vessel.orbit.apoapsis > 690000:
             vessel.control.throttle = 0
             time.sleep(0.5)
             vessel.control.activate_next_stage()
