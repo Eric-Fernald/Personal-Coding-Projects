@@ -79,6 +79,8 @@ while ascentPhase or cruisePhase or insertionPhase:
         
         #MECO (Main Engine Cut Off)
         if vessel.orbit.apoapsis > 690000:
+            text.content = 'Main Engine Cut Off (MECO)'
+            print('Main Engine Cut Off (MECO)')
             vessel.control.throttle = 0
             time.sleep(0.5)
             vessel.control.activate_next_stage()
