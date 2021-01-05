@@ -40,7 +40,7 @@ countdown = ["Five", "Four", "Three", "Two", "One", "LIFT OFF!"]
 
 #Start the Countdown Sequence.
 for i in range(len(countdown)):
-    print(countdown[i])
+    print("Countdown: " + countdown[i])
     time.sleep(1)
 
 vessel.control.throttle = 1
