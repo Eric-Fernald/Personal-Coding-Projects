@@ -12,7 +12,7 @@ To run this KSP kRPC Python program you need:
 """
 
 import krpc
-import time 
+import time
 
 #Establishes connection to the krpc server.
 conn = krpc.connect()
