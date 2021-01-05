@@ -66,7 +66,7 @@ while ascentPhase or cruisePhase or insertionPhase:
         else:
             vessel.control.yaw = 0.5
 
-        #Adds another stage activation to the vessel if more than one stage is required to get to orbit.
+        #Adds another stage activation to the vessel. (For other rockets this is only needed if more than one stage is required to get to orbit.)
         if vessel.thrust == 0.0:
             vessel.control.activate_next_stage()
         
