@@ -140,5 +140,5 @@ while ascentPhase or cruisePhase or insertionPhase or interceptPhase:
             print('Welcome to Orbit!')
     
     #Intercept Phase
-    elif insertionPhase:
+    elif interceptPhase:
         break
