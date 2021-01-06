@@ -1,5 +1,5 @@
-#This program launches a rocket in Kerbal Space Program.
-#Created by Eric Fernald.
+# This program launches a rocket in Kerbal Space Program.
+# Created by Eric Fernald.
 
 """
 To run this KSP kRPC Python program you need:
@@ -14,30 +14,30 @@ To run this KSP kRPC Python program you need:
 import krpc
 import time
 
-#Establishes connection to the krpc server.
+# Establishes connection to the krpc server.
 conn = krpc.connect()
 
-#Establishes the rocket as the main vessel.
+# Establishes the rocket as the main vessel.
 vessel = conn.space_center.active_vessel
 
-#Defines the entire size of the screen as the canvas variable.
+# Defines the entire size of the screen as the canvas variable.
 canvas = conn.ui.stock_canvas
 
-#Get the size of the game window in pixels.
+# Get the size of the game window in pixels.
 screen_size = canvas.rect_transform.size
 
-#Position the panel on the left of the screen.
+# Position the panel on the left of the screen.
 rect = panel.rect_transform
-rect.size = (400,100)
-rect.position = (210-(screen_size[0]/2),-200)
+rect.size = (400, 100)
+rect.position = (210-(screen_size[0]/2), -200)
 
-#Settings for text size in the panel on screen.
+# Settings for text size in the panel on screen.
 text = panel.add_text("Countdown")
-text.rect_transform.position = (0,-20)
-text.color = (1,1,1)
+text.rect_transform.position = (0, -20)
+text.color = (1, 1, 1)
 text.size = 18
 
-#Start the Countdown Sequence.
+# Start the Countdown Sequence.
 text.content = 'FIVE'
 print('FIVE'); time.sleep(1)
 text.content = 'FOUR'
@@ -51,16 +51,16 @@ print('ONE'); time.sleep(1)
 text.content = 'LIFT OFF'
 print('LIFT OFF!')
 
-#Launch the Vessel.
+# Launch the Vessel.
 vessel.control.throttle = 1
 vessel.control.activate_next_stage()
 
-#Sets the Flight State.
+# Sets the Flight State.
 ascentPhase = True
 cruisePhase = False
 insertionPhase = False
 
-#Main Launch Control.
+# Main Launch Control.
 while ascentPhase or cruisePhase or insertionPhase:
     altitude = vessel.flight().mean_altitude
     heading = vessel.flight().heading
@@ -71,18 +71,18 @@ while ascentPhase or cruisePhase or insertionPhase:
         targetPitch = 90 * ((50000 - altitude) / 50000)
         pitchDiff = vessel.flight().pitch - targetPitch
 
-        #Heading Control
+        # Heading Control
         if heading < 180:
             vessel.control.yaw = (pitchDiff / 90)
         else:
             vessel.control.yaw = 0.5
 
-        #Adds another stage activation to the vessel. (For other rockets this is only needed if more than one stage is required to get to orbit.)
+        # Adds another stage activation to the vessel. (For other rockets this is only needed if more than one stage is required to get to orbit.)
         if vessel.thrust == 0.0:
             vessel.control.activate_next_stage()
         
-        #MECO (Main Engine Cut Off)
-        #The orbit apoapsis is set to 690000 is because Kerbin has a diameter of 600000 meters so the total apoapsis needs to include 600000 more meters.
+        # MECO (Main Engine Cut Off)
+        # The orbit apoapsis is set to 690000 is because Kerbin has a diameter of 600000 meters so the total apoapsis needs to include 600000 more meters.
         if vessel.orbit.apoapsis > 690000:
             text.content = 'Main Engine Cut Off (MECO)'
             print('Main Engine Cut Off (MECO)')
@@ -97,7 +97,7 @@ while ascentPhase or cruisePhase or insertionPhase:
             ascentPhase = False
             cruisePhase = True
     
-    #Cruise Phase
+    # Cruise Phase
     elif cruisePhase:
         if altitude > 80000:
             cruisePhase = False
@@ -105,12 +105,12 @@ while ascentPhase or cruisePhase or insertionPhase:
             vessel.control.sas = False
             vessel.control.throttle = 1
 
-    #Insertion Phase
+    # Insertion Phase
     elif insertionPhase:
         targetPitch = 0
         pitchDiff = vessel.flight().pitch - targetPitch
 
-        #Heading Control
+        # Heading Control
         if heading < 180:
             vessel.control.yaw = (pitchDiff / 90)
             if vessel.flight().pitch < 1 and vessel.flight().pitch > -1:
@@ -120,11 +120,11 @@ while ascentPhase or cruisePhase or insertionPhase:
         else:
             vessel.control.yaw = 0.5
 
-        #SECO (Second Engine Cut Off)
+        # SECO (Second Engine Cut Off)
         if vessel.orbit.periapsis > 690000:
             vessel.control.throttle = 0
             insertionPhase = False
         
-        #Staging
+        # Staging
         if vessel.thrust == 0.0:
             vessel.control.activate_next_stage()
