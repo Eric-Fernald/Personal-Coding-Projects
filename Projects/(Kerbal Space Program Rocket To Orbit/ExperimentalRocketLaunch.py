@@ -134,3 +134,6 @@ while ascentPhase or cruisePhase or insertionPhase:
             vessel.control.activate_next_stage()
             text.content = 'Second Engine Cut Off (SECO)'
             print('Second Engine Cut Off (SECO)')
+            time.sleep(5)
+            text.content = 'Welcome to Orbit!'
+            print('Welcome to Orbit!')
