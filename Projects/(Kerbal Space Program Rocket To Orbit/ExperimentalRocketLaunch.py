@@ -84,11 +84,11 @@ while ascentPhase or cruisePhase or insertionPhase:
         # MECO (Main Engine Cut Off)
         # The orbit apoapsis is set to 690000 is because Kerbin has a diameter of 600000 meters so the total apoapsis needs to include 600000 more meters.
         if vessel.orbit.apoapsis > 690000:
-            text.content = 'Main Engine Cut Off (MECO)'
-            print('Main Engine Cut Off (MECO)')
             vessel.control.throttle = 0
             time.sleep(0.5)
             vessel.control.activate_next_stage()
+            text.content = 'Main Engine Cut Off (MECO)'
+            print('Main Engine Cut Off (MECO)')
 
             vessel.control.sas = True  
             time.sleep(0.1)
@@ -100,6 +100,8 @@ while ascentPhase or cruisePhase or insertionPhase:
     # Cruise Phase
     elif cruisePhase:
         if altitude > 80000:
+            text.content = 'Cruise Phase'
+            print('Cruise Phase')
             cruisePhase = False
             insertionPhase = True
             vessel.control.sas = False
@@ -109,6 +111,8 @@ while ascentPhase or cruisePhase or insertionPhase:
     elif insertionPhase:
         targetPitch = 0
         pitchDiff = vessel.flight().pitch - targetPitch
+        text.content = 'Insertion Phase'
+        print('Insertion Phase')
 
         # Heading Control
         if heading < 180:
@@ -128,3 +132,5 @@ while ascentPhase or cruisePhase or insertionPhase:
         # Staging
         if vessel.thrust == 0.0:
             vessel.control.activate_next_stage()
+            text.content = 'Second Engine Cut Off (SECO)'
+            print('Second Engine Cut Off (SECO)')
