@@ -59,9 +59,10 @@ vessel.control.activate_next_stage()
 ascentPhase = True
 cruisePhase = False
 insertionPhase = False
+interceptPhase = False
 
 # Main Launch Control.
-while ascentPhase or cruisePhase or insertionPhase:
+while ascentPhase or cruisePhase or insertionPhase or interceptPhase:
     altitude = vessel.flight().mean_altitude
     heading = vessel.flight().heading
 
@@ -137,3 +138,7 @@ while ascentPhase or cruisePhase or insertionPhase:
             time.sleep(5)
             text.content = 'Welcome to Orbit!'
             print('Welcome to Orbit!')
+    
+    #Intercept Phase
+    elif insertionPhase:
+        break
