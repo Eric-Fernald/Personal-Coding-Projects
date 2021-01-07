@@ -59,7 +59,9 @@ vessel.control.activate_next_stage()
 ascentPhase = True
 cruisePhase = False
 insertionPhase = False
-interceptPhase = False
+dunainterceptPhase = False
+dunaOrbitPhase = False
+dunaLandingPhase = False
 
 # Main Launch Control.
 while ascentPhase or cruisePhase or insertionPhase or interceptPhase:
@@ -146,10 +148,20 @@ while ascentPhase or cruisePhase or insertionPhase or interceptPhase:
             print('Enjoy the view while it lasts, because now we are going to Mars!')
             time.sleep(15)
 
-            interceptPhase = True
+            dunaInterceptPhase = True
 
-    #Intercept Phase
-    elif interceptPhase:
-        text.content = 'Intercept Phase'
-        print('Intercept Phase')
+    #Duna (Mars) Intercept Phase
+    elif dunaInterceptPhase:
+        text.content = 'Duna Intercept Phase'
+        print('Duna Intercept Phase')
+    
+    #Duna (Mars) Orbit Phase
+    elif dunaOrbitPhase:
+        text.content = 'Duna Orbit Phase'
+        print('Duna Orbit Phase')
+    
+    #Duna (Mars) Landing Phase
+    elif dunaLandingPhase:
+        text.content = 'Duna Landing Phase'
+        print('Duna Landing Phase')
         
