@@ -26,6 +26,9 @@ canvas = conn.ui.stock_canvas
 # Get the size of the game window in pixels.
 screen_size = canvas.rect_transform.size
 
+#Defines the panel to hold UI elements.
+panel = canvas.add_panel()
+
 # Position the panel on the left of the screen.
 rect = panel.rect_transform
 rect.size = (400, 100)
