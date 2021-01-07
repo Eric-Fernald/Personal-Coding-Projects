@@ -133,12 +133,23 @@ while ascentPhase or cruisePhase or insertionPhase or interceptPhase:
         # Staging
         if vessel.thrust == 0.0:
             vessel.control.activate_next_stage()
+            
             text.content = 'Second Engine Cut Off (SECO)'
             print('Second Engine Cut Off (SECO)')
             time.sleep(5)
+
             text.content = 'Welcome to Orbit!'
             print('Welcome to Orbit!')
-    
+            time.sleep(5)
+
+            text.content = 'Enjoy the view while it lasts, because now we are going to Mars!'
+            print('Enjoy the view while it lasts, because now we are going to Mars!')
+            time.sleep(15)
+
+            interceptPhase = True
+
     #Intercept Phase
     elif interceptPhase:
-        break
+        text.content = 'Intercept Phase'
+        print('Intercept Phase')
+        
