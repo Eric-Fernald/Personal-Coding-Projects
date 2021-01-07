@@ -151,5 +151,5 @@ while ascentPhase or cruisePhase or insertionPhase or interceptPhase:
     #Intercept Phase
     elif interceptPhase:
         text.content = 'Intercept Phase'
-        print('Intercept Phase')
+        print('Intercept Phase') 
         
