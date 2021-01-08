@@ -74,6 +74,7 @@ while ascentPhase or cruisePhase or insertionPhase or interceptPhase:
     if ascentPhase:
         text.content = 'Ascent Phase'
         print('Ascent Phase')
+        #The target heading (90) and base altitude (50000) need to be altered if the vessel configuration is changed.
         targetPitch = 90 * ((50000 - altitude) / 50000)
         pitchDiff = vessel.flight().pitch - targetPitch
 
@@ -157,7 +158,7 @@ while ascentPhase or cruisePhase or insertionPhase or interceptPhase:
     elif dunaInterceptPhase:
         text.content = 'Duna Intercept Phase'
         print('Duna Intercept Phase')
-        
+
         #Need to calculate vessel heading in here.
         if vessel.orbit.periapsis > 690000:
             vessel.control.throttle = 1
