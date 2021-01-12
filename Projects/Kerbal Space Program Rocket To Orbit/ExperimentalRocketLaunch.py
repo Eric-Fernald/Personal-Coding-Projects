@@ -132,7 +132,7 @@ while ascentPhase or cruisePhase or insertionPhase or interceptPhase:
             vessel.control.yaw = 0.5
 
         # SECO (Second Engine Cut Off)
-        if vessel.orbit.periapsis > 690000:
+        if vessel.orbit.periapsis > 680000:
             vessel.control.throttle = 0
             insertionPhase = False
         
