@@ -38,7 +38,7 @@ rect.position = (210-(screen_size[0]/2), -200)
 text = panel.add_text("Countdown")
 text.rect_transform.position = (0, -20)
 text.color = (1, 1, 1)
-text.size = 16
+text.size = 18
 
 # Start the Countdown Sequence.
 text.content = 'FIVE'
