@@ -31,7 +31,7 @@ panel = canvas.add_panel()
 
 # Position the panel on the left of the screen.
 rect = panel.rect_transform
-rect.size = (400, 100)
+rect.size = (350, 100)
 rect.position = (210-(screen_size[0]/2), -200)
 
 # Settings for text size in the panel on screen.
