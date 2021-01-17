@@ -172,6 +172,7 @@ while ascentPhase or cruisePhase or insertionPhase or interceptPhase:
         print('Duna Orbit Phase')
         if vessel.orbit.periapsis > 690000:
             vessel.control.throttle = 0
+            
     #Duna (Mars) Landing Phase
     elif dunaLandingPhase:
         text.content = 'Duna Landing Phase'
