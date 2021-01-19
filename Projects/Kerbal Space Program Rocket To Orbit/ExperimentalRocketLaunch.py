@@ -59,6 +59,7 @@ vessel.control.throttle = 1
 vessel.control.activate_next_stage()
 
 # Sets the Flight State.
+#The Flight State operates similar to a traffic light with the program iterating through each phase like a traffic light.
 ascentPhase = True
 cruisePhase = False
 insertionPhase = False
