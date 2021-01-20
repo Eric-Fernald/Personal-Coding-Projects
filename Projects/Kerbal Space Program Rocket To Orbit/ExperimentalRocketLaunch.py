@@ -76,7 +76,7 @@ while ascentPhase or cruisePhase or insertionPhase or interceptPhase:
         text.content = 'Ascent Phase'
         print('Ascent Phase')
         #The target heading (90) and base altitude (50000) need to be altered if the vessel configuration is changed. Every vessel configuration is different.
-        targetPitch = 90 * ((50000 - altitude) / 50000)
+        targetPitch = 85 * ((50000 - altitude) / 50000)
         pitchDiff = vessel.flight().pitch - targetPitch
 
         # Heading Control
