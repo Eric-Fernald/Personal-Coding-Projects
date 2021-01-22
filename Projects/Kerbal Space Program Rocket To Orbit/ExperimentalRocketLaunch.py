@@ -93,7 +93,7 @@ while ascentPhase or cruisePhase or insertionPhase or interceptPhase:
         # The orbit apoapsis is set to 690000 is because Kerbin has a diameter of 600000 meters so the total apoapsis needs to include 600000 more meters.
         if vessel.orbit.apoapsis > 690000:
             vessel.control.throttle = 0
-            time.sleep(0.5)
+            time.sleep(1)
             vessel.control.activate_next_stage()
             text.content = 'Main Engine Cut Off (MECO)'
             print('Main Engine Cut Off (MECO)')
