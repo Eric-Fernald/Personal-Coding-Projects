@@ -68,7 +68,7 @@ dunaOrbitPhase = False
 dunaLandingPhase = False
 
 # Main Launch Control.
-while ascentPhase or cruisePhase or insertionPhase or interceptPhase:
+while ascentPhase or cruisePhase or insertionPhase or dunainterceptPhase or dunaOrbitPhase or dunaLandingPhase:
     altitude = vessel.flight().mean_altitude
     heading = vessel.flight().heading
 
