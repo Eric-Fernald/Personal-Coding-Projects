@@ -138,7 +138,7 @@ while ascentPhase or cruisePhase or insertionPhase or dunainterceptPhase or duna
             insertionPhase = False
         
         # Staging
-        if vessel.thrust == 0.0:
+        if vessel.thrust == 0:
             vessel.control.activate_next_stage()
             
             text.content = 'Second Engine Cut Off (SECO)'
