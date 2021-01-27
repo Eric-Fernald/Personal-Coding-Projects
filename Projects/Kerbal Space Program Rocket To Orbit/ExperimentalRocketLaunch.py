@@ -178,7 +178,7 @@ while ascentPhase or cruisePhase or insertionPhase or dunainterceptPhase or duna
     elif dunaLandingPhase:
         text.content = 'Duna Landing Phase'
         print('Duna Landing Phase')
-        targetPitch = 0 * ((60000 - altitude) / 60000)
+        targetPitch = 0 * ((50000 - altitude) / 50000)
         pitchDiff = vessel.flight().pitch - targetPitch
         if altitude > 60000:
             vessel.control.throttle = 0.1
