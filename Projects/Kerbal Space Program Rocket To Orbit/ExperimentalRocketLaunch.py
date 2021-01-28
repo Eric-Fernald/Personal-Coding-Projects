@@ -1,4 +1,4 @@
-# This program launches a rocket in Kerbal Space Program. This program also assumes that the rocket is properly oriented for its flight azimuth.
+# This program launches a rocket in Kerbal Space Program to orbit and lands on Duna, the in-game equivalent of Mars. This program also assumes that the rocket is properly oriented for its flight azimuth.
 # Created by Eric Fernald.
 
 """
