@@ -36,7 +36,7 @@ rect.position = (210-(screen_size[0]/2), -200)
 
 # Settings for text size in the panel on screen.
 text = panel.add_text("Countdown")
-text.rect_transform.position = (0, -20)
+text.rect_transform.position = (0, -10)
 text.color = (1, 1, 1)
 text.size = 18
 
