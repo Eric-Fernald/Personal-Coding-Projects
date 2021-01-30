@@ -181,4 +181,4 @@ while ascentPhase or cruisePhase or insertionPhase or dunainterceptPhase or duna
         targetPitch = 0 * ((50000 - altitude) / 50000)
         pitchDiff = vessel.flight().pitch - targetPitch
         if altitude > 60000:
-            vessel.control.throttle = 0.15
+            vessel.control.throttle = 0.18
