@@ -1,6 +1,7 @@
 //This program creates an animal sanctuary and 3 tasks for a zookeeper to perform.
 //Created by Eric Fernald.
 
+//Define the main function.
 fun main() {
   
   var responsibilities = mutableListOf("feed the chimps", "play a random game", "conduct a health check on Foxie")
