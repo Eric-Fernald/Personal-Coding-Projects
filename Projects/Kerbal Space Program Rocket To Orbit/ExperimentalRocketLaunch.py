@@ -159,7 +159,7 @@ while ascentPhase or cruisePhase or insertionPhase or dunainterceptPhase or duna
     elif dunaInterceptPhase:
         text.content = 'Duna Intercept Phase'
         print('Duna Intercept Phase')
-        targetPitch = 70 * ((50000 - altitude) / 50000)
+        targetPitch = 90 * ((50000 - altitude) / 50000)
         pitchDiff = vessel.flight().pitch - targetPitch
 
         #Need to calculate vessel heading in here.
