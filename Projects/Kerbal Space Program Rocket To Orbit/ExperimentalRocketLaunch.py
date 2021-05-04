@@ -107,7 +107,7 @@ while ascentPhase or cruisePhase or insertionPhase or dunainterceptPhase or duna
     
     # Cruise Phase
     elif cruisePhase:
-        if altitude > 90000:
+        if altitude > 80000:
             text.content = 'Cruise Phase'
             print('Cruise Phase')
             cruisePhase = False
