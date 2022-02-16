@@ -13,13 +13,15 @@ BLACK = (0, 0, 0)
 def draw(win):
     win.fill(WHITE)
     pygame.display.update()
-    
+
+
 def main():
     run = True
     clock = pygame.time.Clock()
 
     while run:
         clock.tick(FPS)
+        draw(WIN)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
