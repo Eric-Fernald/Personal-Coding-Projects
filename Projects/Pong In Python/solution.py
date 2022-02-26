@@ -15,7 +15,7 @@ PADDLE_WIDTH, PADDLE_HEIGHT = 20, 100
 class Paddle:
     COLOR = WHITE
     VEL = 4
-    
+
     def __init__(self, x, y, width, height):
         self.x = x
         self.y = y
@@ -32,6 +32,13 @@ def draw(win, paddles):
         paddle.draw(win)
 
     pygame.display.update()
+
+def move(self, up=True):
+    if up:
+        self.y -= self.VEL
+    else:
+        self.y += self.VEL
+
 
 
 def main():
