@@ -25,10 +25,10 @@ class Paddle:
         pygame.draw.rect(win, self.COLOR, (self.x, self.y, self.width, self.height))
     
     def move(self, up=True):
-    if up:
-        self.y -= self.VEL
-    else:
-        self.y += self.VEL
+        if up:
+            self.y -= self.VEL
+        else:
+            self.y += self.VEL
 
 def draw(win, paddles):
     win.fill(BLACK)
