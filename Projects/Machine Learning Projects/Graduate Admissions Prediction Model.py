@@ -49,9 +49,6 @@ def fit_model(features_train, labels_train, learning_rate, num_epochs):
 learning_rate = 0.01
 num_epochs = 1000
 history = fit_model(features_train_scaled, labels_train, learning_rate, num_epochs)
-for property, value in vars(history).items():
-    #print(property, ":", value)
-    pass
 val_mse, val_mae = history.model.evaluate(features_test, labels_test, verbose = 0)
 print("MAE: ", val_mae)
 
