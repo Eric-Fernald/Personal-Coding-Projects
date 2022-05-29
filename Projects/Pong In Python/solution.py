@@ -56,7 +56,7 @@ class Ball:
         self.y_vel = 0
         self.x_vel *= -1
 
-def draw(win, paddles, left_score, right_score):
+def draw(win, paddles, ball, left_score, right_score):
     win.fill(BLACK)
 
     left_score_text = SCORE_FONT.render(f"{left_score}", 1, WHITE)
@@ -136,7 +136,7 @@ def main():
         handle_paddle_movement(keys, left_paddle, right_paddle)
         ball.move()
         handle_collision(ball, left_paddle, right_paddle)
-        
+
         if ball.x < 0:
             right_score += 1
             ball.reset()
