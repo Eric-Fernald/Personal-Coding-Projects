@@ -3,12 +3,13 @@
 def one_diff(a, b):
     if len(a) != len(b):
         return False
+    differences = 0
     for i in range(len(a)):
         if a[i] != b[i]:
-            if a[i] == b[i + 1] or a[i + 1] == b[i]:
+            differences += 1
+            if differences == 1:
                 return True
-            else:
-                return False
     return False
+
 
 print(one_diff("test", "text"))
