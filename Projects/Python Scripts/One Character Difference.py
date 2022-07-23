@@ -7,9 +7,9 @@ def one_diff(a, b):
     for i in range(len(a)):
         if a[i] != b[i]:
             differences += 1
-            if differences == 1:
-                return True
-    return False
+            if differences > 1:
+                return False
+    return True
 
 
-print(one_diff("test", "text"))
+print(one_diff("test", "texa"))
