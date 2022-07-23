@@ -1,15 +1,13 @@
-# write a function that compares two strings and returns true if there is only one character difference between them
+def compare_strings(a, b):
+    if a is None or b is None:
+        print("Number of Same Characters: 0")
+        return
+    size = min(len(a), len(b))
+    count = 0 
+    for i in range(size):
+        if a[i] == b[i]:
+            count += 1
 
-def one_diff(a, b):
-    if len(a) != len(b):
-        return False
-    differences = 0
-    for i in range(len(a)):
-        if a[i] != b[i]:
-            differences += 1
-            if differences > 1:
-                return False
-    return True
+    print("Number of Same Characters:", count)
 
-
-print(one_diff("test", "texa"))
+print(compare_strings("test", "text"))
