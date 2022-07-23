@@ -11,4 +11,4 @@ def compare_strings(a, b):
     else:
         print("False")
             
-compare_strings("abcd", "abdc")
+compare_strings("abcd", "abdd")
