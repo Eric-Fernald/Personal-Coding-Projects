@@ -10,5 +10,7 @@ def compare_strings(a, b):
         print("True")
     else:
         print("False")
-            
-compare_strings("abcd", "abdd")
+
+
+compare_strings("abcd", "abdd")  # Should print True
+compare_strings("abcd", "abdc")  # Should print False
