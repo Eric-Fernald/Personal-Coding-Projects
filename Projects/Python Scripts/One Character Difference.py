@@ -11,4 +11,4 @@ def one_diff(a, b):
                 return False
     return False
 
-one_diff("test", "text")
+print(one_diff("test", "text"))
