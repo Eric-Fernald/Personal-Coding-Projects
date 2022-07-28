@@ -12,5 +12,5 @@ def compare_strings(a, b):
         print("False")
 
 
-compare_strings("abcd", "abdd")  # Should print True
-compare_strings("abcd", "abdc")  # Should print False
+compare_strings("car", "cat")  # Should print True
+compare_strings("car", "cop")  # Should print False
