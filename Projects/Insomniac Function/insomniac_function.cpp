@@ -7,7 +7,11 @@ The function should return a TrajectoryResult struct, which has the following de
 #include <double.h>
 using namespace std;
 
-/*struct Vec3
+/*
+Return if a hit is valid or not.
+Return max time if no hit is detected.
+Return the end point of the trajectory.
+struct Vec3
 {
   double x, y, z;
 
@@ -33,7 +37,7 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position, const Vec3& 
     Vec3 up_vector = {0,0,0};
     double gravity_accel = 0;
     double raycast_time_step = 0;
-    double max_time = 0;
+    double max_time = 10;
     TrajectoryResult result = PredictTrajectory(start_position, start_velocity, up_vector, gravity_accel, raycast_time_step, max_time);
     return result;
 
