@@ -44,10 +44,10 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position={0,0,0},
 
 
     //Round the endpoint to 2 decimal places
-    m_EndPoint = std::ceil(EndPoint * 100.0) / 100.0;
+    TrajectoryResult::m_EndPoint = std::ceil(TrajectoryResult::m_EndPoint * 100.0) / 100.0;
 
     //Round time to 2 decimal places
-    m_time = std::ceil(time * 100.0) / 100.0;
+    TrajectoryResult::m_time = std::ceil(TrajectoryResult::m_time * 100.0) / 100.0;
 
     //Check if the hit is valid and if the time is greater than the max time
     if m_time >= max_time{
