@@ -6,7 +6,8 @@ The function should return a TrajectoryResult struct, which has the following de
 #include <math.h>
 #include <double.h>
 using namespace std;
-struct Vec3
+
+/*struct Vec3
 {
   double x, y, z;
 
@@ -19,7 +20,7 @@ struct TrajectoryResult
   bool  m_ValidHit;
 };
 
-/*TrajectoryResult PredictTrajectory( const Vec3& start_position, 
+TrajectoryResult PredictTrajectory( const Vec3& start_position, 
                                     const Vec3& start_velocity, 
                                     const Vec3& up_vector, 
                                     double gravity_accel, 
