@@ -38,16 +38,22 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position={0,0,0},
 
     //Round time to 2 decimal places
     m_time = std::ceil(time * 100.0) / 100.0;
+
+    //Check if the hit is valid and if the time is greater than the max time
     if m_time >= max_time{
         m_ValidHit = false;
     }
     else{
         m_ValidHit = true;
     }
+    
+    //Return the result struct
     TrajectoryResult result = m_EndPoint, m_time, m_ValidHit;
     return result;
 
 }
+
+//Execute the function.
 int main() {
   TrajectoryResult t;
   t = input();
