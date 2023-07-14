@@ -2,8 +2,9 @@
 
 The function should return a TrajectoryResult struct, which has the following definition:
 */
-#include <string.h>
-#include <iostream>
+#include <stdint.h>
+#include <math.h>
+#include <double.h>
 using namespace std;
 struct Vec3
 {
