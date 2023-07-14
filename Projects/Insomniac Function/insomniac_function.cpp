@@ -13,6 +13,7 @@ Return max time if no hit is detected.
 Return the end point of the trajectory.
 Questions to ask:
 Will the input always be valid or will I have to check for a valid input?
+Should default values be set for the parameters?
 struct Vec3
 {
   double x, y, z;
@@ -35,21 +36,21 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position,
                                         double max_time){
     
     //Initialize the variables
-    TrajectoryResult::m_ValidHit = true;
-    TrajectoryResult::m_EndPoint = {0,0,0};
-    TrajectoryResult::m_time = 0;
+    m_ValidHit = true;
+    m_EndPoint = {0,0,0};
+    m_time = 0;
 
     //Calculate the end point of the trajectory
-    TrajectoryResult::m_EndPoint = start_position + start_velocity * max_time + 0.5 * gravity_accel * max_time * max_time;
+    m_EndPoint = start_position + start_velocity * max_time + 0.5 * gravity_accel * max_time * max_time;
 
 
 
 
     //Round the endpoint to 2 decimal places
-    TrajectoryResult::m_EndPoint = std::ceil(TrajectoryResult::m_EndPoint * 100.0) / 100.0;
+    m_EndPoint = std::ceil(m_EndPoint * 100.0) / 100.0;
 
     //Round time to 2 decimal places
-    TrajectoryResult::m_time = std::ceil(TrajectoryResult::m_time * 100.0) / 100.0;
+    m_time = std::ceil(m_time * 100.0) / 100.0;
 
     //Check if the hit is valid and if the time is greater than the max time
     if m_time >= max_time{
