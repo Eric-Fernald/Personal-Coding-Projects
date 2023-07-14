@@ -32,7 +32,7 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position={0,0,0},
                                         double raycast_time_step=0, 
                                         double max_time=10){
 
-    TrajectoryResult result = PredictTrajectory(start_position, start_velocity, up_vector, gravity_accel, raycast_time_step, max_time);
+    TrajectoryResult result = m_EndPoint, m_time, m_ValidHit;
     return result;
 
 }
