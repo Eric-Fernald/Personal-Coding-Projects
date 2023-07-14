@@ -52,7 +52,7 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position,
     //Round time to 3 decimal places
     m_time = std::round(m_time * 1000.0) / 1000.0;
 
-    //Check if the hit is valid and if the time is greater than the max time
+    //Check if the time is greater than the max time and if so, set the valid hit to false
     if m_time >= max_time{
         m_ValidHit = false;
     }
