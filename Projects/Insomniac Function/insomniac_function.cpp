@@ -38,3 +38,8 @@ void TrajectoryResult(){
     std::cout << result.m_Time << std::endl;
     std::cout << result.m_ValidHit << std::endl;
 }
+
+int main() {
+  TrajectoryResult();
+  return 0;
+}
