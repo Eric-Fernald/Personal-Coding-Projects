@@ -25,7 +25,7 @@ struct TrajectoryResult
                                     double gravity_accel, 
                                     double raycast_time_step, 
                                     double max_time ); */
-void TrajectoryResult(){
+void TrajectoryResult input(){
     Vec3 start_position = {0,0,0};
     Vec3 start_velocity = {0,0,0};
     Vec3 up_vector = {0,0,0};
@@ -41,6 +41,7 @@ void TrajectoryResult(){
 }
 
 int main() {
-  TrajectoryResult();
+  TrajectoryResult t;
+  t = input();
   return 0;
 }
