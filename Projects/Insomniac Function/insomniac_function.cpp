@@ -27,7 +27,7 @@ TrajectoryResult PredictTrajectory( const Vec3& start_position,
                                     double raycast_time_step, 
                                     double max_time );
 
-void TrajectoryResult input(const Vec3& start_position, const Vec3& start_velocity, const Vec3& up_vector, double gravity_accel, double raycast_time_step, double max_time ){
+void TrajectoryResult PredictTrajectory(const Vec3& start_position, const Vec3& start_velocity, const Vec3& up_vector, double gravity_accel, double raycast_time_step, double max_time ){
     Vec3 start_position = {0,0,0};
     Vec3 start_velocity = {0,0,0};
     Vec3 up_vector = {0,0,0};
