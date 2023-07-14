@@ -31,10 +31,19 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position={0,0,0},
                                         double gravity_accel=0, 
                                         double raycast_time_step=0, 
                                         double max_time=10){
-
+    
+    //Initialize the variables
     m_ValidHit = true;
     m_EndPoint = {0,0,0};
     m_time = 0;
+
+    //Calculate the end point of the trajectory
+    m_EndPoint = start_position + start_velocity * max_time + 0.5 * gravity_accel * max_time * max_time;
+
+
+
+
+
 
     //Round the endpoint to 2 decimal places
     m_EndPoint = std::ceil(EndPoint * 100.0) / 100.0;
