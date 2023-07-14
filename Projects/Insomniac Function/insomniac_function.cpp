@@ -55,9 +55,7 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position={0,0,0},
     if m_time >= max_time{
         m_ValidHit = false;
     }
-    else{
-        m_ValidHit = true;
-    }
+    
 
     //Return the result struct
     TrajectoryResult result = m_EndPoint, m_time, m_ValidHit;
