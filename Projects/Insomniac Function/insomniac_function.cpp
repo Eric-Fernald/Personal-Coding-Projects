@@ -32,6 +32,13 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position={0,0,0},
                                         double raycast_time_step=0, 
                                         double max_time=10){
 
+
+    //Round the endpoint to 2 decimal places
+    m_EndPoint = std::ceil(EndPoint * 100.0) / 100.0;
+
+    //Round time to 2 decimal places
+    m_time = std::ceil(time * 100.0) / 100.0;
+
     TrajectoryResult result = m_EndPoint, m_time, m_ValidHit;
     return result;
 
