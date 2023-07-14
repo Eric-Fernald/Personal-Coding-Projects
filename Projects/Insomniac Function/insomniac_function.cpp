@@ -28,6 +28,12 @@ struct TrajectoryResult
   bool  m_ValidHit;
 };
 */
+//Define TrajectoryResult struct
+    struct TrajectoryResult {
+      m_EndPoint; 
+      m_time; 
+      m_ValidHit;
+    };
 
 void TrajectoryResult PredictTrajectory(const Vec3& start_position, 
                                         const Vec3& start_velocity, 
@@ -57,17 +63,9 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position,
     if m_time >= max_time{
         m_ValidHit = false;
     }
-    
-    //Define TrajectoryResult struct
-    struct TrajectoryResult {
-      m_EndPoint; 
-      m_time; 
-      m_ValidHit;
-    };
 
     //Return the result struct
     return TrajectoryResult;
-
 }
 
 //Execute the function.
