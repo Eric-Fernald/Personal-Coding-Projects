@@ -11,6 +11,8 @@ using namespace std;
 Return if a hit is valid or not.
 Return max time if no hit is detected.
 Return the end point of the trajectory.
+Questions to ask:
+Will the input always be valid or will I have to check for a valid input?
 struct Vec3
 {
   double x, y, z;
@@ -25,12 +27,12 @@ struct TrajectoryResult
 };
 */
 
-void TrajectoryResult PredictTrajectory(const Vec3& start_position={0,0,0}, 
-                                        const Vec3& start_velocity={0,0,0}, 
-                                        const Vec3& up_vector={0,0,0}, 
-                                        double gravity_accel=0, 
-                                        double raycast_time_step=0, 
-                                        double max_time=10){
+void TrajectoryResult PredictTrajectory(const Vec3& start_position, 
+                                        const Vec3& start_velocity, 
+                                        const Vec3& up_vector, 
+                                        double gravity_accel, 
+                                        double raycast_time_step, 
+                                        double max_time){
     
     //Initialize the variables
     TrajectoryResult::m_ValidHit = true;
