@@ -34,6 +34,7 @@ void TrajectoryResult input(){
     double raycast_time_step = 0;
     double max_time = 0;
     TrajectoryResult result = PredictTrajectory(start_position, start_velocity, up_vector, gravity_accel, raycast_time_step, max_time);
+    return result;
 
 }
 int main() {
