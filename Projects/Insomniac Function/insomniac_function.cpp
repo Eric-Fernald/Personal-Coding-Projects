@@ -60,7 +60,9 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position,
     
     //Define TrajectoryResult struct
     struct TrajectoryResult {
-      m_EndPoint; m_time; m_ValidHit;
+      m_EndPoint; 
+      m_time; 
+      m_ValidHit;
     };
 
     //Return the result struct
