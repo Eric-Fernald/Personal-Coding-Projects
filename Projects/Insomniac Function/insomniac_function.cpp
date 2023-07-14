@@ -29,11 +29,11 @@ struct TrajectoryResult
 };
 */
 //Define TrajectoryResult struct
-    struct TrajectoryResult {
-      m_EndPoint; 
-      m_time; 
-      m_ValidHit;
-    };
+struct TrajectoryResult {
+  m_EndPoint; 
+  m_time; 
+  m_ValidHit;
+};
 
 void TrajectoryResult PredictTrajectory(const Vec3& start_position, 
                                         const Vec3& start_velocity, 
