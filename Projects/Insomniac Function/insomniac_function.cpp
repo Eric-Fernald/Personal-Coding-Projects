@@ -19,12 +19,12 @@ struct TrajectoryResult {
       bool m_ValidHit;
     }TResult;
 
-TrajectoryResult PredictTrajectory(const Vec3& start_position, 
+TrajectoryResult PredictTrajectory( const Vec3& start_position, 
                                         const Vec3& start_velocity, 
                                         const Vec3& up_vector, 
                                         double gravity_accel, 
                                         double raycast_time_step, 
-                                        double max_time){
+                                        double max_time ){
 
     //Initialize the variables
     m_EndPoint = TResult.m_EndPoint;
