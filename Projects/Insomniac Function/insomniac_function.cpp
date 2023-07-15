@@ -33,7 +33,7 @@ struct TrajectoryResult {
   Vec3 m_EndPoint; 
   double m_time; 
   bool m_ValidHit;
-};
+}TResult;
 
 void TrajectoryResult PredictTrajectory(const Vec3& start_position, 
                                         const Vec3& start_velocity, 
@@ -43,9 +43,9 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position,
                                         double max_time){
     
     //Initialize the variables
-    TrajectoryResult::m_EndPoint = {0,0,0};
-    m_time = 0;
-    m_ValidHit = true;
+    m_EndPoint = TResult.m_EndPoint;
+    m_time = TResult.m_time;
+    m_ValidHit = TResult.m_ValidHit;
 
     //Calculate the end point of the trajectory
     m_EndPoint = start_position + start_velocity * m_time + 0.5 * gravity_accel * m_time * m_time;
