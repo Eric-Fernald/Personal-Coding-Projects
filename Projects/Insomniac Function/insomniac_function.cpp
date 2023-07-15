@@ -27,7 +27,6 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position,
                                         double gravity_accel, 
                                         double raycast_time_step, 
                                         double max_time){
-    
     //Initialize the variables
     m_EndPoint = TResult.m_EndPoint;
     m_time = TResult.m_time;
