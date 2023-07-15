@@ -12,6 +12,10 @@ Should default values be set for the parameters or the return struct if at all?
 Should a default value be set for the endpoint and time if the hit is not valid?
 Is there a desired variable name for the struct?
 Is the raycast_time_step defined as seconds or something else?
+Are there bounds to the values of x, y, and z?
+Can you have a negative height (shooting out of water)?
+Latitude X(-90 - 90) Longitude Y(-180 - 180) Z(-100 - 100)
+*/
 */
 struct TrajectoryResult {
       Vec3 m_EndPoint; 
