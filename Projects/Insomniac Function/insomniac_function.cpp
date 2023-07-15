@@ -27,7 +27,9 @@ TrajectoryResult PredictTrajectory( const Vec3& start_position,
                                         double max_time ){
 
     //Calculate the end point of the trajectory
-    TrajectoryResult.m_EndPoint = PredictTrajectory.start_position + PredictTrajectory.start_velocity * m_time + 0.5 * PredictTrajectory.gravity_accel * m_time * m_time;
+    TrajectoryResult.m_EndPoint = PredictTrajectory.start_position + PredictTrajectory.start_velocity * 
+                                  TrajectoryResult.m_time + 0.5 * PredictTrajectory.gravity_accel * 
+                                  TrajectoryResult.m_time * TrajectoryResult.m_time;
 
 
 
