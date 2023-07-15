@@ -52,7 +52,7 @@ void TrajectoryResult PredictTrajectory( const Vec3& start_position,
         m_ValidHit = false;
     };
 
-    FinalResult = PredictTrajectory(m_EndPoint, m_time, m_ValidHit);
+    struct FinalResult = PredictTrajectory(m_EndPoint, m_time, m_ValidHit);
     //Return the result struct
     return FinalResult;
 }
