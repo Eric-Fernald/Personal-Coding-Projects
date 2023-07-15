@@ -14,18 +14,18 @@ Should a default value be set for the endpoint and time if the hit is not valid?
 Is there a desired variable name for the struct?
 Is the raycast_time_step defined as seconds or something else?
 */
-
+struct TrajectoryResult {
+      Vec3 m_EndPoint; 
+      double m_time; 
+      bool m_ValidHit;
+    }TResult;
+    
 TrajectoryResult PredictTrajectory(const Vec3& start_position, 
                                         const Vec3& start_velocity, 
                                         const Vec3& up_vector, 
                                         double gravity_accel, 
                                         double raycast_time_step, 
                                         double max_time){
-    struct TrajectoryResult {
-      Vec3 m_EndPoint; 
-      double m_time; 
-      bool m_ValidHit;
-    }TResult;
 
     //Initialize the variables
     m_EndPoint = TResult.m_EndPoint;
