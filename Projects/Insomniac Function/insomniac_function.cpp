@@ -30,9 +30,9 @@ struct TrajectoryResult
 */
 //Define TrajectoryResult struct
 struct TrajectoryResult {
-  m_EndPoint; 
-  m_time; 
-  m_ValidHit;
+  Vec3 m_EndPoint; 
+  double m_time; 
+  bool m_ValidHit;
 };
 
 void TrajectoryResult PredictTrajectory(const Vec3& start_position, 
@@ -43,7 +43,7 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position,
                                         double max_time){
     
     //Initialize the variables
-    m_EndPoint = {0,0,0};
+    TrajectoryResult::m_EndPoint = {0,0,0};
     m_time = 0;
     m_ValidHit = true;
 
