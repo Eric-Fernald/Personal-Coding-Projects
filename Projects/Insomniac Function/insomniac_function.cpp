@@ -1,7 +1,3 @@
-/*For this test, you will be implementing a function that simulates a projectile trajectory based on its initial starting position and velocity.
-
-The function should return a TrajectoryResult struct, which has the following definition:
-*/
 #include <stdint.h>
 #include <math.h>
 #include <double.h>
@@ -16,18 +12,6 @@ Will the input always be valid or will I have to check for a valid input?
 Should default values be set for the parameters or the return struct if at all?
 Should a default value be set for the endpoint and time if the hit is not valid?
 Is there a desired variable name for the struct?
-struct Vec3
-{
-  double x, y, z;
-
-};
-
-struct TrajectoryResult
-{
-  Vec3 m_EndPoint;
-  double m_Time;
-  bool  m_ValidHit;
-};
 */
 
 void TrajectoryResult PredictTrajectory(const Vec3& start_position, 
