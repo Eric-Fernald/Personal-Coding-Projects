@@ -101,3 +101,4 @@ ax2.set_xlabel('epoch')
 ax2.legend(['train', 'validation'], loc='upper left')
 
 plt.show()
+#Model currently has 75% accuracy.
