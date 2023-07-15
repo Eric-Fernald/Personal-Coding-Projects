@@ -67,10 +67,3 @@ void TrajectoryResult PredictTrajectory(const Vec3& start_position,
     //Return the result struct
     return TrajectoryResult;
 }
-
-//Execute the function.
-int main() {
-  TrajectoryResult t;
-  t = input();
-  return 0;
-}
