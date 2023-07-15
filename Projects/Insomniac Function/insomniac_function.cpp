@@ -11,6 +11,7 @@ Questions to ask:
 Will the input always be valid or will I have to check for a valid input?
 Should default values be set for the parameters or the return struct if at all?
 Should a default value be set for the endpoint and time if the hit is not valid?
+Is the function signature correct?
 Is there a desired variable name for the struct?
 */
 
