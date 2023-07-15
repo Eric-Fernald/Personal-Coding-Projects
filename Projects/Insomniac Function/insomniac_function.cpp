@@ -1,7 +1,6 @@
 #include <stdint.h>
 #include <math.h>
 #include <double.h>
-using namespace std;
 
 /*
 Return if a hit is valid or not.
