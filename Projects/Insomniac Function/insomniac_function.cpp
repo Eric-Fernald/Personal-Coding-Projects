@@ -25,7 +25,7 @@ void TrajectoryResult PredictTrajectory( const Vec3& start_position,
                                         double gravity_accel, 
                                         double raycast_time_step, 
                                         double max_time ){
-                                          
+
     //Initialize the variables pulled in from the struct.
     m_EndPoint = TResult.m_EndPoint;
     m_time = TResult.m_time;
@@ -38,16 +38,17 @@ void TrajectoryResult PredictTrajectory( const Vec3& start_position,
 
 
     //Round the endpoint to 2 decimal places
-    TrajectoryResult.m_EndPoint = round(m_EndPoint * 100.0) / 100.0;
+    m_EndPoint = round(m_EndPoint * 100.0) / 100.0;
 
     //Round time to 3 decimal places
-    TrajectoryResult.m_time = round(m_time * 1000.0) / 1000.0;
+    m_time = round(m_time * 1000.0) / 1000.0;
 
     //Check if the time is greater than the max time and if so, set the valid hit to false
-    if TrajectoryResult.m_time >= PredictTrajectory.max_time{
-        TrajectoryResult.m_ValidHit = false;
+    if m_time >= max_time{
+        m_ValidHit = false;
     };
 
+    struct FinalResult = {m_EndPoint, m_time, m_ValidHit};
     //Return the result struct
-    return TrajectoryResult;
+    return FinalResult;
 }
