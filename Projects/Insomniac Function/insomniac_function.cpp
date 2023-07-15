@@ -18,7 +18,7 @@ struct TrajectoryResult {
       Vec3 m_EndPoint; 
       double m_time; 
       bool m_ValidHit;
-    }TResult;
+    };
 
 TrajectoryResult PredictTrajectory(const Vec3& start_position, 
                                         const Vec3& start_velocity, 
