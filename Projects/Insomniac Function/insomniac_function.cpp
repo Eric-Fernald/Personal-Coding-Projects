@@ -50,5 +50,5 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
     }
 
     //Return the result struct
-    return PredictTrajectory;
+    return TResult;
 }
