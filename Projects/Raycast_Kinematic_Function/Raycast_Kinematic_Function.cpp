@@ -13,6 +13,7 @@ Should a default value be set for the endpoint and time if the hit is never vali
 Is there a desired variable name for the struct?
 Are there bounds to the values of x, y, and z?
 Does the radius of the collision detection need to be set to a value?
+Will the gravity acceleration parameter always be positive on input?
 */
 
 //Define TrajectoryResult struct
