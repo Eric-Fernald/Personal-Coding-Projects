@@ -32,9 +32,10 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
                                    const Vec3& start_velocity,
                                    const Vec3& up_vector,
                                    double gravity_accel,
-                                   double time_step,
+                                   double raycast_time_step,
                                    double max_time) {
     TrajectoryResult result;
+    double max_distance = start_velocity.x * max_time;
 
     Vec3 current_position = start_position;
     Vec3 current_velocity = start_velocity;
@@ -43,22 +44,38 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
 
     while (current_time <= max_time) {
         // Calculate the new position and velocity based on gravity and current time step
-        current_velocity.y += gravity_accel * time_step;
-        current_position.x += current_velocity.x * time_step;
-        current_position.y += current_velocity.y * time_step;
-        current_position.z += current_velocity.z * time_step;
+        current_velocity.y += gravity_accel * raycast_time_step;
+        current_position.x += current_velocity.x * raycast_time_step;
+        current_position.y += current_velocity.y * raycast_time_step;
+        current_position.z += current_velocity.z * raycast_time_step;
 
-        // Perform collision detection using the physics planes
-        if (Physics::Raycast(current_position)) {
-            valid_hit = true;
+        // Check if the current position is beyond the maximum distance
+        if (current_position.x >= max_distance) {
             break;
         }
 
-        current_time += time_step;
+        // Perform raycast from the current position to the next position
+        Vec3 next_position = current_position + current_velocity * raycast_time_step;
+        Physics::QueryResult raycast_result = Physics::Raycast(current_position, next_position);
+
+        if (raycast_result.m_ValidHit) {
+            // A valid hit occurred, update the result and break the loop
+            valid_hit = true;
+            result.m_EndPoint = raycast_result.m_HitPos;
+            double time_ratio = (raycast_result.m_HitPos.x - current_position.x) / current_velocity.x;
+            result.m_Time = current_time + time_ratio * raycast_time_step;
+            break;
+        }
+
+        current_time += raycast_time_step;
     }
 
-    result.m_EndPoint = current_position;
-    result.m_Time = current_time;
+    if (!valid_hit) {
+        // No hit occurred, set the result to the maximum time and the endpoint at the final position
+        result.m_EndPoint = current_position;
+        result.m_Time = max_time;
+    }
+
     result.m_ValidHit = valid_hit;
 
     return result;
