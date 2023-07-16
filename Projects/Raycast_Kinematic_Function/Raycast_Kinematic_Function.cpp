@@ -27,71 +27,39 @@ struct Vec3 {
     double x, y, z;
 };
 
-//Define Sphere struct
-struct Sphere {
-    Vec3 center;
-    double radius;
-};
-
-//Function to check for collision using a sphere
-bool CheckCollision(const Vec3& position, const Sphere& sphere) {
-    double distanceSquared = (position.x - sphere.center.x) * (position.x - sphere.center.x) +
-                             (position.y - sphere.center.y) * (position.y - sphere.center.y) +
-                             (position.z - sphere.center.z) * (position.z - sphere.center.z);
-
-    double radiusSquared = sphere.radius * sphere.radius;
-
-    if (distanceSquared <= radiusSquared) {
-        return true;
-    }
-
-    return false;
-}
-
-//Main function to calculate the trajectory
+//Main function
 TrajectoryResult PredictTrajectory(const Vec3& start_position,
                                    const Vec3& start_velocity,
                                    const Vec3& up_vector,
                                    double gravity_accel,
-                                   double raycast_time_step,
+                                   double time_step,
                                    double max_time) {
     TrajectoryResult result;
 
-    //Define variables based on the input parameters
     Vec3 current_position = start_position;
     Vec3 current_velocity = start_velocity;
     double current_time = 0.0;
     bool valid_hit = false;
 
-    //Initialize collision sphere
-    Sphere collision_sphere = { { 1.0, 2.0, 3.0 }, 1.0 };
-
-    //Perform raycast until the max time is reached
     while (current_time <= max_time) {
+        // Calculate the new position and velocity based on gravity and current time step
+        current_velocity.y += gravity_accel * time_step;
+        current_position.x += current_velocity.x * time_step;
+        current_position.y += current_velocity.y * time_step;
+        current_position.z += current_velocity.z * time_step;
 
-        //Calculate the new position and velocity based on gravity, current time step, and kinematic equations
-        Vec3 acceleration = up_vector * (-gravity_accel);
-        current_velocity = current_velocity + acceleration * raycast_time_step;
-        current_position = current_position + current_velocity * raycast_time_step;
-
-        //Collision detection here to check for hits
-        if (CheckCollision(current_position, collision_sphere)) {
+        // Perform collision detection using the physics planes
+        if (Physics::CheckCollision(current_position)) {
             valid_hit = true;
             break;
         }
 
-        current_time += raycast_time_step;
+        current_time += time_step;
     }
 
-    //Set the values of the struct and round EndPoint to the nearest hundredth and time to the nearest thousandth
-    result.m_EndPoint = (current_position * 100.0) / 100.0;
-    result.m_Time = (current_time * 1000.0) / 1000.0;
+    result.m_EndPoint = current_position;
+    result.m_Time = current_time;
     result.m_ValidHit = valid_hit;
 
-    //If there is no hit, set the time to the max time
-    if (result.m_ValidHit == false) {
-        result.m_Time = max_time;
-    }
-
-    return TrajectoryResult(result);
+    return result;
 }
