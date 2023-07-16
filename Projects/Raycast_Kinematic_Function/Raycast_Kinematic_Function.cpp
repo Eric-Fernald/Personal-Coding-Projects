@@ -66,7 +66,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         //Calculate the new position and velocity based on gravity, current time step, and kinematic equations
         Vec3 acceleration = up_vector * (-gravity_accel);
         current_velocity = current_velocity + acceleration * raycast_time_step;
-        current_position = current_position + (current_velocity * current_time) + 0.5 * (gravity_accel * (current_time * current_time)) * raycast_time_step;
+        current_position = current_position + (current_velocity * current_time) + 0.5 * (-gravity_accel * (current_time * current_time)) * raycast_time_step;
         //Possibly add a known end point to check for a hit
         //Collision detection here to check for hits
         if (CheckCollision(current_position, current_position, radius)) {
