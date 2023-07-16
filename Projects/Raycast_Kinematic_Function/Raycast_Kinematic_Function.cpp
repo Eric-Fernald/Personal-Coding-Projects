@@ -46,12 +46,11 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         if (raycast_result.m_ValidHit) {
             valid_hit = true;
             result.m_EndPoint = raycast_result.m_HitPos;
-            double distance_squared = (raycast_result.m_HitPos.x - current_position.x) * (raycast_result.m_HitPos.x - current_position.x)
-                                      + (raycast_result.m_HitPos.y - current_position.y) * (raycast_result.m_HitPos.y - current_position.y)
-                                      + (raycast_result.m_HitPos.z - current_position.z) * (raycast_result.m_HitPos.z - current_position.z);
-            double velocity_squared = current_velocity.x * current_velocity.x + current_velocity.y * current_velocity.y + current_velocity.z * current_velocity.z;
-            double time_ratio = sqrt(distance_squared / velocity_squared);
-            result.m_Time = current_time + time_ratio * raycast_time_step;
+
+            // Calculate the time ratio based on the distance traveled along the raycast
+            double distance_ratio = (raycast_result.m_HitPos.x - current_position.x) / (current_velocity.x * raycast_time_step);
+            result.m_Time = current_time + distance_ratio * raycast_time_step;
+
             break;
         }
 
