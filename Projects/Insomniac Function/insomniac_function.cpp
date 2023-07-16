@@ -31,21 +31,21 @@ void TrajectoryResult PredictTrajectory( const Vec3& start_position,
                                         double max_time ){
 
     //Initialize the variables pulled in from the struct.
-    Vec3 m_EndPoint = TResult.m_EndPoint;
-    double m_time = TResult.m_time;
-    bool m_ValidHit = TResult.m_ValidHit;
+    m_EndPoint = TResult.m_EndPoint;
+    m_time = TResult.m_time;
+    m_ValidHit = TResult.m_ValidHit;
 
     //Calculate the end point of the trajectory
-    Vec3 m_EndPoint = start_position + start_velocity * m_time + 0.5 * gravity_accel * m_time * m_time;
+    m_EndPoint = start_position + start_velocity * m_time + 0.5 * gravity_accel * m_time * m_time;
 
 
 
 
     //Round the endpoint to 2 decimal places
-    Vec3 m_EndPoint = round(m_EndPoint * 100.0) / 100.0;
+    m_EndPoint = round(m_EndPoint * 100.0) / 100.0;
 
     //Round time to 3 decimal places
-    double m_time = round(m_time * 1000.0) / 1000.0;
+    m_time = round(m_time * 1000.0) / 1000.0;
 
     //Check if the time is greater than the max time and if so, set the valid hit to false
     if m_time >= max_time{
