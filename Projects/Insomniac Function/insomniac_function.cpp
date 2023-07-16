@@ -49,12 +49,12 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
     bool valid_hit = false;
 
     while (current_time <= max_time) {
-        // Calculate the new position and velocity based on gravity and current time step
+        //Calculate the new position and velocity based on gravity and current time step
         Vec3 acceleration = up_vector * (-gravity_accel);
         current_velocity = current_velocity + acceleration * raycast_time_step;
         current_position = current_position + current_velocity * raycast_time_step;
 
-        // Perform raycasting or collision detection here to check for hits
+        //Collision detection here to check for hits
         if (CheckCollision(current_position, collision_box)) {
             valid_hit = true;
             break;
@@ -63,8 +63,8 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         current_time += raycast_time_step;
     }
 
-    result.m_EndPoint = current_position;
-    result.m_time = current_time;
+    result.m_EndPoint = round(current_position * 100.0) / 100.0;
+    result.m_time = round(current_time * 1000.0) / 1000.0;
     result.m_ValidHit = valid_hit;
 
     return result;
