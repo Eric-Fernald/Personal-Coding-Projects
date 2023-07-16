@@ -27,12 +27,6 @@ struct Vec3 {
     double x, y, z;
 };
 
-//Define Sphere struct
-struct Sphere {
-    Vec3 center;
-    double radius;
-};
-
 //Function to check for collision based on kinmatic equations
 bool CheckCollision(const Vec3& p0, const Vec3& p1, double radius) {
     double distanceSquared = (p0.x - p1.x) * (p0.x - p1.x) +
