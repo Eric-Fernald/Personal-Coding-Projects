@@ -19,24 +19,48 @@ struct TrajectoryResult {
       Vec3 m_EndPoint; 
       double m_time; 
       bool m_ValidHit;
-    }TResult;
+    };
 
-void TrajectoryResult PredictTrajectory( const Vec3& start_position, 
-                                        const Vec3& start_velocity, 
-                                        const Vec3& up_vector, 
-                                        double gravity_accel, 
-                                        double raycast_time_step, 
-                                        double max_time ){
+struct Vec3 {
+    double x, y, z;
+};
 
-    //Initialize the variables pulled in from the struct.
-    m_EndPoint = TResult.m_EndPoint;
-    m_time = TResult.m_time;
-    m_ValidHit = TResult.m_ValidHit;
+TrajectoryResult PredictTrajectory(const Vec3& start_position,
+                                   const Vec3& start_velocity,
+                                   const Vec3& up_vector,
+                                   double gravity_accel,
+                                   double raycast_time_step,
+                                   double max_time) {
+    TrajectoryResult result;
 
-    //Calculate the end point of the trajectory
-    m_EndPoint = start_position + start_velocity * m_time + (0.5 * (gravity_accel * (m_time * m_time)));
+    Vec3 current_position = start_position;
+    Vec3 current_velocity = start_velocity;
+    double current_time = 0.0;
+    bool valid_hit = false;
 
+    while (current_time <= max_time) {
+        // Calculate the new position and velocity based on gravity and current time step
+        Vec3 acceleration = up_vector * (-gravity_accel);
+        current_velocity = current_velocity + acceleration * raycast_time_step;
+        current_position = current_position + current_velocity * raycast_time_step;
 
+        // Perform raycasting or collision detection here to check for hits
+        // ...
+        // Assume a hit occurs when the position crosses a certain threshold
+        if (current_position.z <= 0.0) {
+            valid_hit = true;
+            break;
+        }
+
+        current_time += raycast_time_step;
+    }
+
+    result.m_EndPoint = current_position;
+    result.m_time = current_time;
+    result.m_ValidHit = valid_hit;
+
+    return result;
+}
 
 
     //Round the endpoint to 2 decimal places
