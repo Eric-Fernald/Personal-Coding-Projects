@@ -14,13 +14,15 @@ Is there a desired variable name for the struct?
 Is the raycast_time_step defined as seconds or something else?
 Are there bounds to the values of x, y, and z?
 */
-*/
+
+//Define TrajectoryResult struct
 struct TrajectoryResult {
       Vec3 m_EndPoint; 
       double m_time; 
       bool m_ValidHit;
     };
 
+//Define Vec3 struct
 struct Vec3 {
     double x, y, z;
 };
@@ -41,6 +43,7 @@ bool CheckCollision(const Vec3& position, const AABB& box) {
 
     return false;
 }
+
 //Main function to calculate the trajectory
 TrajectoryResult PredictTrajectory(const Vec3& start_position,
                                    const Vec3& start_velocity,
