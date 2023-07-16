@@ -59,6 +59,9 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
     double current_time = 0.0;
     bool valid_hit = false;
 
+    //Define an example collision box
+    AABB collision_box = { { -1.0, -1.0, -1.0 }, { 1.0, 1.0, 1.0 } };
+
     //Perform raycast until the max time is reached
     while (current_time <= max_time) {
 
