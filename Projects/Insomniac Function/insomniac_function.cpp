@@ -8,7 +8,7 @@ Return max time if no hit is detected.
 Return the end point of the trajectory.
 Questions to ask:
 Will the input always be valid or will I have to check for a valid input?
-Should default values be set for the parameters or the return struct if at all?
+Should default values be set for the parameters?
 Should a default value be set for the endpoint and time if the hit is not valid?
 Is there a desired variable name for the struct?
 Is the raycast_time_step defined as seconds or something else?
