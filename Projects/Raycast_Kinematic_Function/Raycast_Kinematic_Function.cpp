@@ -43,20 +43,8 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
     bool valid_hit = false;
 
     while (current_time <= max_time) {
-        // Calculate the new position and velocity based on gravity and current time step
-        current_velocity.y += gravity_accel * raycast_time_step;
-        current_position.x += current_velocity.x * raycast_time_step;
-        current_position.y += current_velocity.y * raycast_time_step;
-        current_position.z += current_velocity.z * raycast_time_step;
-
-        // Check if the current position is beyond the maximum distance
-        if (current_position.x >= max_distance) {
-            break;
-        }
-
-        // Perform raycast from the current position to the next position
-        Vec3 next_position = current_position + current_velocity * raycast_time_step;
-        Physics::QueryResult raycast_result = Physics::Raycast(current_position, next_position);
+        // Perform raycast at current position
+        Physics::QueryResult raycast_result = Physics::Raycast(current_position, current_position + current_velocity * raycast_time_step);
 
         if (raycast_result.m_ValidHit) {
             // A valid hit occurred, update the result and break the loop
@@ -64,6 +52,15 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
             result.m_EndPoint = raycast_result.m_HitPos;
             double time_ratio = (raycast_result.m_HitPos.x - current_position.x) / current_velocity.x;
             result.m_Time = current_time + time_ratio * raycast_time_step;
+            break;
+        }
+
+        // Calculate the new position and velocity based on gravity and current time step
+        current_velocity.y += gravity_accel * raycast_time_step;
+        current_position += current_velocity * raycast_time_step;
+
+        // Check if the current position is beyond the maximum distance
+        if (current_position.x >= max_distance) {
             break;
         }
 
