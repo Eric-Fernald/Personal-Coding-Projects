@@ -13,6 +13,7 @@ Should a default value be set for the endpoint and time if the hit is not valid?
 Is there a desired variable name for the struct?
 Is the raycast_time_step defined as seconds or something else?
 Are there bounds to the values of x, y, and z?
+Does a collision box need to be defined?
 */
 
 //Define TrajectoryResult struct
