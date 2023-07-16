@@ -43,22 +43,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         // Perform raycast at current position
         Physics::QueryResult raycast_result = Physics::Raycast(current_position, current_position + current_velocity * raycast_time_step);
 
-        // Check if raycast hit a plane
-        bool raycast_hit_plane = false;
-        for (const auto& plane : planes) {
-            if (plane.normal.Dot(current_velocity) != 0.0) {
-                double t = (plane.normal.Dot(plane.normal * plane.d - current_position)) / plane.normal.Dot(current_velocity);
-                if (t >= 0.0 && t <= raycast_time_step) {
-                    Vec3 hit_pos = current_position + current_velocity * t;
-                    raycast_result.m_ValidHit = true;
-                    raycast_result.m_HitPos = hit_pos;
-                    raycast_hit_plane = true;
-                    break;
-                }
-            }
-        }
-
-        if (raycast_result.m_ValidHit && (!raycast_hit_plane || raycast_result.m_HitPos.x < current_position.x)) {
+        if (raycast_result.m_ValidHit && (raycast_result.m_HitPos.x <= max_distance)){
             valid_hit = true;
             result.m_EndPoint = raycast_result.m_HitPos;
 
