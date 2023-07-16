@@ -27,6 +27,12 @@ struct Vec3 {
     double x, y, z;
 };
 
+//Define Sphere struct
+struct Sphere {
+    Vec3 center;
+    double radius;
+};
+
 //Function to check for collision
 bool CheckCollision(const Vec3& position, const Sphere& sphere) {
     double distanceSquared = (position.x - sphere.center.x) * (position.x - sphere.center.x) +
