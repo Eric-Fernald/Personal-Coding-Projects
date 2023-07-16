@@ -25,6 +25,16 @@ struct Vec3 {
     double x, y, z;
 };
 
+bool CheckCollision(const Vec3& position, const AABB& box) {
+    if (position.x >= box.min.x && position.x <= box.max.x &&
+        position.y >= box.min.y && position.y <= box.max.y &&
+        position.z >= box.min.z && position.z <= box.max.z) {
+        return true;
+    }
+
+    return false;
+}
+
 TrajectoryResult PredictTrajectory(const Vec3& start_position,
                                    const Vec3& start_velocity,
                                    const Vec3& up_vector,
