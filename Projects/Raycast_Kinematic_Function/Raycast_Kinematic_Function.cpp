@@ -61,7 +61,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
     //Perform raycast until the max time is reached
     while (current_time <= max_time) {
 
-        //Calculate the new position and velocity based on gravity and current time step
+        //Calculate the new position and velocity based on gravity, current time step, and kinematic equations
         Vec3 acceleration = up_vector * (-gravity_accel);
         current_velocity = current_velocity + acceleration * raycast_time_step;
         current_position = current_position + (current_velocity * current_time) + 0.5 * (gravity_accel * (current_time * current_time)) * raycast_time_step;
