@@ -27,12 +27,6 @@ struct Vec3 {
     double x, y, z;
 };
 
-//Define struct for Axis-Aligned Bounding Box
-struct AABB {
-    Vec3 min;
-    Vec3 max;
-};
-
 //Function to check for collision
 bool CheckCollision(const Vec3& position, const Sphere& sphere) {
     double distanceSquared = (position.x - sphere.center.x) * (position.x - sphere.center.x) +
@@ -84,10 +78,15 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         current_time += raycast_time_step;
     }
 
-    //Set the values of the struct and round EndPoint to the nearest hundredth and time to the nearest thousandth.
+    //Set the values of the struct and round EndPoint to the nearest hundredth and time to the nearest thousandth
     result.m_EndPoint = round(current_position * 100.0) / 100.0;
     result.m_time = round(current_time * 1000.0) / 1000.0;
     result.m_ValidHit = valid_hit;
+
+    //If there is no hit, set the time to the max time
+    if (result.m_ValidHit == false) {
+        result.m_time = max_time;
+    }
 
     return result;
 }
