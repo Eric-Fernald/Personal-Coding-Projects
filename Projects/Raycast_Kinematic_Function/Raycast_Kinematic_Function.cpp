@@ -34,12 +34,12 @@ struct Sphere {
 };
 
 //Function to check for collision
-bool CheckCollision(const Vec3& position, const Sphere& sphere) {
-    double distanceSquared = (position.x - sphere.center.x) * (position.x - sphere.center.x) +
-                             (position.y - sphere.center.y) * (position.y - sphere.center.y) +
-                             (position.z - sphere.center.z) * (position.z - sphere.center.z);
+bool CheckCollision(const Vec3& position1, const Vec3& position2, double radius) {
+    double distanceSquared = (position1.x - position2.x) * (position1.x - position2.x) +
+                             (position1.y - position2.y) * (position1.y - position2.y) +
+                             (position1.z - position2.z) * (position1.z - position2.z);
 
-    double radiusSquared = sphere.radius * sphere.radius;
+    double radiusSquared = radius * radius;
 
     if (distanceSquared <= radiusSquared) {
         return true;
@@ -62,9 +62,6 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
     Vec3 current_velocity = start_velocity;
     double current_time = 0.0;
     bool valid_hit = false;
-
-    //Define a collision sphere
-    Sphere collision_sphere = { { 1.0, 2.0, 3.0 }, 1.0 };
 
     //Perform raycast until the max time is reached
     while (current_time <= max_time) {
