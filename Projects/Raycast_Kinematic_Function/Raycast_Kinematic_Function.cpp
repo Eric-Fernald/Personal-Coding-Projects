@@ -49,7 +49,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         current_position.z += current_velocity.z * time_step;
 
         // Perform collision detection using the physics planes
-        if (Physics::CheckCollision(current_position)) {
+        if (Physics::Raycast(current_position)) {
             valid_hit = true;
             break;
         }
