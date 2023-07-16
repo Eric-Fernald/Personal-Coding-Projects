@@ -75,7 +75,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         current_position = current_position + current_velocity * raycast_time_step;
 
         //Collision detection here to check for hits
-        if (CheckCollision(current_position, collision_box)) {
+        if (CheckCollision(current_position, collision_sphere)) {
             valid_hit = true;
             break;
         }
