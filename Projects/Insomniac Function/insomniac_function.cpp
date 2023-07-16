@@ -70,7 +70,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
     return result;
 }
 
-
+/*
     //Round the endpoint to 2 decimal places
     m_EndPoint = round(m_EndPoint * 100.0) / 100.0;
 
@@ -86,3 +86,4 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
     //Return the result struct
     return FinalResult;
 }
+*/
