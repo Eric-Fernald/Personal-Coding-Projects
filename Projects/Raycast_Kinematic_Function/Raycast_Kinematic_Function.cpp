@@ -14,7 +14,6 @@ Is there a desired variable name for the struct?
 Are there bounds to the values of x, y, and z?
 Does the radius of the collision detection need to be set to a value?
 Will the gravity acceleration parameter always be positive on input?
-Does it need to be simple collision detection or continuous collision detection?
 */
 
 //Define TrajectoryResult struct
@@ -29,13 +28,19 @@ struct Vec3 {
     double x, y, z;
 };
 
-//Function to check for collision
-bool CheckCollision(const Vec3& p0, const Vec3& p1, double radius) {
-    double distanceSquared = (p0.x - p1.x) * (p0.x - p1.x) +
-                             (p0.y - p1.y) * (p0.y - p1.y) +
-                             (p0.z - p1.z) * (p0.z - p1.z);
+//Define Sphere struct
+struct Sphere {
+    Vec3 center;
+    double radius;
+};
 
-    double radiusSquared = radius * radius;
+//Function to check for collision using a sphere
+bool CheckCollision(const Vec3& position, const Sphere& sphere) {
+    double distanceSquared = (position.x - sphere.center.x) * (position.x - sphere.center.x) +
+                             (position.y - sphere.center.y) * (position.y - sphere.center.y) +
+                             (position.z - sphere.center.z) * (position.z - sphere.center.z);
+
+    double radiusSquared = sphere.radius * sphere.radius;
 
     if (distanceSquared <= radiusSquared) {
         return true;
@@ -56,9 +61,11 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
     //Define variables based on the input parameters
     Vec3 current_position = start_position;
     Vec3 current_velocity = start_velocity;
-    double radius = CheckCollision.radius;
     double current_time = 0.0;
     bool valid_hit = false;
+
+    //Initialize collision sphere
+    Sphere collision_sphere = { { 1.0, 2.0, 3.0 }, 1.0 };
 
     //Perform raycast until the max time is reached
     while (current_time <= max_time) {
@@ -66,15 +73,15 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         //Calculate the new position and velocity based on gravity, current time step, and kinematic equations
         Vec3 acceleration = up_vector * (-gravity_accel);
         current_velocity = current_velocity + acceleration * raycast_time_step;
-        current_position = current_position + (current_velocity * current_time) + 0.5 * (-gravity_accel * (current_time * current_time)) * raycast_time_step;
+        current_position = current_position + current_velocity * raycast_time_step;
+
         //Possibly add a known end point to check for a hit
         //Collision detection here to check for hits
-        if (CheckCollision(current_position, current_position, radius)) {
+        if (CheckCollision(current_position, collision_sphere)) {
             valid_hit = true;
             break;
         }
 
-        //Increment the current time by the time step
         current_time += raycast_time_step;
     }
 
