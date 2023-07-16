@@ -43,7 +43,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         // Perform raycast at current position
         Physics::QueryResult raycast_result = Physics::Raycast(current_position, current_position + current_velocity * raycast_time_step);
 
-        if (raycast_result.m_ValidHit && (raycast_result.m_HitPos.x <= max_distance)){
+        if (raycast_result.m_ValidHit && (raycast_result.m_HitPos.x <= current_position.x)){
             valid_hit = true;
             result.m_EndPoint = raycast_result.m_HitPos;
 
@@ -56,7 +56,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
 
         // Calculate the new position based on velocity and current time step
         current_position.x += current_velocity.x * raycast_time_step;
-        current_position.y += current_velocity.y * raycast_time_step;
+        current_position.y += current_velocity.y * raycast_time_step + 0.5 * gravity_accel * raycast_time_step * raycast_time_step;
         current_position.z += current_velocity.z * raycast_time_step;
 
         // Calculate the new velocity based on gravity and current time step
