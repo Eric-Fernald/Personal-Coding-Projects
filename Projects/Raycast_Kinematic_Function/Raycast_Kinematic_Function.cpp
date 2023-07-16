@@ -8,11 +8,8 @@ Return max time if no hit is detected.
 Return the end point of the trajectory.
 Questions to ask:
 Will the input always be valid or will I have to check for a valid input?
-Should default values be set for the parameters?
 Should a default value be set for the endpoint and time if the hit is never valid?
 Are there bounds to the values of x, y, and z?
-Does the radius of the collision detection need to be set to a value?
-Will the gravity acceleration parameter always be positive on input?
 */
 
 //Define TrajectoryResult struct
@@ -47,17 +44,26 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         Physics::QueryResult raycast_result = Physics::Raycast(current_position, current_position + current_velocity * raycast_time_step);
 
         if (raycast_result.m_ValidHit) {
-            // A valid hit occurred, update the result and break the loop
             valid_hit = true;
             result.m_EndPoint = raycast_result.m_HitPos;
-            double time_ratio = (raycast_result.m_HitPos.x - current_position.x) / current_velocity.x;
+            double distance_squared = (raycast_result.m_HitPos.x - current_position.x) * (raycast_result.m_HitPos.x - current_position.x)
+                                      + (raycast_result.m_HitPos.y - current_position.y) * (raycast_result.m_HitPos.y - current_position.y)
+                                      + (raycast_result.m_HitPos.z - current_position.z) * (raycast_result.m_HitPos.z - current_position.z);
+            double velocity_squared = current_velocity.x * current_velocity.x + current_velocity.y * current_velocity.y + current_velocity.z * current_velocity.z;
+            double time_ratio = std::sqrt(distance_squared / velocity_squared);
             result.m_Time = current_time + time_ratio * raycast_time_step;
             break;
         }
 
-        // Calculate the new position and velocity based on gravity and current time step
-        current_velocity.y += gravity_accel * raycast_time_step;
-        current_position += current_velocity * raycast_time_step;
+        // Calculate the new position based on velocity and current time step
+        current_position.x += current_velocity.x * raycast_time_step;
+        current_position.y += current_velocity.y * raycast_time_step;
+        current_position.z += current_velocity.z * raycast_time_step;
+
+        // Calculate the new velocity based on gravity and current time step
+        current_velocity.x += up_vector.x * gravity_accel * raycast_time_step;
+        current_velocity.y += up_vector.y * gravity_accel * raycast_time_step;
+        current_velocity.z += up_vector.z * gravity_accel * raycast_time_step;
 
         // Check if the current position is beyond the maximum distance
         if (current_position.x >= max_distance) {
