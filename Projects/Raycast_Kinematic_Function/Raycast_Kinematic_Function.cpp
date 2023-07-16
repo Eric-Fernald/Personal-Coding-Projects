@@ -12,7 +12,7 @@ Should default values be set for the parameters?
 Should a default value be set for the endpoint and time if the hit is never valid?
 Is there a desired variable name for the struct?
 Are there bounds to the values of x, y, and z?
-Does a collision box need to be defined?
+Does the radius of the collision detection need to be set to a value?
 */
 
 //Define TrajectoryResult struct
@@ -54,6 +54,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
     //Define variables based on the input parameters
     Vec3 current_position = start_position;
     Vec3 current_velocity = start_velocity;
+    double radius = CheckCollision.radius;
     double current_time = 0.0;
     bool valid_hit = false;
 
@@ -63,10 +64,10 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         //Calculate the new position and velocity based on gravity and current time step
         Vec3 acceleration = up_vector * (-gravity_accel);
         current_velocity = current_velocity + acceleration * raycast_time_step;
-        current_position = current_position + current_velocity * raycast_time_step;
-
+        current_position = current_position + (current_velocity * current_time) + 0.5 * (gravity_accel * (current_time * current_time)) * raycast_time_step;
+        //Possibly add a known end point to check for a hit
         //Collision detection here to check for hits
-        if (CheckCollision(current_position, collision_sphere)) {
+        if (CheckCollision(current_position, current_position, radius)) {
             valid_hit = true;
             break;
         }
