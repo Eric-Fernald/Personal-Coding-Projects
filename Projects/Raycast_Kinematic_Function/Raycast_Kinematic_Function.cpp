@@ -3,9 +3,6 @@
 #include <double.h>
 
 /*
-Return if a hit is valid or not.
-Return max time if no hit is detected.
-Return the end point of the trajectory.
 Questions to ask:
 Will the input always be valid or will I have to check for a valid input?
 Should a default value be set for the endpoint and time if the hit is never valid?
