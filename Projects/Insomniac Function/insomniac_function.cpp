@@ -62,7 +62,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
 
         current_time += raycast_time_step;
     }
-
+    //Set the values of the struct and round EndPoint to the nearest hundredth and time to the nearest thousandth.
     result.m_EndPoint = round(current_position * 100.0) / 100.0;
     result.m_time = round(current_time * 1000.0) / 1000.0;
     result.m_ValidHit = valid_hit;
