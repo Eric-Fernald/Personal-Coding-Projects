@@ -31,6 +31,7 @@ struct AABB {
     Vec3 max;
 };
 
+//Function to check for collision
 bool CheckCollision(const Vec3& position, const AABB& box) {
     if (position.x >= box.min.x && position.x <= box.max.x &&
         position.y >= box.min.y && position.y <= box.max.y &&
@@ -40,7 +41,7 @@ bool CheckCollision(const Vec3& position, const AABB& box) {
 
     return false;
 }
-
+//Main function to calculate the trajectory
 TrajectoryResult PredictTrajectory(const Vec3& start_position,
                                    const Vec3& start_velocity,
                                    const Vec3& up_vector,
@@ -49,12 +50,15 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
                                    double max_time) {
     TrajectoryResult result;
 
+    //Define variables based on the input parameters
     Vec3 current_position = start_position;
     Vec3 current_velocity = start_velocity;
     double current_time = 0.0;
     bool valid_hit = false;
 
+    //Perform raycast until the max time is reached
     while (current_time <= max_time) {
+
         //Calculate the new position and velocity based on gravity and current time step
         Vec3 acceleration = up_vector * (-gravity_accel);
         current_velocity = current_velocity + acceleration * raycast_time_step;
@@ -66,8 +70,10 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
             break;
         }
 
+        //Increment the current time by the time step
         current_time += raycast_time_step;
     }
+
     //Set the values of the struct and round EndPoint to the nearest hundredth and time to the nearest thousandth.
     result.m_EndPoint = round(current_position * 100.0) / 100.0;
     result.m_time = round(current_time * 1000.0) / 1000.0;
@@ -75,11 +81,3 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
 
     return result;
 }
-
-/*
-    //Check if the time is greater than the max time and if so, set the valid hit to false
-    if m_time >= max_time{
-        m_ValidHit = false;
-    };
-}
-*/
