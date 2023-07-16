@@ -11,7 +11,6 @@ Will the input always be valid or will I have to check for a valid input?
 Should default values be set for the parameters?
 Should a default value be set for the endpoint and time if the hit is not valid?
 Is there a desired variable name for the struct?
-Is the raycast_time_step defined as seconds or something else?
 Are there bounds to the values of x, y, and z?
 Does a collision box need to be defined?
 */
