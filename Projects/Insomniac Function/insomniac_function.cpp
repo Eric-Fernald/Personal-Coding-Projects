@@ -34,10 +34,14 @@ struct AABB {
 };
 
 //Function to check for collision
-bool CheckCollision(const Vec3& position, const AABB& box) {
-    if (position.x >= box.min.x && position.x <= box.max.x &&
-        position.y >= box.min.y && position.y <= box.max.y &&
-        position.z >= box.min.z && position.z <= box.max.z) {
+bool CheckCollision(const Vec3& position, const Sphere& sphere) {
+    double distanceSquared = (position.x - sphere.center.x) * (position.x - sphere.center.x) +
+                             (position.y - sphere.center.y) * (position.y - sphere.center.y) +
+                             (position.z - sphere.center.z) * (position.z - sphere.center.z);
+
+    double radiusSquared = sphere.radius * sphere.radius;
+
+    if (distanceSquared <= radiusSquared) {
         return true;
     }
 
@@ -59,8 +63,8 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
     double current_time = 0.0;
     bool valid_hit = false;
 
-    //Define an example collision box
-    AABB collision_box = { { -1.0, -1.0, -1.0 }, { 1.0, 1.0, 1.0 } };
+    //Define a collision sphere
+    Sphere collision_sphere = { { 1.0, 2.0, 3.0 }, 1.0 };
 
     //Perform raycast until the max time is reached
     while (current_time <= max_time) {
