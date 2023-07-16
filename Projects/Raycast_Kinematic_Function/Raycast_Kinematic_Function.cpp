@@ -14,6 +14,7 @@ Is there a desired variable name for the struct?
 Are there bounds to the values of x, y, and z?
 Does the radius of the collision detection need to be set to a value?
 Will the gravity acceleration parameter always be positive on input?
+Does it need to be simple collision detection or continuous collision detection?
 */
 
 //Define TrajectoryResult struct
