@@ -34,10 +34,10 @@ struct Sphere {
 };
 
 //Function to check for collision
-bool CheckCollision(const Vec3& position1, const Vec3& position2, double radius) {
-    double distanceSquared = (position1.x - position2.x) * (position1.x - position2.x) +
-                             (position1.y - position2.y) * (position1.y - position2.y) +
-                             (position1.z - position2.z) * (position1.z - position2.z);
+bool CheckCollision(const Vec3& p0, const Vec3& p1, double radius) {
+    double distanceSquared = (p0.x - p1.x) * (p0.x - p1.x) +
+                             (p0.y - p1.y) * (p0.y - p1.y) +
+                             (p0.z - p1.z) * (p0.z - p1.z);
 
     double radiusSquared = radius * radius;
 
