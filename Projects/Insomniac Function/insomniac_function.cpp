@@ -25,6 +25,12 @@ struct Vec3 {
     double x, y, z;
 };
 
+//Define struct for Axis-Aligned Bounding Box
+struct AABB {
+    Vec3 min;
+    Vec3 max;
+};
+
 bool CheckCollision(const Vec3& position, const AABB& box) {
     if (position.x >= box.min.x && position.x <= box.max.x &&
         position.y >= box.min.y && position.y <= box.max.y &&
