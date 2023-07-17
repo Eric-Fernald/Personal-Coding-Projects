@@ -68,7 +68,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         result.m_Time = max_time;
     }
 
-    result.m_ValidHit = valid_hit;
+    result.m_ValidHit = valid_hit; // Might need to take this out
 
     return result;
 }
