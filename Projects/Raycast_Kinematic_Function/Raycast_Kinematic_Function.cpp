@@ -8,6 +8,7 @@ Will the input always be valid or will I have to check for a valid input?
 Should a default value be set for the endpoint and time if the hit is never valid?
 Are there bounds to the values of x, y, and z?
 Is the z axis or y axis up?
+Are any of the projectiles launched at an angle?
 */
 
 //Define TrajectoryResult struct
@@ -43,7 +44,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         Physics::QueryResult raycast_result = Physics::Raycast(current_position, current_position + current_velocity * raycast_time_step);
         //Check if the raycast hit and if so, set the result to the hit position and time
         if (raycast_result.m_ValidHit){
-            valid_hit = true; //Might need to change this to result.m_ValidHit
+            valid_hit = true;
             result.m_EndPoint = raycast_result.m_HitPos;
             result.m_Time = current_time;
             break;
@@ -68,7 +69,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         result.m_Time = max_time;
     }
 
-    result.m_ValidHit = valid_hit; // Might need to take this out
+    result.m_ValidHit = false;
 
     return result;
 }
