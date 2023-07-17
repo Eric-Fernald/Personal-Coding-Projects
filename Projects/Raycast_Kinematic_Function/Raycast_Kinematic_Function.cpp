@@ -36,39 +36,31 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
     double current_time = 0.0;
     bool valid_hit = false;
 
+    // Perform raycast at current position
+    Physics::QueryResult raycast_result = Physics::Raycast(current_position, current_position + current_velocity * raycast_time_step);
+
     while (current_time <= max_time) {
-        // Perform raycast at current position
-        Physics::QueryResult raycast_result = Physics::Raycast(current_position, current_position + current_velocity * raycast_time_step);
         //Check if the raycast hit and if so, set the result to the hit position and time
-        if (raycast_result.m_ValidHit && (raycast_result.m_HitPos.x <= current_position.x)){
+        if (raycast_result.m_ValidHit){
             valid_hit = true;
             result.m_EndPoint = raycast_result.m_HitPos;
-
-            // Calculate the time ratio based on the distance traveled along the raycast
-            double distance_ratio = (raycast_result.m_HitPos.x - current_position.x) / (current_velocity.x * raycast_time_step);
-            result.m_Time = current_time + distance_ratio * raycast_time_step;
-
+            result.m_Time = current_time;
             break;
         }
 
         // Calculate the new position based on velocity and current time step
-        current_position.x += current_velocity.x * raycast_time_step;
+        current_position.x += current_velocity.x * raycast_time_step + 0.5 * gravity_accel * raycast_time_step * raycast_time_step;
         current_position.y += current_velocity.y * raycast_time_step + 0.5 * gravity_accel * raycast_time_step * raycast_time_step;
-        current_position.z += current_velocity.z * raycast_time_step;
+        current_position.z += current_velocity.z * raycast_time_step + 0.5 * gravity_accel * raycast_time_step * raycast_time_step;
 
         // Calculate the new velocity based on gravity and current time step
         current_velocity.x += up_vector.x * gravity_accel * raycast_time_step;
         current_velocity.y += up_vector.y * gravity_accel * raycast_time_step;
         current_velocity.z += up_vector.z * gravity_accel * raycast_time_step;
 
-        // Check if the current position is beyond the maximum distance
-        if (current_position.x >= max_distance) {
-            break;
-        }
-
         current_time += raycast_time_step;
     }
-
+    
     if (!valid_hit) {
         // No hit occurred, set the result to the maximum time and the endpoint at the final position
         result.m_EndPoint = current_position;
