@@ -43,7 +43,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         Physics::QueryResult raycast_result = Physics::Raycast(current_position, current_position + current_velocity * raycast_time_step);
         //Check if the raycast hit and if so, set the result to the hit position and time
         if (raycast_result.m_ValidHit){
-            valid_hit = true;
+            valid_hit = true; //Might need to change this to result.m_ValidHit
             result.m_EndPoint = raycast_result.m_HitPos;
             result.m_Time = current_time;
             break;
