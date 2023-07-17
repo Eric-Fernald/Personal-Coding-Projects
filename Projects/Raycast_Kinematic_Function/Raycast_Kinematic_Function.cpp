@@ -43,18 +43,17 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         // Perform raycast at current position and time step until the max time is reached
         Physics::QueryResult raycast_result = Physics::Raycast(current_position, current_position + current_velocity * raycast_time_step);
         //Check if the raycast hit and if so, set the result to the hit position and time
-        if (raycast_result.m_ValidHit  && raycast_result.m_HitPos.x <= max_distance){
-            result.m_EndPoint = raycast_result.m_HitPos;
+        if (raycast_result.m_ValidHit){
             valid_hit = true;
+            result.m_EndPoint = raycast_result.m_HitPos;
             result.m_Time = current_time;
             break;
         }
 
         // Calculate the new position based on velocity and current time step
-        //current_position.x += current_velocity.x * raycast_time_step + 0.5 * gravity_accel * raycast_time_step * raycast_time_step;
-        current_position.x += current_velocity.x * Sqrtd((2 * current_position.z) / gravity_accel);
-        current_position.y += current_velocity.y * raycast_time_step + 0.5 * raycast_time_step * raycast_time_step;
-        current_position.z += current_velocity.z * raycast_time_step + 0.5 * raycast_time_step * raycast_time_step;
+        current_position.x += current_velocity.x * raycast_time_step + 0.5 * gravity_accel * raycast_time_step * raycast_time_step;
+        current_position.y += current_velocity.y * raycast_time_step + 0.5 * gravity_accel * raycast_time_step * raycast_time_step;
+        current_position.z += current_velocity.z * raycast_time_step + 0.5 * gravity_accel * raycast_time_step * raycast_time_step;
 
         // Calculate the new velocity based on gravity and current time step
         current_velocity.x += up_vector.x * gravity_accel * raycast_time_step;
@@ -70,7 +69,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         result.m_Time = max_time;
     }
 
-    result.m_ValidHit = valid_hit;
+    result.m_ValidHit = false;
 
     return result;
 }
