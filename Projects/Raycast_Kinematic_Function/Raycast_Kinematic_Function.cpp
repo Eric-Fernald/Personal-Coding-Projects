@@ -4,8 +4,8 @@
 
 //Define TrajectoryResult struct
 struct TrajectoryResult {
-      Vec3 m_EndPoint; 
-      double m_time; 
+      Vec3 m_EndPoint;
+      double m_time;
       bool m_ValidHit;
     };
 
