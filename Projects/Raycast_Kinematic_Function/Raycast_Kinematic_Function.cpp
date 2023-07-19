@@ -2,15 +2,6 @@
 #include <math.h>
 #include <double.h>
 
-/*
-Questions to ask:
-Will the input always be valid or will I have to check for a valid input?
-Should a default value be set for the endpoint and time if the hit is never valid?
-Are there bounds to the values of x, y, and z?
-Is the z axis or y axis up?
-Are any of the projectiles launched at an angle?
-*/
-
 //Define TrajectoryResult struct
 struct TrajectoryResult {
       Vec3 m_EndPoint; 
