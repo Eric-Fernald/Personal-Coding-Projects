@@ -24,6 +24,10 @@ struct Vec3 {
 };
 
 //Main function
+double magnitude(const Vec3& vec) {
+    return Sqrtd(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
+}
+
 TrajectoryResult PredictTrajectory(const Vec3& start_position,
                                    const Vec3& start_velocity,
                                    const Vec3& up_vector,
@@ -31,45 +35,51 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
                                    double raycast_time_step,
                                    double max_time) {
     TrajectoryResult result;
-    double max_distance = start_velocity.x * max_time;
-
     Vec3 current_position = start_position;
     Vec3 current_velocity = start_velocity;
     double current_time = 0.0;
     bool valid_hit = false;
 
     while (current_time <= max_time) {
-
         // Perform raycast at current position and time step until the max time is reached
         Physics::QueryResult raycast_result = Physics::Raycast(current_position, current_position + current_velocity * raycast_time_step);
-        //Check if the raycast hit and if so, set the result to the hit position and time
-        if (raycast_result.m_ValidHit){
+
+        // Calculate the time it takes to reach the hit position between two consecutive raycasts
+        double time_to_hit = raycast_time_step;
+
+        if (raycast_result.m_ValidHit) {
             valid_hit = true;
+            // Calculate the time adjustment based on the actual hit position and the distance traveled
+            double hit_distance = magnitude(raycast_result.m_HitPos - current_position);
+            double total_distance = magnitude(current_velocity) * raycast_time_step;
+            time_to_hit *= hit_distance / total_distance;
+
             result.m_EndPoint = raycast_result.m_HitPos;
-            result.m_Time = current_time;
+            result.m_Time = current_time + time_to_hit;
             break;
         }
 
-        // Calculate the new position based on velocity and current time step
-        current_position.x += current_velocity.x * raycast_time_step + 0.5 * gravity_accel * raycast_time_step * raycast_time_step;
-        current_position.y += current_velocity.y * raycast_time_step + 0.5 * gravity_accel * raycast_time_step * raycast_time_step;
-        current_position.z += current_velocity.z * raycast_time_step + 0.5 * gravity_accel * raycast_time_step * raycast_time_step;
+        // Advance the time based on the adjusted time to hit
+        current_time += time_to_hit;
 
-        // Calculate the new velocity based on gravity and current time step
-        current_velocity.x += up_vector.x * gravity_accel * raycast_time_step;
-        current_velocity.y += up_vector.y * gravity_accel * raycast_time_step;
-        current_velocity.z += up_vector.z * gravity_accel * raycast_time_step;
+        // Calculate the new position based on velocity and time step
+        current_position.x += current_velocity.x * time_to_hit;
+        current_position.y += current_velocity.y * time_to_hit + 0.5 * gravity_accel * time_to_hit * time_to_hit;
+        current_position.z += current_velocity.z * time_to_hit;
 
-        current_time += raycast_time_step;
+        // Calculate the new velocity based on gravity and time step
+        current_velocity.x += up_vector.x * gravity_accel * time_to_hit;
+        current_velocity.y += up_vector.y * gravity_accel * time_to_hit;
+        current_velocity.z += up_vector.z * gravity_accel * time_to_hit;
     }
-    
+
     if (!valid_hit) {
         // No hit occurred, set the result to the maximum time and the endpoint at the final position
         result.m_EndPoint = current_position;
         result.m_Time = max_time;
     }
 
-    result.m_ValidHit = false;
+    result.m_ValidHit = valid_hit;
 
     return result;
 }
