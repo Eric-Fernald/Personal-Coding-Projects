@@ -45,7 +45,7 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         Physics::QueryResult raycast_result = Physics::Raycast(current_position, current_position + current_velocity * raycast_time_step);
 
         // Calculate the time it takes to reach the hit position between two consecutive raycasts
-        float time_to_hit = raycast_time_step;
+        double time_to_hit = raycast_time_step;
 
         if (raycast_result.m_ValidHit) {
             valid_hit = true;
