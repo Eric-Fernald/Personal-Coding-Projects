@@ -1,24 +1,9 @@
-#include <stdint.h>
-#include <math.h>
-#include <double.h>
-
-//Define TrajectoryResult struct
-struct TrajectoryResult {
-      Vec3 m_EndPoint;
-      double m_time;
-      bool m_ValidHit;
-    };
-
-//Define Vec3 struct
-struct Vec3 {
-    double x, y, z;
-};
-
-//Main function
+//Define magnitude function which returns the square root of the sum of the squares of the vector components
 double magnitude(const Vec3& vec) {
     return Sqrtd(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
 }
 
+//Main function
 TrajectoryResult PredictTrajectory(const Vec3& start_position,
                                    const Vec3& start_velocity,
                                    const Vec3& up_vector,
@@ -29,19 +14,21 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
     Vec3 current_position = start_position;
     Vec3 current_velocity = start_velocity;
     double current_time = 0.0;
+    double time_to_hit = raycast_time_step;
+    double hit_distance = 0.0;
+    double total_distance = 0.0;
     bool valid_hit = false;
 
+    // Perform raycast at current position and time step until the max time is reached
     while (current_time <= max_time) {
-        // Perform raycast at current position and time step until the max time is reached
+
         Physics::QueryResult raycast_result = Physics::Raycast(current_position, current_position + current_velocity * raycast_time_step);
 
-        // Calculate the time it takes to reach the hit position between two consecutive raycasts
-        double time_to_hit = raycast_time_step;
-
+        // If the raycast hit is valid, calculate the time to hit, set the endpoint to the hit position, set the time to the current time plus the time to hit, and break out of the loop
         if (raycast_result.m_ValidHit) {
             valid_hit = true;
-            double hit_distance = magnitude(raycast_result.m_HitPos - current_position);
-            double total_distance = magnitude(current_velocity) * raycast_time_step;
+            hit_distance = magnitude(raycast_result.m_HitPos - current_position);
+            total_distance = magnitude(current_velocity) * raycast_time_step;
             time_to_hit *= hit_distance / total_distance;
             result.m_EndPoint = raycast_result.m_HitPos;
             result.m_Time = current_time + time_to_hit;
@@ -63,10 +50,11 @@ TrajectoryResult PredictTrajectory(const Vec3& start_position,
         
     }
 
+    // No hit occurred, set the result to the maximum time and the endpoint at the final position
     if (!valid_hit) {
-        // No hit occurred, set the result to the maximum time and the endpoint at the final position
         result.m_EndPoint = current_position;
         result.m_Time = max_time;
+        
     }
 
     result.m_ValidHit = valid_hit;
