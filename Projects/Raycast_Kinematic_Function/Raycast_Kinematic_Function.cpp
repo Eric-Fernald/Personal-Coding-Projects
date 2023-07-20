@@ -1,3 +1,4 @@
+//Written by: Eric Fernald
 //Define magnitude function which returns the square root of the sum of the squares of the vector components
 double magnitude(const Vec3& vec) {
     return Sqrtd(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
