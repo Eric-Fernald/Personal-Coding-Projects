@@ -23,12 +23,12 @@ resource "aws_subnet" "opensearch_subnet" {
   availability_zone = element(["us-east-2a", "us-east-2b", "us-east-2c"], count.index)
 }
 
-# Create a security group for the OpenSearch cluster.
+# Create a security group for the OpenSearch cluster if needed.
 #resource "aws_security_group" "opensearch_sg" {
   #name_prefix = "opensearch-v1dot3"
   #vpc_id = aws_vpc.opensearch_vpc.id
 
-  # Define security group rules here if needed.
+  # Define security group rules here.
   # Example:
   # ingress {
   #   from_port   = 80
