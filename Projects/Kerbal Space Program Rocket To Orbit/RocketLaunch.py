@@ -13,6 +13,8 @@ To run this KSP kRPC Python program you need:
 
 import krpc
 import time 
+import unittest
+import RocketLaunch
 
 #Establishes connection to the krpc server.
 conn = krpc.connect()
@@ -100,3 +102,28 @@ while ascentPhase or cruisePhase or insertionPhase:
         #Staging.
         if vessel.thrust == 0.0:
             vessel.control.activate_next_stage()
+
+class TestRocketLaunch(unittest.TestCase):
+    def setUp(self):
+        self.conn = krpc.connect()
+        self.vessel = self.conn.space_center.active_vessel
+
+    def test_countdown(self):
+        countdown = ["Five", "Four", "Three", "Two", "One", "LIFT OFF!"]
+        RocketLaunch.start_countdown(self.vessel)
+        self.assertEqual(RocketLaunch.countdown, countdown)
+
+    def test_ascent_phase(self):
+        RocketLaunch.ascent_phase(self.vessel)
+        self.assertTrue(RocketLaunch.ascentPhase)
+
+    def test_cruise_phase(self):
+        RocketLaunch.cruise_phase(self.vessel)
+        self.assertTrue(RocketLaunch.cruisePhase)
+
+    def test_insertion_phase(self):
+        RocketLaunch.insertion_phase(self.vessel)
+        self.assertTrue(RocketLaunch.insertionPhase)
+
+if __name__ == '__main__':
+    unittest.main()
