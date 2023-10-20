@@ -24,19 +24,18 @@ resource "aws_subnet" "opensearch_subnet" {
 }
 
 # Create a security group for the OpenSearch cluster if needed.
-#resource "aws_security_group" "opensearch_sg" {
-  #name_prefix = "opensearch-v1dot3"
-  #vpc_id = aws_vpc.opensearch_vpc.id
-
-  # Define security group rules here.
-  # Example:
-  # ingress {
-  #   from_port   = 80
-  #   to_port     = 80
-  #   protocol    = "tcp"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  # }
-#}
+resource "aws_security_group" "opensearch_sg" {
+  name_prefix = "opensearch-v1dot3"
+  vpc_id = aws_vpc.opensearch_vpc.id
+  description = "Allow inbound traffic from the OpenSearch cluster"
+  
+   ingress {
+     from_port   = 80
+     to_port     = 80
+     protocol    = "tcp"
+     cidr_blocks = ["0.0.0.0/0"]
+   }
+}
 
 # Create an OpenSearch domain.
 resource "opensearch_domain" "example" {
