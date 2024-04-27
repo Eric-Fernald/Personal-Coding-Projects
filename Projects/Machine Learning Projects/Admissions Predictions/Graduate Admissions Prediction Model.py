@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 
 import tensorflow as tf
 from tensorflow	import keras
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.callbacks import EarlyStopping
-from tensorflow.keras import layers
+from keras import Sequential
+from keras import EarlyStopping
+from keras import layers
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -28,10 +28,10 @@ labels = admissions_data.iloc[:,-1]
 # Mark features
 features = admissions_data.iloc[:, 1:8]
 
-# Split our training and test set
+# Split training and test set
 features_train, features_test, labels_train, labels_test = train_test_split(features, labels, test_size=0.25, random_state = 42)
 
-# Standardizing our data by scaling it
+# Standardizing data by scaling it
 sc = StandardScaler()
 features_train_scale = sc.fit_transform(features_train)
 features_test_scale = sc.transform(features_test)
@@ -53,7 +53,7 @@ def design_model(feature_data):
 	model.add(layers.Dense(1))
 
 	# Using an adam optimizer with a learning rate of 0.005
-	# Using mean-squared error as our loss function and mean average error as our metric
+	# Using mean-squared error as loss function and mean average error as metric
 	opt = keras.optimizers.Adam(learning_rate=0.005)
 	model.compile(loss='mse', metrics=['mae'], optimizer=opt)
 	return model
