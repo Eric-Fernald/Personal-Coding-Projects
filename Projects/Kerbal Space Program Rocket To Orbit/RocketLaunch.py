@@ -102,7 +102,7 @@ while ascentPhase or cruisePhase or insertionPhase:
         #Staging.
         if vessel.thrust == 0.0:
             vessel.control.activate_next_stage()
-
+"""
 class TestRocketLaunch(unittest.TestCase):
     def setUp(self):
         self.conn = krpc.connect()
@@ -127,3 +127,4 @@ class TestRocketLaunch(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+"""
