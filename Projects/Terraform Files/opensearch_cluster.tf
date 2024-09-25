@@ -1,10 +1,3 @@
-# Define the OpenSearch provider configuration.
-provider "opensearch" {
-  required_providers = "1.3.0"
-  endpoint = "opensearch-v1dot3" 
-  aws_profile = "expressionc2s"
-}
-
 # Create a VPC for the OpenSearch cluster.
 resource "aws_vpc" "opensearch_vpc" {
   cidr_block = "10.0.0.0/16"
