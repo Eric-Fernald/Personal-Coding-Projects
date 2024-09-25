@@ -1,13 +1,8 @@
-# Define the AWS provider configuration.
-provider "aws" {
-  region = "us-east-2" # Change to your desired AWS region
-}
-
 # Define the OpenSearch provider configuration.
 provider "opensearch" {
-  required_providers = "1.3.0" # Specify the version of the OpenSearch provider
-  endpoint = "opensearch-v1dot3" # Replace with your OpenSearch endpoint
-  aws_profile = "expressionc2s" # Replace with your AWS profile if needed
+  required_providers = "1.3.0"
+  endpoint = "opensearch-v1dot3" 
+  aws_profile = "expressionc2s"
 }
 
 # Create a VPC for the OpenSearch cluster.
