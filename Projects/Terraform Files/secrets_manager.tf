@@ -1,7 +1,3 @@
-provider "aws" {
-  region = "us-east-1"  # Specify your region
-}
-
 # Store Keycloak database credentials in AWS Secrets Manager
 resource "aws_secretsmanager_secret" "keycloak_db_secret" {
   name        = "keycloak-database-credentials"
