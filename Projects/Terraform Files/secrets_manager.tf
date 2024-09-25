@@ -60,7 +60,7 @@ resource "aws_iam_role_policy_attachment" "keycloak_secret_access" {
 resource "kubernetes_secret" "keycloak_db_credentials" {
   metadata {
     name      = "keycloak-db-secret"
-    namespace = "mvcr-dev"
+    namespace = "blank"
   }
 
   data = {
@@ -73,7 +73,7 @@ resource "kubernetes_secret" "keycloak_db_credentials" {
 resource "kubernetes_deployment" "keycloak" {
   metadata {
     name      = "keycloak"
-    namespace = "mvcr-dev"
+    namespace = "blank"
     labels = {
       app = "keycloak"
     }
@@ -138,7 +138,7 @@ resource "kubernetes_deployment" "keycloak" {
 resource "kubernetes_service" "keycloak_service" {
   metadata {
     name      = "keycloak"
-    namespace = "mvcr-dev"  # Specify your OpenShift namespace
+    namespace = "blank"
   }
 
   spec {
