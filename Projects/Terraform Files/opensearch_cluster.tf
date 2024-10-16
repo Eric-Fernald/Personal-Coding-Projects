@@ -1,15 +1,3 @@
-# Define the AWS provider configuration.
-provider "aws" {
-  region = "us-east-2" # Change to your desired AWS region
-}
-
-# Define the OpenSearch provider configuration.
-provider "opensearch" {
-  required_providers = "1.3.0" # Specify the version of the OpenSearch provider
-  endpoint = "opensearch-v1dot3" # Replace with your OpenSearch endpoint
-  aws_profile = "expressionc2s" # Replace with your AWS profile if needed
-}
-
 # Create a VPC for the OpenSearch cluster.
 resource "aws_vpc" "opensearch_vpc" {
   cidr_block = "10.0.0.0/16"
@@ -38,12 +26,10 @@ resource "aws_security_group" "opensearch_sg" {
 }
 
 # Create an OpenSearch domain.
-resource "opensearch_domain" "example" {
-  domain_name = "opensearch-v1dot3"
-  elasticsearch_version = "7.10"
-  node_to_node_encryption_options {
-    enabled = true
-  }
+resource "aws_opensearch_domain" "example" {
+  domain_name = "my-opensearch-domain"
+  engine_version = "OpenSearch_2.3"
+
   cluster_config {
     instance_type = "r6g.large.search"
     instance_count = 3
