@@ -1,0 +1,339 @@
+{
+  "kits": [
+    {
+      "kit_id": "10001",
+      "kit_SKU": "10001",
+      "kit_status": "Shipped",
+      "kit_customer": "Customer XYZ",
+      "items": [
+        {
+          "item_name": "Camera_01",
+          "item_SKU": "10001",
+          "item_status": "Good",
+          "item_customer": "Customer XYZ",
+          "item_location": "USA"
+        },
+        {
+          "item_name": "LIDAR_01",
+          "item_SKU": "10007",
+          "item_status": "Good",
+          "item_customer": "Customer XYZ",
+          "item_location": "USA"
+        },
+        {
+          "item_name": "GPS_Module_01",
+          "item_SKU": "10008",
+          "item_status": "Good",
+          "item_customer": "Customer XYZ",
+          "item_location": "USA"
+        },
+        {
+          "item_name": "IMU_Sensor_01",
+          "item_SKU": "10009",
+          "item_status": "Good",
+          "item_customer": "Customer XYZ",
+          "item_location": "USA"
+        },
+        {
+          "item_name": "Edge_Computer_01",
+          "item_SKU": "10010",
+          "item_status": "Good",
+          "item_customer": "Customer XYZ",
+          "item_location": "USA"
+        },
+        {
+          "item_name": "Power_Supply_01",
+          "item_SKU": "10011",
+          "item_status": "Good",
+          "item_customer": "Customer XYZ",
+          "item_location": "USA"
+        }
+      ]
+    },
+    {
+      "kit_id": "10002",
+      "kit_SKU": "10002",
+      "kit_status": "In Transit",
+      "kit_customer": "Customer ABC",
+      "items": [
+        {
+          "item_name": "Sensor_02",
+          "item_SKU": "10002",
+          "item_status": "New",
+          "item_customer": "Customer ABC",
+          "item_location": "Canada"
+        },
+        {
+          "item_name": "Battery_Pack_02",
+          "item_SKU": "10005",
+          "item_status": "New",
+          "item_customer": "Customer ABC",
+          "item_location": "Canada"
+        },
+        {
+          "item_name": "LIDAR_02",
+          "item_SKU": "10012",
+          "item_status": "New",
+          "item_customer": "Customer ABC",
+          "item_location": "Canada"
+        },
+        {
+          "item_name": "GPS_Module_02",
+          "item_SKU": "10013",
+          "item_status": "New",
+          "item_customer": "Customer ABC",
+          "item_location": "Canada"
+        },
+        {
+          "item_name": "IMU_Sensor_02",
+          "item_SKU": "10014",
+          "item_status": "New",
+          "item_customer": "Customer ABC",
+          "item_location": "Canada"
+        },
+        {
+          "item_name": "Edge_Computer_02",
+          "item_SKU": "10015",
+          "item_status": "New",
+          "item_customer": "Customer ABC",
+          "item_location": "Canada"
+        },
+        {
+          "item_name": "Power_Supply_02",
+          "item_SKU": "10016",
+          "item_status": "New",
+          "item_customer": "Customer ABC",
+          "item_location": "Canada"
+        }
+      ]
+    },
+    {
+      "kit_id": "10003",
+      "kit_SKU": "10003",
+      "kit_status": "Delivered",
+      "kit_customer": "Customer DEF",
+      "items": [
+        {
+          "item_name": "Sensor_03",
+          "item_SKU": "10003",
+          "item_status": "Used",
+          "item_customer": "Customer DEF",
+          "item_location": "UK"
+        },
+        {
+          "item_name": "Battery_Pack_03",
+          "item_SKU": "10006",
+          "item_status": "Used",
+          "item_customer": "Customer DEF",
+          "item_location": "UK"
+        },
+        {
+          "item_name": "LIDAR_03",
+          "item_SKU": "10017",
+          "item_status": "Used",
+          "item_customer": "Customer DEF",
+          "item_location": "UK"
+        },
+        {
+          "item_name": "GPS_Module_03",
+          "item_SKU": "10018",
+          "item_status": "Used",
+          "item_customer": "Customer DEF",
+          "item_location": "UK"
+        },
+        {
+          "item_name": "IMU_Sensor_03",
+          "item_SKU": "10019",
+          "item_status": "Used",
+          "item_customer": "Customer DEF",
+          "item_location": "UK"
+        },
+        {
+          "item_name": "Edge_Computer_03",
+          "item_SKU": "10020",
+          "item_status": "Used",
+          "item_customer": "Customer DEF",
+          "item_location": "UK"
+        },
+        {
+          "item_name": "Power_Supply_03",
+          "item_SKU": "10021",
+          "item_status": "Used",
+          "item_customer": "Customer DEF",
+          "item_location": "UK"
+        }
+      ]
+    },
+    {
+        "kit_id": "10004",
+        "kit_SKU": "10004",
+        "kit_status": "Processing",
+        "kit_customer": "Customer GHI",
+        "items": [
+            {
+            "item_name": "Sensor_04",
+            "item_SKU": "10022",
+            "item_status": "New",
+            "item_customer": "Customer GHI",
+            "item_location": "Germany"
+            },
+            {
+            "item_name": "Battery_Pack_04",
+            "item_SKU": "10023",
+            "item_status": "New",
+            "item_customer": "Customer GHI",
+            "item_location": "Germany"
+            },
+            {
+            "item_name": "LIDAR_04",
+            "item_SKU": "10024",
+            "item_status": "New",
+            "item_customer": "Customer GHI",
+            "item_location": "Germany"
+            },
+            {
+            "item_name": "GPS_Module_04",
+            "item_SKU": "10025",
+            "item_status": "New",
+            "item_customer": "Customer GHI",
+            "item_location": "Germany"
+            },
+            {
+            "item_name": "IMU_Sensor_04",
+            "item_SKU": "10026",
+            "item_status": "New",
+            "item_customer": "Customer GHI",
+            "item_location": "Germany"
+            },
+            {
+            "item_name": "Edge_Computer_04",
+            "item_SKU": "10027",
+            "item_status": "New",
+            "item_customer": "Customer GHI",
+            "item_location": "Germany"
+            },
+            {
+            "item_name": "Power_Supply_04",
+            "item_SKU": "10028",
+            "item_status": "New",
+            "item_customer": "Customer GHI",
+            "item_location": "Germany"
+            }
+        ]
+    },
+    {
+        "kit_id": "10005",
+        "kit_SKU": "10005",
+        "kit_status": "Shipped",
+        "kit_customer": "Customer JKL",
+        "items": [
+            {
+            "item_name": "Sensor_05",
+            "item_SKU": "10029",
+            "item_status": "Good",
+            "item_customer": "Customer JKL",
+            "item_location": "France"
+            },
+            {
+            "item_name": "Battery_Pack_05",
+            "item_SKU": "10030",
+            "item_status": "Good",
+            "item_customer": "Customer JKL",
+            "item_location": "France"
+            },
+            {
+            "item_name": "LIDAR_05",
+            "item_SKU": "10031",
+            "item_status": "Good",
+            "item_customer": "Customer JKL",
+            "item_location": "France"
+            },
+            {
+            "item_name": "GPS_Module_05",
+            "item_SKU": "10032",
+            "item_status": "Good",
+            "item_customer": "Customer JKL",
+            "item_location": "France"
+            },
+            {
+            "item_name": "IMU_Sensor_05",
+            "item_SKU": "10033",
+            "item_status": "Good",
+            "item_customer": "Customer JKL",
+            "item_location": "France"
+            },
+            {
+            "item_name": "Edge_Computer_05",
+            "item_SKU": "10034",
+            "item_status": "Good",
+            "item_customer": "Customer JKL",
+            "item_location": "France"
+            },
+            {
+            "item_name": "Power_Supply_05",
+            "item_SKU": "10035",
+            "item_status": "Good",
+            "item_customer": "Customer JKL",
+            "item_location": "France"
+            }
+        ]
+    },
+    {
+        "kit_id": "10006",
+        "kit_SKU": "10006",
+        "kit_status": "Delivered",
+        "kit_customer": "Customer MNO",
+        "items": [
+            {
+            "item_name": "Sensor_06",
+            "item_SKU": "10036",
+            "item_status": "Used",
+            "item_customer": "Customer MNO",
+            "item_location": "Australia"
+            },
+            {
+            "item_name": "Battery_Pack_06",
+            "item_SKU": "10037",
+            "item_status": "Used",
+            "item_customer": "Customer MNO",
+            "item_location": "Australia"
+            },
+            {
+            "item_name": "LIDAR_06",
+            "item_SKU": "10038",
+            "item_status": "Used",
+            "item_customer": "Customer MNO",
+            "item_location": "Australia"
+            },
+            {
+            "item_name": "GPS_Module_06",
+            "item_SKU": "10039",
+            "item_status": "Used",
+            "item_customer": "Customer MNO",
+            "item_location": "Australia"
+            },
+            {
+            "item_name": "IMU_Sensor_06",
+            "item_SKU": "10040",
+            "item_status": "Used",
+            "item_customer": "Customer MNO",
+            "item_location": "Australia"
+            },
+            {
+            "item_name": "Edge_Computer_06",
+            "item_SKU": "10041",
+            "item_status": "Used",
+            "item_customer": "Customer MNO",
+            "item_location": "Australia"
+            },
+            {
+            "item_name": "Power_Supply_06",
+            "item_SKU": "10042",
+            "item_status": "Used",
+            "item_customer": "Customer MNO",
+            "item_location": "Australia"
+            }
+        ]
+    }    
+  ]
+}
