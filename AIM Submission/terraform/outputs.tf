@@ -27,3 +27,13 @@ output "cluster_id_usw2" {
   description = "EKS cluster ID in us-west-2"
   value       = module.eks-usw2.cluster_id
 }
+
+output "waf_id" {
+  value = aws_wafv2_web_acl.inventory_waf.id
+  description = "WAF Web ACL ID"
+}
+
+output "shield_id" {
+  value = aws_shield_protection.inventory_shield.id
+  description = "Shield proection ID"
+}
