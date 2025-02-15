@@ -30,6 +30,23 @@ resource "kubernetes_deployment" "inventory_api" {
           port {
             container_port = 8080
           }
+          #Health Checks
+          liveness_probe {
+            http_get {
+              path = "/health"
+              port = 8080
+            }
+            initial_delay_seconds = 30
+            period_seconds      = 10
+          }
+          readiness_probe {
+            http_get {
+              path = "/ready"
+              port = 8080
+            }
+            initial_delay_seconds = 30
+            period_seconds      = 10
+          }
         }
       }
     }

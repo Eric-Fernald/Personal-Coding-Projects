@@ -6,12 +6,13 @@ resource "kubernetes_service" "inventory_api_service" {
 
   spec {
     selector = {
-      app = "inventory-api"
+      app = kubernetes_deployment.inventory_api.metadata[0].labels.app
     }
 
     port {
       port        = 80
       target_port = 8080
+      name = "http"
     }
 
     type = "LoadBalancer"
