@@ -1,5 +1,5 @@
 #Web Access Control List
-resource "aws_wafv2_web_acl" "inventory_waf" {
+resource "aws_wafv2_web_acl" "aim-inventory-waf" {
   name  = "inventory-waf"
   description = "Web ACL for Inventory Application"
   scope = "REGIONAL"
@@ -72,7 +72,7 @@ resource "aws_wafv2_web_acl" "inventory_waf" {
 }
 
 #Associate the Web ACL with the Load Balancer
-resource "aws_wafv2_web_acl_association" "inventory_waf_association" {
+resource "aws_wafv2_web_acl_association" "aim-inventory-waf-association" {
   resource_arn = module.eks-use1.cluster_endpoint_use1
   web_acl_arn  = aws_wafv2_web_acl.inventory_waf.arn
 }
