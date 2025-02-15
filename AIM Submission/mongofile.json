@@ -6,7 +6,10 @@
     "kit_SKU": "10001",
     "kit_status": "Shipped",
     "customer": {
-      "name": "Customer XYZ"
+      "name": "Customer XYZ",
+      "phone": "123-456-7890",
+      "email": "customerxyz@gmail.com"
+
     },
     "items": [
       {
@@ -39,7 +42,9 @@
     "kit_SKU": "10002",
     "kit_status": "In Transit",
     "customer": {
-      "name": "Customer ABC"
+      "name": "Customer ABC",
+      "phone": "456-789-0123",
+      "email": "customerabc@gmail.com"
     },
     "items": [
       {
@@ -122,7 +127,9 @@
     "kit_SKU": "10003",
     "kit_status": "Delivered",
     "customer": {
-      "name": "Customer DEF"
+      "name": "Customer DEF",
+      "phone": "789-012-3456",
+      "email": "customerdef@gmail.com"
     },
     "items": [
       {
@@ -205,7 +212,9 @@
     "kit_SKU": "10004",
     "kit_status": "Processing",
     "customer": {
-      "name": "Customer GHI"
+      "name": "Customer GHI",
+      "phone": "098-765-4321",
+      "email": "customerghi@gmail.com"
     },
     "items": [
       {
@@ -288,7 +297,9 @@
     "kit_SKU": "10005",
     "kit_status": "Shipped",
     "customer": {
-      "name": "Customer JKL"
+      "name": "Customer JKL",
+      "phone": "019-283-4756",
+      "email": "customerjkl@gmail.com"
     },
     "items": [
       {
@@ -371,7 +382,9 @@
     "kit_SKU": "10006",
     "kit_status": "Delivered",
     "customer": {
-      "name": "Customer MNO"
+      "name": "Customer MNO",
+      "phone": "567-489-3012",
+      "email": "customermno@gmail.com"
     },
     "items": [
       {

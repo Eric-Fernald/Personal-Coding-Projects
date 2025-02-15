@@ -7,7 +7,7 @@ module "eks-use1" {
   vpc_id          = module.vpc-use1.vpc_id
   subnet_ids      = module.vpc-use1.private_subnets
 
-  manage_aws_auth_configmap = true
+  manage_aws_auth_configmap = true #Automatically manage the aws-auth configmap for IAM role access
 
   eks_managed_node_group_defaults = {
     ami_type        = var.eks_node_group_ami_type_use1
