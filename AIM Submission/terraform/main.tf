@@ -12,12 +12,12 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = var.aws_region_east
   alias  = "us-east-1"
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = var.aws_region_west
   alias  = "us-west-2"
 }
 
