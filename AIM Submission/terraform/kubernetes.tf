@@ -32,7 +32,7 @@ resource "kubernetes_deployment" "inventory_api_use1" {
             container_port = 8080
           }
           #Health Checks
-          liveness_probe {
+          liveness_probe { #Kubernetes uses the liveness probe to see if the container is running
             http_get {
               path = "/health"
               port = 8080

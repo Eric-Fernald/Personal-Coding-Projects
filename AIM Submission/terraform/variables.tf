@@ -13,7 +13,7 @@ variable "domain_name" {
   description = "The domain name for the application (e.g., yourdomain.com)"
 }
 
-# VPC Variables
+#VPC Variables
 variable "vpc_name_use1" {
   type        = string
   description = "Name of the VPC in us-east-1"
@@ -64,7 +64,7 @@ variable "vpc_public_subnets_usw2" {
   description = "List of CIDR blocks for public subnets in us-west-2"
 }
 
-# EKS Variables
+#EKS Variables
 variable "eks_cluster_name_use1" {
   type        = string
   description = "Name of the EKS cluster in us-east-1"
