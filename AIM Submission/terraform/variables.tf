@@ -1,16 +1,16 @@
 variable "aws_region_east" {
   type        = string
-  description = "AWS region for the primary deployment (e.g., us-east-1)"
+  description = "AWS region for the primary deployment"
 }
 
 variable "aws_region_west" {
   type        = string
-  description = "AWS region for the secondary/failover deployment (e.g., us-west-2)"
+  description = "AWS region for the secondary/failover deployment"
 }
 
 variable "domain_name" {
   type        = string
-  description = "The domain name for the application (e.g., yourdomain.com)"
+  description = "The domain name for the application"
 }
 
 #VPC Variables

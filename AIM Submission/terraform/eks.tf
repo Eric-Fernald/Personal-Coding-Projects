@@ -5,7 +5,7 @@ module "eks-use1" {
   cluster_name    = var.eks_cluster_name_use1
   cluster_version = var.eks_cluster_version_use1
   vpc_id          = module.vpc-use1.vpc_id
-  subnet_ids      = module.vpc-use1.private_subnets
+  subnet_ids      = module.vpc-use1.private_subnets #Uses private subnets instead of public subnets
 
   manage_aws_auth_configmap = true #Automatically manage the aws-auth configmap for IAM role access
 
