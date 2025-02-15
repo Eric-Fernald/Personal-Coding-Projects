@@ -34,7 +34,7 @@ resource "kubernetes_deployment" "inventory_api_use1" {
           #Health Checks
           liveness_probe {
             http_get {
-              path = "/healthz"  # Or your health check endpoint
+              path = "/health"
               port = 8080
             }
             initial_delay_seconds = 30
@@ -42,7 +42,7 @@ resource "kubernetes_deployment" "inventory_api_use1" {
           }
           readiness_probe {
             http_get {
-              path = "/readyz"  # Or your readiness endpoint
+              path = "/ready"
               port = 8080
             }
             initial_delay_seconds = 30
@@ -51,7 +51,6 @@ resource "kubernetes_deployment" "inventory_api_use1" {
         }
       }
     }
-       #Required otherwise TF will force a new deployment on every deploy due to hash changes
     strategy {
       type = "RollingUpdate"
       rolling_update {
@@ -71,13 +70,13 @@ resource "kubernetes_service" "inventory_api_service_use1" {
 
   spec {
     selector = {
-      app = kubernetes_deployment.inventory_api_use1.metadata[0].labels.app #Reference the deployment app label for consistency
+      app = kubernetes_deployment.inventory_api_use1.metadata[0].labels.app
     }
 
     port {
       port        = 80
       target_port = 8080
-      name = "http" #Required name parameter
+      name = "http"
     }
 
     type = "LoadBalancer"
@@ -89,10 +88,10 @@ resource "kubernetes_ingress" "inventory_api_ingress_use1" {
   metadata {
     name      = "inventory-api-ingress"
     namespace = "default"
-    annotations = { #Required for AWS Load Balancer Controller
+    annotations = {
       "kubernetes.io/ingress.class"                       = "alb"
-      "alb.ingress.kubernetes.io/scheme"                  = "internet-facing" #or internal
-      "alb.ingress.kubernetes.io/target-type"             = "ip"  # or instance
+      "alb.ingress.kubernetes.io/scheme"                  = "internet-facing"
+      "alb.ingress.kubernetes.io/target-type"             = "ip"
     }
   }
 
