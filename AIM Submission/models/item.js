@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
 
 const itemSchema = new mongoose.Schema({
-  sku: { type: String, required: true },
-  item_status: { type: String, required: true }, // Ordered, Modified, Shipped
-  customerId: { type: mongoose.Schema.Types.ObjectId, ref: 'Customer' },
-  kitId: { type: mongoose.Schema.Types.ObjectId, ref: 'Kit' }
+    item_SKU: { type: String, required: true, unique: true }, // Unique Stock Keeping Unit
+    item_name: { type: String, required: true },        // Descriptive name of the item (e.g., "Camera_01")
+    item_status: { type: String, enum: ['New', 'Good', 'Used', 'Defective'], default: 'New' }, // Item condition
+    item_location: { type: String },                   // Where the item is physically located (e.g., "USA")
+    customerId: { type: mongoose.Schema.Types.ObjectId, ref: 'Customer' }, // Links to the Customer document
+    kitId: { type: mongoose.Schema.Types.ObjectId, ref: 'Kit' },          // Links to the Kit document
+    order_status: {type: String} //For tracking the item order status
 });
 
-const Item = mongoose.model('Item', itemSchema);
-module.exports = Item;
+module.exports = mongoose.model('Item', itemSchema);

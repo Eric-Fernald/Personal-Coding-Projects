@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 
 const customerSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    email: { type: String, required: true }
-  });
-  
-const Customer = mongoose.model('Customer', customerSchema);
-module.exports = Customer;
+    name: { type: String, required: true, unique: true }, // Customer's name (e.g., "Customer XYZ")
+});
+
+module.exports = mongoose.model('Customer', customerSchema);

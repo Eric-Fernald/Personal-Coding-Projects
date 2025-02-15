@@ -68,7 +68,7 @@ app.get('/api/items/customer/:customerId', async (req, res) => {
 //GET kits associated with a customer
 app.get('/api/kits/customer/:customerName', async (req, res) => {
     try {
-        const customerKits = kits.filter(k => k.kit_customer === req.params.customerName);
+        const customerKits = Kit.filter(k => k.kit_customer === req.params.customerName);
         if (!customerKits.length) return res.status(404).json({ message: 'No kits found for this customer' });
         res.json(customerKits);
     } catch (err) {
@@ -89,7 +89,6 @@ app.post('/api/item', async (req, res) => {
         });
 
         const savedItem = await newItem.save();
-
         res.status(201).json(savedItem);
     } catch (err) {
         res.status(400).json({ message: err.message });
@@ -120,7 +119,7 @@ app.patch('/api/items/:kitId/:itemSku/customer', async (req, res) => {
         const { kitId, itemSku } = req.params;
         const { newCustomer } = req.body;
 
-        const kit = kits.find(k => k.kit_id === kitId);
+        const kit = kit.find(k => k.kit_id === kitId);
         if (!kit) return res.status(404).json({ message: 'Kit not found' });
 
         const item = kit.items.find(i => i.item_SKU === itemSku);
@@ -139,7 +138,7 @@ app.patch('/api/items/:kitId/:itemSku/status', async (req, res) => {
         const { kitId, itemSku } = req.params;
         const { newStatus } = req.body;
 
-        const kit = kits.find(k => k.kit_id === kitId);
+        const kit = kit.find(k => k.kit_id === kitId);
         if (!kit) return res.status(404).json({ message: 'Kit not found' });
 
         const item = kit.items.find(i => i.item_SKU === itemSku);
@@ -178,7 +177,7 @@ app.patch('/api/kits/:kitId/status', async (req, res) => {
         const { kitId } = req.params;
         const { newStatus } = req.body;
 
-        const kit = kits.find(k => k.kit_id === kitId);
+        const kit = kit.find(k => k.kit_id === kitId);
         if (!kit) return res.status(404).json({ message: 'Kit not found' });
 
         kit.kit_status = newStatus;
@@ -194,7 +193,7 @@ app.patch('/api/kits/:kitId/sku', async (req, res) => {
         const { kitId } = req.params;
         const { newSku } = req.body;
 
-        const kit = kits.find(k => k.kit_id === kitId);
+        const kit = kit.find(k => k.kit_id === kitId);
         if (!kit) return res.status(404).json({ message: 'Kit not found' });
 
         kit.kit_SKU = newSku;
