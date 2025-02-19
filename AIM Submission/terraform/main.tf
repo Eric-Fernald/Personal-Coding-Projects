@@ -2,22 +2,22 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0" #Can be any version 5.0 or higher, but less than 6.0
+      version = "~> 5.0"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "~> 2.0" #Can be any version 2.0 or higher, but less than 3.0
+      version = "~> 2.0"
     }
   }
 }
 
 provider "aws" {
-  region = var.aws_region_east
+  region = var.aws-region-east
   alias  = "us-east-1"
 }
 
 provider "aws" {
-  region = var.aws_region_west
+  region = var.aws-region-west
   alias  = "us-west-2"
 }
 
@@ -29,4 +29,14 @@ provider "kubernetes" {
 
 data "aws_eks_cluster_auth" "use1" {
   name = module.eks-use1.cluster_name
+}
+
+provider "kubernetes" {
+  host                   = module.eks-usw2.cluster_endpoint 
+  cluster_ca_certificate = base64decode(module.eks-usw2.cluster_certificate_authority_data)
+  token                  = data.aws_eks_cluster_auth.usw2.token
+}
+
+data "aws_eks_cluster_auth" "usw2" {
+  name = module.eks-usw2.cluster_name
 }

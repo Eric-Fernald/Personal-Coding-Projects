@@ -1,10 +1,10 @@
 resource "kubernetes_deployment" "inventory_api_use1" {
   provider = kubernetes
   metadata {
-    name      = "inventory-api"
+    name      = "inventory-management"
     namespace = "default"
     labels = {
-      app = "inventory-api"
+      app = "inventory-management"
     }
   }
 
@@ -13,26 +13,25 @@ resource "kubernetes_deployment" "inventory_api_use1" {
 
     selector {
       match_labels = {
-        app = "inventory-api"
+        app = "inventory-management"
       }
     }
 
     template {
       metadata {
         labels = {
-          app = "inventory-api"
+          app = "inventory-management"
         }
       }
 
       spec {
         container {
-          name  = "inventory-api"
-          image = var.kubernetes_image
+          name  = "inventory-management"
+          image = var.kubernetes-image
           port {
             container_port = 8080
           }
-          #Health Checks
-          liveness_probe { #Kubernetes uses the liveness probe to see if the container is running
+          liveness_probe { #liveness probe to check if the container is running
             http_get {
               path = "/health"
               port = 8080
@@ -61,7 +60,7 @@ resource "kubernetes_deployment" "inventory_api_use1" {
   }
 }
 
-resource "kubernetes_service" "inventory_api_service_use1" {
+resource "kubernetes_service" "api-service-use1" {
   provider = kubernetes
   metadata {
     name      = "inventory-api-service"
@@ -83,21 +82,21 @@ resource "kubernetes_service" "inventory_api_service_use1" {
   }
 }
 
-resource "kubernetes_ingress" "inventory_api_ingress_use1" {
+resource "kubernetes_ingress" "api-ingress-use1" {
   provider = kubernetes
   metadata {
-    name      = "inventory-api-ingress"
+    name      = "api-ingress-use1"
     namespace = "default"
     annotations = {
-      "kubernetes.io/ingress.class"                       = "alb"
-      "alb.ingress.kubernetes.io/scheme"                  = "internet-facing"
-      "alb.ingress.kubernetes.io/target-type"             = "ip"
+      "kubernetes.io/ingress.class"             = "alb"
+      "alb.ingress.kubernetes.io/scheme"        = "internet-facing"
+      "alb.ingress.kubernetes.io/target-type"   = "ip"
     }
   }
 
   spec {
     rule {
-      host = var.domain_name
+      host = var.domain-name
       http {
         path {
           path = "/"
@@ -111,14 +110,14 @@ resource "kubernetes_ingress" "inventory_api_ingress_use1" {
   }
 }
 
-# Kubernetes Resources for us-west-2
-resource "kubernetes_deployment" "inventory_api_usw2" {
+#Kubernetes Resources for us-west-2
+resource "kubernetes_deployment" "api-usw2" {
   provider = kubernetes.usw2
   metadata {
-    name      = "inventory-api"
+    name      = "api-usw2"
     namespace = "default"
     labels = {
-      app = "inventory-api"
+      app = "inventory-management"
     }
   }
 
@@ -127,25 +126,24 @@ resource "kubernetes_deployment" "inventory_api_usw2" {
 
     selector {
       match_labels = {
-        app = "inventory-api"
+        app = "inventory-management"
       }
     }
 
     template {
       metadata {
         labels = {
-          app = "inventory-api"
+          app = "inventory-management"
         }
       }
 
       spec {
         container {
-          name  = "inventory-api"
+          name  = "inventory-management"
           image = var.kubernetes_image
           port {
             container_port = 8080
           }
-          #Health Checks
           liveness_probe {
             http_get {
               path = "/health"
@@ -175,14 +173,11 @@ resource "kubernetes_deployment" "inventory_api_usw2" {
   }
 }
 
-resource "kubernetes_service" "inventory_api_service_usw2" {
+resource "kubernetes_service" "api-service-usw2" {
   provider = kubernetes.usw2
   metadata {
     name      = "inventory-api-service"
     namespace = "default"
-    labels = {
-      app = "inventory-api"
-    }
   }
 
   spec {
@@ -200,15 +195,15 @@ resource "kubernetes_service" "inventory_api_service_usw2" {
   }
 }
 
-resource "kubernetes_ingress" "inventory_api_ingress_usw2" {
+resource "kubernetes_ingress" "api-ingress-usw2" {
   provider = kubernetes.usw2
   metadata {
     name      = "inventory-api-ingress"
     namespace = "default"
     annotations = {
-      "kubernetes.io/ingress.class"                       = "alb"
-      "alb.ingress.kubernetes.io/scheme"                  = "internet-facing"
-      "alb.ingress.kubernetes.io/target-type"             = "ip"
+      "kubernetes.io/ingress.class"            = "alb"
+      "alb.ingress.kubernetes.io/scheme"       = "internet-facing"
+      "alb.ingress.kubernetes.io/target-type"  = "ip"
     }
   }
 

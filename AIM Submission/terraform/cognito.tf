@@ -29,8 +29,8 @@ resource "aws_cognito_user_pool" "inventory_user_pool" {
   }
 }
 
-#Create Cognito App Client
-resource "aws_cognito_user_pool_client" "inventory_app_client" {
+#Cognito App Client
+resource "aws_cognito_user_pool_client" "app_client" {
   name                      = "inventory-app-client"
   user_pool_id              = aws_cognito_user_pool.inventory_user_pool.id
   allowed_oauth_flows       = ["code", "implicit"]
@@ -47,14 +47,14 @@ resource "aws_cognito_user_pool_client" "inventory_app_client" {
   supported_identity_providers = ["COGNITO"]
 }
 
-#Create Cognito Domain
-resource "aws_cognito_user_pool_domain" "inventory_domain" {
+#Cognito Domain
+resource "aws_cognito_user_pool_domain" "cognito_domain" {
   domain       = "aim.machines.run"
   user_pool_id = aws_cognito_user_pool.inventory_user_pool.id
 }
 
-#Create IAM role for the Lambda function
-resource "aws_iam_role" "cognito_pre_signup_lambda_role" {
+#IAM role for the Lambda function
+resource "aws_iam_role" "pre_signup_lambda_role" {
   name = "cognito-pre-signup-lambda-role"
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
@@ -71,14 +71,14 @@ resource "aws_iam_role" "cognito_pre_signup_lambda_role" {
 }
 
 #Attach policies to the IAM role
-resource "aws_iam_policy_attachment" "cognito_pre_signup_lambda_policy" {
+resource "aws_iam_policy_attachment" "pre_signup_lambda_policy" {
   name       = "cognito-pre-signup-lambda-policy"
   roles      = [aws_iam_role.cognito_pre_signup_lambda_role.name]
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
 #Lambda function
-resource "aws_lambda_function" "cognito_pre_signup_lambda" {
+resource "aws_lambda_function" "pre_signup_lambda" {
   function_name = "cognito-pre-signup-lambda"
   handler       = "index.lambda_handler"
   runtime       = "python3.9"
@@ -94,7 +94,7 @@ resource "aws_lambda_function" "cognito_pre_signup_lambda" {
 }
 
 #Lambda trigger for Cognito
-resource "aws_cognito_user_pool" "inventory_user_pool" {
+resource "aws_cognito_user_pool" "user_pool" {
   name = "aim-inventory-user-pool"
   lambda_config {
     pre_sign_up = aws_lambda_function.cognito_pre_signup_lambda.arn

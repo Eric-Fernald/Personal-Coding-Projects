@@ -40,15 +40,15 @@ output "shield_id" {
 
 output "user_pool_id" {
   value = aws_cognito_user_pool.inventory_user_pool.id
-  description = "The ID of the Cognito User Pool"
+  description = "ID of the Cognito User Pool"
 }
 
 output "app_client_id" {
   value = aws_cognito_user_pool_client.inventory_app_client.id
-  description = "The ID of the Cognito App Client"
+  description = "ID of the Cognito App Client"
 }
 
 output "cognito_domain" {
   value = aws_cognito_user_pool_domain.inventory_domain.domain
-  description = "The domain of the Cognito User Pool"
+  description = "Domain of the Cognito User Pool"
 }

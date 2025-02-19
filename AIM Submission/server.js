@@ -1,7 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const Item = require('./models/item');
-const Customer = require('./models/customer');
 const Kit = require('./models/kit');
 
 const app = express();
@@ -14,52 +12,24 @@ mongoose.connect('mongodb://localhost:27017/inventory', {
 
 app.use(express.json());
 
-//GET all inventory items
+//GET APIs
+
+//GET all inventory items (Kits)
 app.get('/api/inventory', async (req, res) => {
     try {
-        const items = await Item.find();
-        res.json(items);
+        const kits = await Kit.find();
+        res.json(kits);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
 });
 
-//GET a specific item by its ID
-app.get('/api/item/:id', async (req, res) => {
+//GET a specific kit by its ID
+app.get('/api/kit/:id', async (req, res) => {
     try {
-        const item = await Item.findById(req.params.id);
-        if (!item) return res.status(404).json({ message: 'Item not found' });
-        res.json(item);
-    } catch (err) {
-        res.status(500).json({ message: err.message });
-    }
-});
-
-//GET items by status (Ordered, Modified, Shipped)
-app.get('/api/items/status/:item_status', async (req, res) => {
-    try {
-        const items = await Item.find({ item_status: req.params.item_status });
-        res.json(items);
-    } catch (err) {
-        res.status(500).json({ message: err.message });
-    }
-});
-
-//GET items by SKU
-app.get('/api/items/sku/:sku', async (req, res) => {
-    try {
-        const items = await Item.find({ sku: req.params.sku });
-        res.json(items);
-    } catch (err) {
-        res.status(500).json({ message: err.message });
-    }
-});
-
-//GET items associated with a customer
-app.get('/api/items/customer/:customerId', async (req, res) => {
-    try {
-        const items = await Item.find({ customerId: req.params.customerId });
-        res.json(items);
+        const kit = await Kit.findById(req.params.id);
+        if (!kit) return res.status(404).json({ message: 'Kit not found' });
+        res.json(kit);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
@@ -68,104 +38,114 @@ app.get('/api/items/customer/:customerId', async (req, res) => {
 //GET kits associated with a customer
 app.get('/api/kits/customer/:customerName', async (req, res) => {
     try {
-        const customerKits = Kit.filter(k => k.kit_customer === req.params.customerName);
-        if (!customerKits.length) return res.status(404).json({ message: 'No kits found for this customer' });
-        res.json(customerKits);
+        const kits = await Kit.find({ 'customer.name': req.params.customerName }); //Access embedded customer's name
+        if (!kits || kits.length === 0) {
+            return res.status(404).json({ message: 'No kits found for this customer' });
+        }
+        res.json(kits);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
 });
 
-//POST a new item into inventory
-app.post('/api/item', async (req, res) => {
-    try {
-        const { sku, item_status, customerId, kitId } = req.body;
-
-        const newItem = new Item({
-        sku,
-        item_status,
-        customerId,
-        kitId
-        });
-
-        const savedItem = await newItem.save();
-        res.status(201).json(savedItem);
-    } catch (err) {
-        res.status(400).json({ message: err.message });
-    }
-});
+//POST APIs
 
 //POST a new kit into inventory
 app.post('/api/kit', async (req, res) => {
     try {
-        const { name, items } = req.body;
+        const { kit_SKU, kit_status, customer, items } = req.body;
 
         const newKit = new Kit({
-        name,
-        items
+            kit_SKU,
+            kit_status,
+            customer,
+            items
         });
 
         const savedKit = await newKit.save();
-
         res.status(201).json(savedKit);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }
 });
 
-//PATCH a customer of an item
-app.patch('/api/items/:kitId/:itemSku/customer', async (req, res) => {
+//POST a new item into a kit
+app.post('/api/kits/:kitId/items', async (req, res) => {
     try {
-        const { kitId, itemSku } = req.params;
-        const { newCustomer } = req.body;
+        const { kitId } = req.params;
+        const { item_SKU, item_name, item_status, item_location, order_status } = req.body;
 
-        const kit = kit.find(k => k.kit_id === kitId);
-        if (!kit) return res.status(404).json({ message: 'Kit not found' });
+        const kit = await Kit.findById(kitId);
+        if (!kit) {
+            return res.status(404).json({ message: 'Kit not found' });
+        }
 
-        const item = kit.items.find(i => i.item_SKU === itemSku);
-        if (!item) return res.status(404).json({ message: 'Item not found' });
+        //Create the new item object
+        const newItem = {
+            item_SKU,
+            item_name,
+            item_status,
+            item_location,
+            order_status
+        };
 
-        item.item_customer = newCustomer;
-        res.json(item);
+        //Add the new item to the kit's items array
+        kit.items.push(newItem);
+
+        //Save the updated kit
+        await kit.save();
+
+        res.status(201).json(kit);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }
 });
 
-//PATCH the status of an item
-app.patch('/api/items/:kitId/:itemSku/status', async (req, res) => {
+//PATCH APIs
+
+//PATCH the status of an item (within a Kit)
+app.patch('/api/kits/:kitId/items/:itemIndex/status', async (req, res) => {
     try {
-        const { kitId, itemSku } = req.params;
-        const { newStatus } = req.body;
+        const { kitId, itemIndex } = req.params;
+        const { item_status } = req.body;
 
-        const kit = kit.find(k => k.kit_id === kitId);
-        if (!kit) return res.status(404).json({ message: 'Kit not found' });
+        const kit = await Kit.findById(kitId);
+        if (!kit) {
+            return res.status(404).json({ message: 'Kit not found' });
+        }
 
-        const item = kit.items.find(i => i.item_SKU === itemSku);
-        if (!item) return res.status(404).json({ message: 'Item not found' });
+        if (itemIndex < 0 || itemIndex >= kit.items.length) {
+            return res.status(404).json({ message: 'Item index out of range' });
+        }
 
-        item.item_status = newStatus;
-        res.json(item);
+        kit.items[itemIndex].item_status = item_status; //Directly update the embedded item
+        await kit.save(); //Save the changes to the Kit document
+
+        res.json(kit);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }
 });
 
-//PATCH the order status of an item
-app.patch('/api/item/order-status/:itemId', async (req, res) => {
+//PATCH the order status of an item (within a Kit)
+app.patch('/api/kits/:kitId/items/:itemIndex/order-status', async (req, res) => {
     try {
-        const { itemId } = req.params;
+        const { kitId, itemIndex } = req.params;
         const { order_status } = req.body;
 
-        const updatedItem = await Item.findByIdAndUpdate(
-        itemId,
-        { order_status },
-        { new: true }
-        );
+        const kit = await Kit.findById(kitId);
+        if (!kit) {
+            return res.status(404).json({ message: 'Kit not found' });
+        }
 
-        if (!updatedItem) return res.status(404).json({ message: 'Item not found' });
+        if (itemIndex < 0 || itemIndex >= kit.items.length) {
+            return res.status(404).json({ message: 'Item index out of range' });
+        }
 
-        res.status(200).json(updatedItem);
+        kit.items[itemIndex].order_status = order_status;
+        await kit.save();
+
+        res.json(kit);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }
@@ -175,12 +155,12 @@ app.patch('/api/item/order-status/:itemId', async (req, res) => {
 app.patch('/api/kits/:kitId/status', async (req, res) => {
     try {
         const { kitId } = req.params;
-        const { newStatus } = req.body;
+        const { kit_status } = req.body;
 
-        const kit = kit.find(k => k.kit_id === kitId);
+        const kit = await Kit.findByIdAndUpdate(kitId, { kit_status: kit_status }, { new: true });
+
         if (!kit) return res.status(404).json({ message: 'Kit not found' });
 
-        kit.kit_status = newStatus;
         res.json(kit);
     } catch (err) {
         res.status(400).json({ message: err.message });
@@ -191,67 +171,35 @@ app.patch('/api/kits/:kitId/status', async (req, res) => {
 app.patch('/api/kits/:kitId/sku', async (req, res) => {
     try {
         const { kitId } = req.params;
-        const { newSku } = req.body;
+        const { kit_SKU } = req.body;
 
-        const kit = kit.find(k => k.kit_id === kitId);
+        const kit = await Kit.findByIdAndUpdate(kitId, { kit_SKU: kit_SKU }, { new: true });
+
         if (!kit) return res.status(404).json({ message: 'Kit not found' });
 
-        kit.kit_SKU = newSku;
         res.json(kit);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }
 });
 
-//PATCH the customer associated with a kit
-app.patch('/api/kit/customer/:kitId', async (req, res) => {
+//PATCH the kit customer
+app.patch('/api/kits/:kitId/customer', async (req, res) => {
     try {
         const { kitId } = req.params;
-        const { customerId } = req.body;
+        const { customer } = req.body;
 
-        const updatedKit = await Kit.findByIdAndUpdate(
-        kitId,
-        { customerId },
-        { new: true }
-        );
+        const kit = await Kit.findByIdAndUpdate(kitId, { customer: customer }, { new: true });
 
-        if (!updatedKit) return res.status(404).json({ message: 'Kit not found' });
+        if (!kit) return res.status(404).json({ message: 'Kit not found' });
 
-        res.status(200).json(updatedKit);
+        res.json(kit);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }
 });
 
-//DELETE a specific item by its ID
-app.delete('/api/item/:id', async (req, res) => {
-    try {
-        const { id } = req.params;
-
-        const deletedItem = await Item.findByIdAndDelete(id);
-
-        if (!deletedItem) return res.status(404).json({ message: 'Item not found' });
-
-        res.status(200).json({ message: 'Item deleted successfully', deletedItem });
-    } catch (err) {
-        res.status(500).json({ message: err.message });
-    }
-});
-
-//DELETE an item by its SKU
-app.delete('/api/item/sku/:sku', async (req, res) => {
-    try {
-        const { sku } = req.params;
-
-        const deletedItem = await Item.findOneAndDelete({ sku });
-
-        if (!deletedItem) return res.status(404).json({ message: 'Item not found' });
-
-        res.status(200).json({ message: 'Item deleted successfully', deletedItem });
-    } catch (err) {
-        res.status(500).json({ message: err.message });
-    }
-});
+// DELETE APIs
 
 //DELETE a specific kit by its ID
 app.delete('/api/kit/:kitId', async (req, res) => {
@@ -268,16 +216,18 @@ app.delete('/api/kit/:kitId', async (req, res) => {
     }
 });
 
-//DELETE a kit by its SKU
+//DELETE all kits with a specific SKU
 app.delete('/api/kit/sku/:kitSku', async (req, res) => {
     try {
         const { kitSku } = req.params;
 
-        const deletedKit = await Kit.findOneAndDelete({ kit_SKU: kitSku });
+        const deletedKits = await Kit.deleteMany({ kit_SKU: kitSku.toUpperCase() });
 
-        if (!deletedKit) return res.status(404).json({ message: 'Kit not found' });
+        if (deletedKits.deletedCount === 0) {
+            return res.status(404).json({ message: 'No kits found with that SKU' });
+        }
 
-        res.status(200).json({ message: 'Kit deleted successfully', deletedKit });
+        res.status(200).json({ message: `${deletedKits.deletedCount} kits deleted successfully` }); //Show the number of deleted kits
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
