@@ -8,10 +8,8 @@ GRAVITY_TURN_ALTITUDE = 50000
 LAUNCH_HEADING = 90
 COUNTDOWN_WORDS = ("Five", "Four", "Three", "Two", "One", "LIFT OFF!")
 
-
 def clamp(value, lower, upper):
     return max(lower, min(upper, value))
-
 
 class RocketLaunchController:
     def __init__(self, connection, vessel):
@@ -109,12 +107,10 @@ class RocketLaunchController:
         if self.vessel.control.current_stage > 0:
             self.vessel.control.activate_next_stage()
 
-
 def main():
     connection = krpc.connect(name="RocketLaunch")
     vessel = connection.space_center.active_vessel
     RocketLaunchController(connection, vessel).run()
-
 
 if __name__ == "__main__":
     main()
