@@ -1,5 +1,4 @@
 import time
-
 import krpc
 
 TARGET_APOAPSIS = 690000
