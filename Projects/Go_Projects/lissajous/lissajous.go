@@ -30,9 +30,9 @@ func lissajous(out io.Writer) {
 		nframes = 64    // number of animation frames
 		delay   = 8     // delay between frames in 10ms units
 	)
-	freq := rand.Float64() * 3.0  // relative frequency of y oscillator
-	anim := gif.GIF{LoopCount: 0} // 0 = loop forever
-	phase := 0.0                  // phase difference
+	freq := rand.Float64() * 3.0 // relative frequency of y oscillator
+	anim := gif.GIF{LoopCount: nframes}
+	phase := 0.0 // phase difference
 	for i := 0; i < nframes; i++ {
 		rect := image.Rect(0, 0, 2*size+1, 2*size+1)
 		img := image.NewPaletted(rect, palette)
